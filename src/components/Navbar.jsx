@@ -43,12 +43,14 @@ export default function Navbar() {
     )}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="flex-none z-50">
-          <img src="/brndo_logo.svg" alt="Brndo Logo" className="h-14 md:h-16 w-auto dark:brightness-0 dark:invert transition-all" />
-        </a>
+        <div className="flex-none z-50">
+          <a href="#">
+            <img src="/brndo_logo.svg" alt="Brndo Logo" className="h-14 md:h-16 w-auto dark:brightness-0 dark:invert transition-all" />
+          </a>
+        </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex flex-1 items-center justify-start ml-12 lg:ml-20 gap-4 lg:gap-8">
+        <div className="hidden md:flex flex-1 items-center justify-center gap-4 lg:gap-8 pr-4 lg:pr-12">
           {navLinks.map((link) => (
             link.dropdown ? (
               <div key={link.name} className="relative group">
@@ -85,16 +87,17 @@ export default function Navbar() {
               </a>
             )
           ))}
-          
-          <div className="ml-auto flex items-center gap-6">
-            <ThemeToggle />
-            <a 
-              href="#contact" 
-              className="bg-black text-white px-8 py-3 rounded-md text-base font-semibold hover:bg-gray-900 dark:bg-brndo-red dark:hover:bg-brndo-darkRed cursor-pointer transition-colors"
-            >
-              Contact Us
-            </a>
-          </div>
+        </div>
+
+        {/* Right side: Toggle & Contact */}
+        <div className="hidden md:flex flex-none items-center gap-4 md:gap-6 z-50">
+          <ThemeToggle />
+          <a 
+            href="#contact" 
+            className="bg-black text-white px-8 py-3 rounded-md text-base font-semibold hover:bg-gray-900 dark:bg-brndo-red dark:hover:bg-brndo-darkRed cursor-pointer transition-colors"
+          >
+            Contact Us
+          </a>
         </div>
 
         {/* Mobile Toggle */}

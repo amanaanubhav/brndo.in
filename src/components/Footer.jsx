@@ -36,6 +36,9 @@ export default function Footer() {
               <li><a href="#about" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors inline-block relative group">About Us<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brndo-red transition-all duration-300 group-hover:w-full"></span></a></li>
               <li><a href="#services" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors inline-block relative group">Services<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brndo-red transition-all duration-300 group-hover:w-full"></span></a></li>
               <li><a href="#pricing" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors inline-block relative group">Pricing<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brndo-red transition-all duration-300 group-hover:w-full"></span></a></li>
+              <li><a href="#impact" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors inline-block relative group">Success Stories<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brndo-red transition-all duration-300 group-hover:w-full"></span></a></li>
+              <li><a href="#blog" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors inline-block relative group">Blog<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brndo-red transition-all duration-300 group-hover:w-full"></span></a></li>
+              <li><a href="#partners" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors inline-block relative group">Partner Program<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brndo-red transition-all duration-300 group-hover:w-full"></span></a></li>
               <li><a href="#careers" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors inline-block relative group">Careers<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brndo-red transition-all duration-300 group-hover:w-full"></span></a></li>
             </ul>
           </div>
@@ -58,7 +61,7 @@ export default function Footer() {
                 </a>
                 
                 {/* Dynamic Google Map Test */}
-                <div className="w-full max-w-[280px] h-32 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+                <div className="w-full max-w-[280px] h-28 mt-2 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
                   <iframe 
                     src="https://maps.google.com/maps?q=Navbharat+Apartments,+Paschim+Vihar,+Delhi+-+110063&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                     width="100%" 
