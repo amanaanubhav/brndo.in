@@ -10,7 +10,7 @@ import { ThemeProvider } from './contexts/ThemeContext';
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-brndo-red selection:bg-brndo-red/30 selection:text-brndo-red transition-colors duration-300">
+      <div className="min-h-screen bg-white dark:bg-gray-950 selection:bg-brndo-red/30 selection:text-brndo-red transition-colors duration-300">
         <Navbar />
         {/* Temporarily hidden sections */}
         {/* <Hero /> */}

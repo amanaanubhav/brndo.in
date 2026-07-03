@@ -45,14 +45,14 @@ export default function Services() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-6 tracking-tight transition-colors"
           >
-            Full-Funnel <span className="text-brndo-red dark:text-white underline decoration-white/30 decoration-8 underline-offset-4">Domination.</span>
+            Full-Funnel <span className="text-brndo-red">Domination.</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-gray-600 dark:text-white/80 font-light transition-colors"
+            className="text-lg text-gray-600 dark:text-gray-400 font-light transition-colors"
           >
             We don't just run ads. We engineer comprehensive growth systems tailored to your unit economics.
           </motion.p>
@@ -66,13 +66,13 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-brndo-darkRed p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-white/10 hover:shadow-xl hover:shadow-brndo-red/5 dark:hover:shadow-white/10 hover:-translate-y-2 transition-all duration-300 group cursor-default"
+              className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-xl hover:shadow-brndo-red/5 hover:-translate-y-2 transition-all duration-300 group cursor-default"
             >
-              <div className="w-16 h-16 bg-red-50 dark:bg-white/10 text-brndo-red dark:text-white rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brndo-red dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-brndo-red transition-colors duration-300">
+              <div className="w-16 h-16 bg-red-50 dark:bg-gray-800 text-brndo-red rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brndo-red group-hover:text-white transition-colors duration-300">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">{service.title}</h3>
-              <p className="text-gray-600 dark:text-white/70 font-light leading-relaxed transition-colors">
+              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed transition-colors">
                 {service.description}
               </p>
             </motion.div>
