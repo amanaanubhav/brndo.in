@@ -13,7 +13,7 @@ function App() {
       <div className="min-h-screen bg-white dark:bg-gray-950 selection:bg-brndo-red/30 selection:text-brndo-red transition-colors duration-300">
         <Navbar />
         {/* Temporarily hidden sections */}
-        {/* <Hero /> */}
+        <Hero />
         {/* <Services /> */}
         {/* <Metrics /> */}
         {/* <CTA /> */}
