@@ -9,9 +9,9 @@ const stats = [
 
 export default function Metrics() {
   return (
-    <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
+    <section className="py-24 bg-gray-900 dark:bg-brndo-darkRed text-white relative overflow-hidden transition-colors duration-300">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brndo-red/20 to-transparent blur-3xl opacity-50 transform translate-x-1/4" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brndo-red/20 dark:from-white/10 to-transparent blur-3xl opacity-50 transform translate-x-1/4 transition-colors" />
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -29,7 +29,7 @@ export default function Metrics() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-gray-400 text-lg font-light leading-relaxed mb-8 max-w-md"
+              className="text-gray-400 dark:text-white/80 text-lg font-light leading-relaxed mb-8 max-w-md transition-colors"
             >
               We are obsessed with data. Our strategies are built on rigorous testing, continuous optimization, and an unwavering focus on your bottom line.
             </motion.p>
@@ -43,10 +43,10 @@ export default function Metrics() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="border-l-2 border-brndo-red pl-6"
+                className="border-l-2 border-brndo-red dark:border-white/30 pl-6 transition-colors"
               >
                 <p className="text-5xl font-black text-white mb-2 tracking-tighter">{stat.value}</p>
-                <p className="text-gray-400 font-medium uppercase tracking-wider text-sm">{stat.label}</p>
+                <p className="text-gray-400 dark:text-white/60 font-medium uppercase tracking-wider text-sm transition-colors">{stat.label}</p>
               </motion.div>
             ))}
           </div>

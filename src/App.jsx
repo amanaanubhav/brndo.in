@@ -5,19 +5,22 @@ import Metrics from './components/Metrics';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white selection:bg-brndo-red/30 selection:text-brndo-red">
-      <Navbar />
-      {/* Temporarily hidden sections */}
-      {/* <Hero /> */}
-      {/* <Services /> */}
-      {/* <Metrics /> */}
-      {/* <CTA /> */}
-      <Contact />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-brndo-red selection:bg-brndo-red/30 selection:text-brndo-red transition-colors duration-300">
+        <Navbar />
+        {/* Temporarily hidden sections */}
+        {/* <Hero /> */}
+        {/* <Services /> */}
+        {/* <Metrics /> */}
+        {/* <CTA /> */}
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
