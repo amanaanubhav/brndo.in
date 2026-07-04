@@ -56,7 +56,7 @@ export default function Navbar() {
               <div key={link.name} className="relative group">
                 <a 
                   href={link.href}
-                  className="text-base font-semibold text-gray-700 dark:text-gray-200 hover:bg-brndo-red hover:text-white px-5 py-2.5 rounded-md transition-colors flex items-center gap-1 cursor-pointer"
+                  className="text-base font-semibold uppercase text-gray-700 dark:text-gray-200 hover:bg-brndo-red hover:text-white px-5 py-2.5 rounded-md transition-colors flex items-center gap-1 cursor-pointer"
                 >
                   {link.name}
                   <ChevronDown className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
@@ -69,7 +69,7 @@ export default function Navbar() {
                       <a 
                         key={dropItem.name} 
                         href={dropItem.href}
-                        className="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:bg-brndo-red hover:text-white px-4 py-3 rounded-md transition-colors block"
+                        className="text-sm font-semibold uppercase text-gray-600 dark:text-gray-300 hover:bg-brndo-red hover:text-white px-4 py-3 rounded-md transition-colors block"
                       >
                         {dropItem.name}
                       </a>
@@ -81,7 +81,7 @@ export default function Navbar() {
               <a 
                 key={link.name} 
                 href={link.href}
-                className="text-base font-semibold text-gray-700 dark:text-gray-200 hover:bg-brndo-red hover:text-white px-5 py-2.5 rounded-md transition-colors block"
+                className="text-base font-semibold uppercase text-gray-700 dark:text-gray-200 hover:bg-brndo-red hover:text-white px-5 py-2.5 rounded-md transition-colors block"
               >
                 {link.name}
               </a>
@@ -94,7 +94,7 @@ export default function Navbar() {
           <ThemeToggle />
           <a 
             href="#contact" 
-            className="bg-black text-white px-8 py-3 rounded-md text-base font-semibold hover:bg-gray-900 dark:bg-brndo-red dark:hover:bg-brndo-darkRed cursor-pointer transition-colors"
+            className="bg-black text-white px-8 py-3 rounded-md text-base font-semibold uppercase hover:bg-gray-900 dark:bg-brndo-red dark:hover:bg-brndo-darkRed cursor-pointer transition-colors"
           >
             Contact Us
           </a>
@@ -126,7 +126,7 @@ export default function Navbar() {
                 <a 
                   href={link.href}
                   onClick={() => !link.dropdown && setMobileMenuOpen(false)}
-                  className="text-3xl font-bold text-gray-900 dark:text-white flex items-center justify-between"
+                  className="text-3xl font-bold uppercase text-gray-900 dark:text-white flex items-center justify-between"
                 >
                   {link.name}
                   {link.dropdown && <ChevronDown className="w-6 h-6 text-gray-400" />}
@@ -138,7 +138,7 @@ export default function Navbar() {
                         key={dropItem.name} 
                         href={dropItem.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="text-xl font-semibold text-gray-600 dark:text-gray-300 hover:text-brndo-red dark:hover:text-brndo-lightRed transition-colors"
+                        className="text-xl font-semibold uppercase text-gray-600 dark:text-gray-300 hover:text-brndo-red dark:hover:text-brndo-lightRed transition-colors"
                       >
                         {dropItem.name}
                       </a>
@@ -150,7 +150,7 @@ export default function Navbar() {
             <a 
               href="#contact" 
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-8 bg-black dark:bg-brndo-red text-white text-center py-4 rounded-md text-xl font-bold"
+              className="mt-8 bg-black dark:bg-brndo-red text-white text-center py-4 rounded-md text-xl font-bold uppercase"
             >
               Contact Us
             </a>
