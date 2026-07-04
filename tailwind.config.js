@@ -9,13 +9,14 @@ export default {
     extend: {
       colors: {
         brndo: {
-          red: '#932c2c',
+          red: '#6F4A4A',
           darkRed: '#6b2121',
-          lightRed: '#e6b3b3',
+          lightRed: '#EBD8D3',
         },
       },
       fontFamily: {
         sans: ['Outfit', 'Inter', 'sans-serif'],
+        pangram: ['"PP Pangram"', 'sans-serif'],
       }
     },
   },

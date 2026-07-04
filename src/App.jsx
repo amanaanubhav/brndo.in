@@ -3,8 +3,10 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Metrics from './components/Metrics';
 import CTA from './components/CTA';
-import Footer from './components/Footer';
+import Reviews from './components/Reviews';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {
@@ -12,11 +14,13 @@ function App() {
     <ThemeProvider>
       <div className="min-h-screen bg-white dark:bg-gray-950 selection:bg-brndo-red/30 selection:text-brndo-red transition-colors duration-300">
         <Navbar />
-        {/* Temporarily hidden sections */}
+        {/* Main Content Sections */}
         <Hero />
         {/* <Services /> */}
         {/* <Metrics /> */}
         {/* <CTA /> */}
+        <Reviews />
+        <FAQ />
         <Contact />
         <Footer />
       </div>
