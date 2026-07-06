@@ -27,21 +27,21 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-pangram text-2xl sm:text-4xl lg:text-5xl font-black text-black tracking-tighter leading-[1.2] mb-20 uppercase flex flex-col items-center w-full"
+          className="font-pangram text-3xl sm:text-4xl lg:text-5xl font-black text-black dark:text-white tracking-tighter leading-[1.2] mb-20 uppercase flex flex-col items-center w-full"
         >
-          <span className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 flex-nowrap whitespace-nowrap">
+          <span className="flex flex-col md:flex-row items-center justify-center gap-1 sm:gap-3 md:gap-4 flex-nowrap whitespace-nowrap">
             <span>Your Partner In</span>
-            <span className="text-brndo-red flex items-center gap-2 sm:gap-3 md:gap-4">
+            <span className="text-brndo-red flex items-center gap-2 sm:gap-3 md:gap-4 mt-1 md:mt-0">
               <span>Digital</span>
               <img 
                 src="/image.png" 
                 alt="" 
-                className="h-8 sm:h-10 lg:h-12 w-auto object-contain rounded-md" 
+                className="h-10 sm:h-10 lg:h-12 w-auto object-contain rounded-md" 
               />
               <span>Design</span>
             </span>
           </span>
-          <span className="block mt-2 sm:mt-3">& Development</span>
+          <span className="block mt-1 sm:mt-3">& Development</span>
         </motion.h1>
 
         {/* Call To Action Buttons */}

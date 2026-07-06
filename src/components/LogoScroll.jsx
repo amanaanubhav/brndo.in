@@ -1,6 +1,6 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const clientLogos = [
   'AB GLOBAL S.svg',
@@ -12,13 +12,19 @@ const clientLogos = [
 ];
 
 export default function LogoScroll() {
+  // Desktop State
   const scrollRef = useRef(null);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
 
-  // Duplicate logos for smooth infinite scrolling illusion
+  // Mobile State
+  const [mobileIndex, setMobileIndex] = useState(0);
+
+  // Desktop Duplicate for smooth infinite scroll
   const displayLogos = [...clientLogos, ...clientLogos, ...clientLogos];
 
+  // Desktop Auto Scroll Effect
   useEffect(() => {
+    if (window.innerWidth < 768) return; // Skip on mobile
     if (!isAutoScrolling) return;
     const interval = setInterval(() => {
       if (scrollRef.current) {
@@ -32,6 +38,15 @@ export default function LogoScroll() {
     return () => clearInterval(interval);
   }, [isAutoScrolling]);
 
+  // Mobile Auto Scroll Effect
+  useEffect(() => {
+    if (window.innerWidth >= 768) return; // Skip on desktop
+    const mobileInterval = setInterval(() => {
+      setMobileIndex((prev) => (prev + 1) % clientLogos.length);
+    }, 2500);
+    return () => clearInterval(mobileInterval);
+  }, []);
+
   const scrollLeft = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: -250, behavior: 'smooth' });
@@ -44,24 +59,30 @@ export default function LogoScroll() {
     }
   };
 
+  // Calculate visible indices for mobile
+  const visibleIndices = [
+    (mobileIndex - 1 + clientLogos.length) % clientLogos.length,
+    mobileIndex,
+    (mobileIndex + 1) % clientLogos.length
+  ];
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
-      className="mt-36 w-full max-w-4xl mx-auto flex flex-col items-center relative"
+      className="mt-20 md:mt-36 w-full max-w-4xl mx-auto flex flex-col items-center relative"
     >
-      <div className="w-full flex items-center justify-between gap-4 md:gap-8">
-        {/* Left Arrow Button */}
+      {/* --- DESKTOP VIEW --- */}
+      <div className="hidden md:flex w-full items-center justify-between gap-8">
         <button 
           onClick={scrollLeft}
-          className="flex-shrink-0 p-3 rounded-full bg-white text-black border border-gray-200 hover:bg-brndo-red hover:text-black hover:border-brndo-red transition-all duration-300 shadow-md"
+          className="flex-shrink-0 p-3 rounded-full bg-white text-black border border-gray-200 hover:bg-brndo-red hover:text-white hover:border-brndo-red transition-all duration-300 shadow-md"
           aria-label="Scroll left"
         >
           <ChevronLeft size={20} />
         </button>
 
-        {/* Scrollable Container */}
         <div 
           ref={scrollRef}
           onMouseEnter={() => setIsAutoScrolling(false)}
@@ -73,20 +94,47 @@ export default function LogoScroll() {
             <img 
               key={idx}
               src={`/${logo}`}
-              alt={`Client Logo ${idx}`}
-              className="h-10 md:h-14 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0 cursor-pointer"
+              alt={`Client Logo`}
+              className="h-14 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0 cursor-pointer"
             />
           ))}
         </div>
 
-        {/* Right Arrow Button */}
         <button 
           onClick={scrollRight}
-          className="flex-shrink-0 p-3 rounded-full bg-white text-black border border-gray-200 hover:bg-brndo-red hover:text-black hover:border-brndo-red transition-all duration-300 shadow-md"
+          className="flex-shrink-0 p-3 rounded-full bg-white text-black border border-gray-200 hover:bg-brndo-red hover:text-white hover:border-brndo-red transition-all duration-300 shadow-md"
           aria-label="Scroll right"
         >
           <ChevronRight size={20} />
         </button>
+      </div>
+
+      {/* --- MOBILE VIEW --- */}
+      <div className="flex md:hidden w-full items-center justify-center overflow-hidden py-4 px-2 relative h-24">
+        <AnimatePresence mode="popLayout">
+          {visibleIndices.map((idx, pos) => {
+            const isCenter = pos === 1;
+            // pos: 0 = left, 1 = center, 2 = right
+            return (
+              <motion.img
+                key={idx} // Crucial for framer-motion to track the element
+                src={`/${clientLogos[idx]}`}
+                alt="Client Logo"
+                layout
+                initial={{ opacity: 0, x: 50, scale: 0.8 }}
+                animate={{ 
+                  opacity: isCenter ? 1 : 0.4, 
+                  x: 0,
+                  scale: isCenter ? 1 : 0.8,
+                  filter: isCenter ? 'grayscale(0%)' : 'grayscale(100%)'
+                }}
+                exit={{ opacity: 0, x: -50, scale: 0.8 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                className="h-8 sm:h-10 w-auto object-contain flex-shrink-0 mx-4"
+              />
+            );
+          })}
+        </AnimatePresence>
       </div>
     </motion.div>
   );

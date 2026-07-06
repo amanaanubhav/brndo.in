@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import { cn } from '../lib/utils';
 import ThemeToggle from './ThemeToggle';
 
@@ -100,14 +100,17 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Toggle */}
-        <div className="md:hidden flex items-center gap-4 z-50">
+        {/* Mobile Toggle & Icons */}
+        <div className="md:hidden flex items-center gap-3 z-50">
           <ThemeToggle />
+          <a href="#contact" className="p-2 text-gray-900 dark:text-white">
+            <Phone size={22} />
+          </a>
           <button 
             className="p-2 -mr-2 text-gray-900 dark:text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
@@ -126,7 +129,7 @@ export default function Navbar() {
                 <a 
                   href={link.href}
                   onClick={() => !link.dropdown && setMobileMenuOpen(false)}
-                  className="text-3xl font-bold uppercase text-gray-900 dark:text-white flex items-center justify-between"
+                  className="text-2xl font-bold uppercase text-gray-900 dark:text-white flex items-center justify-between"
                 >
                   {link.name}
                   {link.dropdown && <ChevronDown className="w-6 h-6 text-gray-400" />}
@@ -138,7 +141,7 @@ export default function Navbar() {
                         key={dropItem.name} 
                         href={dropItem.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="text-xl font-semibold uppercase text-gray-600 dark:text-gray-300 hover:text-brndo-red dark:hover:text-brndo-lightRed transition-colors"
+                        className="text-lg font-semibold uppercase text-gray-600 dark:text-gray-300 hover:text-brndo-red dark:hover:text-brndo-lightRed transition-colors"
                       >
                         {dropItem.name}
                       </a>
@@ -150,7 +153,7 @@ export default function Navbar() {
             <a 
               href="#contact" 
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-8 bg-black dark:bg-brndo-red text-white text-center py-4 rounded-md text-xl font-bold uppercase"
+              className="mt-8 bg-black dark:bg-brndo-red text-white text-center py-3.5 rounded-md text-lg font-bold uppercase"
             >
               Contact Us
             </a>
