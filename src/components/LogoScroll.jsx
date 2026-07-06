@@ -71,7 +71,7 @@ export default function LogoScroll() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
-      className="mt-20 md:mt-36 w-full max-w-4xl mx-auto flex flex-col items-center relative"
+      className="mt-16 md:mt-36 w-full max-w-4xl mx-auto flex flex-col items-center relative"
     >
       {/* --- DESKTOP VIEW --- */}
       <div className="hidden md:flex w-full items-center justify-between gap-8">
@@ -110,7 +110,7 @@ export default function LogoScroll() {
       </div>
 
       {/* --- MOBILE VIEW --- */}
-      <div className="flex md:hidden w-full items-center justify-center overflow-hidden py-4 px-2 relative h-24">
+      <div className="flex md:hidden w-full items-center justify-center overflow-hidden py-6 px-2 relative h-32">
         <AnimatePresence mode="popLayout">
           {visibleIndices.map((idx, pos) => {
             const isCenter = pos === 1;
@@ -130,7 +130,7 @@ export default function LogoScroll() {
                 }}
                 exit={{ opacity: 0, x: -50, scale: 0.8 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="h-8 sm:h-10 w-auto object-contain flex-shrink-0 mx-4"
+                className="h-12 sm:h-16 w-auto object-contain flex-shrink-0 mx-6"
               />
             );
           })}
