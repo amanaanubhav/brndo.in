@@ -43,7 +43,7 @@ export default function LogoScroll() {
     if (window.innerWidth >= 768) return; // Skip on desktop
     const mobileInterval = setInterval(() => {
       setMobileIndex((prev) => (prev + 1) % clientLogos.length);
-    }, 1200);
+    }, 1500);
     return () => clearInterval(mobileInterval);
   }, []);
 
@@ -67,7 +67,7 @@ export default function LogoScroll() {
   ];
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
@@ -75,7 +75,7 @@ export default function LogoScroll() {
     >
       {/* --- DESKTOP VIEW --- */}
       <div className="hidden md:flex w-full items-center justify-between gap-8">
-        <button 
+        <button
           onClick={scrollLeft}
           className="flex-shrink-0 p-3 rounded-full bg-white text-black border border-gray-200 hover:bg-brndo-red hover:text-white hover:border-brndo-red transition-all duration-300 shadow-md"
           aria-label="Scroll left"
@@ -83,7 +83,7 @@ export default function LogoScroll() {
           <ChevronLeft size={20} />
         </button>
 
-        <div 
+        <div
           ref={scrollRef}
           onMouseEnter={() => setIsAutoScrolling(false)}
           onMouseLeave={() => setIsAutoScrolling(true)}
@@ -91,7 +91,7 @@ export default function LogoScroll() {
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {displayLogos.map((logo, idx) => (
-            <img 
+            <img
               key={idx}
               src={`/${logo}`}
               alt={`Client Logo`}
@@ -100,7 +100,7 @@ export default function LogoScroll() {
           ))}
         </div>
 
-        <button 
+        <button
           onClick={scrollRight}
           className="flex-shrink-0 p-3 rounded-full bg-white text-black border border-gray-200 hover:bg-brndo-red hover:text-white hover:border-brndo-red transition-all duration-300 shadow-md"
           aria-label="Scroll right"
@@ -122,8 +122,8 @@ export default function LogoScroll() {
                 alt="Client Logo"
                 layout
                 initial={{ opacity: 0, x: 50, scale: 0.8 }}
-                animate={{ 
-                  opacity: isCenter ? 1 : 0.4, 
+                animate={{
+                  opacity: isCenter ? 1 : 0.4,
                   x: 0,
                   scale: isCenter ? 1 : 0.8,
                   filter: isCenter ? 'grayscale(0%)' : 'grayscale(100%)'
