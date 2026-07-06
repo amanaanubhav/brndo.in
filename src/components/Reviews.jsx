@@ -1,40 +1,22 @@
 import { motion } from 'framer-motion';
-import { Star, ArrowUpRight } from 'lucide-react';
 
-const testimonials = [
-  {
-    metric: '4.2x ROAS',
-    label: 'Scaled to $350k/mo spend',
-    text: '“Brndo took over our Meta and Google ads when we were stuck. Not only did they scale our budget by 4x, but our acquisition cost actually dropped. Their attribution modeling is years ahead of other agencies.”',
-    author: 'Sarah Jenkins',
-    title: 'VP of Growth, Modera Fashion',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',
-  },
-  {
-    metric: '+185%',
-    label: 'YoY Revenue Growth',
-    text: '“Their execution speed is unmatched. They launch, test, and iterate creative angles faster than we could ever do internally. They feel like an extension of our core growth team, not a vendor.”',
-    author: 'Marcus Chen',
-    title: 'Founder & CEO, HydrateLife',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
-  },
-  {
-    metric: '-52% CAC',
-    label: 'Optimized search & social funnel',
-    text: '“We were burning cash on cold traffic. Brndo rebuilt our middle-of-funnel retargeting strategy and optimized our landers. The drop in customer acquisition cost was immediate and highly profitable.”',
-    author: 'Elena Rostova',
-    title: 'CMO, FinTech Pulse',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80',
-  },
+const mediaPlaceholders = [
+  'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80',
+  'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80'
 ];
 
 export default function Reviews() {
+  const sets = [0, 1, 2];
+  // To make infinite scroll seamless, we duplicate the sets
+  const displaySets = [...sets, ...sets];
+
   return (
-    <section id="reviews" className="py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
+    <section id="reviews" className="py-24 bg-white dark:bg-gray-950 transition-colors duration-300 overflow-hidden">
+      <div className="w-full">
         
         {/* Header Block */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 px-6">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -55,64 +37,44 @@ export default function Reviews() {
           </motion.p>
         </div>
 
-        {/* Reviews Grid */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-          {testimonials.map((item, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              whileHover={{ y: -6 }}
-              className="bg-gray-50/50 dark:bg-gray-900/40 border border-gray-100 dark:border-gray-900 p-8 rounded-2xl flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md"
-            >
-              <div>
-                {/* Metric Callout */}
-                <div className="flex items-baseline justify-between mb-6">
-                  <div>
-                    <h3 className="font-pangram text-4xl lg:text-5xl font-black text-brndo-red">
-                      {item.metric}
-                    </h3>
-                    <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mt-1">
-                      {item.label}
-                    </p>
+        {/* Marquee Container */}
+        <div className="flex overflow-hidden group py-4">
+          <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused]">
+            {displaySets.map((setItem, index) => (
+              <div key={index} className="flex flex-row items-center gap-3 md:gap-6 px-2 md:px-3">
+                
+                {/* Media Block (Video/Photo Placeholder) */}
+                <div className="relative rounded-2xl overflow-hidden w-[200px] h-[280px] md:w-[260px] md:h-[350px] shadow-md flex-shrink-0 bg-gray-100 dark:bg-gray-900 border border-gray-200/50 dark:border-gray-800/50 group/media cursor-pointer">
+                  <img 
+                    src={mediaPlaceholders[setItem]} 
+                    alt="Product Media Placeholder" 
+                    className="w-full h-full object-cover filter brightness-90 transition-transform duration-700 ease-out group-hover/media:scale-105 group-hover/media:brightness-100"
+                  />
+                  {/* Subtle overlay icon representing video play, purely aesthetic placeholder */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/media:opacity-100 transition-opacity duration-300">
+                    <div className="w-14 h-14 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center">
+                      <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
+                    </div>
                   </div>
-                  <ArrowUpRight className="text-gray-300 dark:text-gray-700 w-6 h-6 flex-shrink-0" />
                 </div>
 
-                {/* Stars */}
-                <div className="flex items-center gap-1 mb-6 text-amber-500">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-current" />
-                  ))}
-                </div>
+                {/* Testimonial Block */}
+                <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 dark:from-red-950/40 dark:via-orange-950/40 dark:to-amber-950/40 border border-gray-100 dark:border-gray-800 shadow-md p-6 md:p-8 w-[240px] h-[280px] md:w-[320px] md:h-[350px] flex-shrink-0 flex items-center justify-center cursor-default">
+                  
+                  {/* Bottom Left Text */}
+                  <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 font-pangram font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest text-xs z-10">
+                    What client says
+                  </div>
+                  
+                  {/* Blank Content Area */}
+                  <div className="flex-1 w-full h-full min-h-[200px]"></div>
 
-                {/* Review Text */}
-                <p className="text-gray-700 dark:text-gray-300 font-light leading-relaxed mb-8">
-                  {item.text}
-                </p>
-              </div>
-
-              {/* Author Info */}
-              <div className="flex items-center gap-4 pt-6 border-t border-gray-100 dark:border-gray-800">
-                <img 
-                  src={item.avatar} 
-                  alt={item.author} 
-                  className="w-12 h-12 rounded-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-300"
-                />
-                <div>
-                  <h4 className="font-bold text-gray-900 dark:text-white text-sm">
-                    {item.author}
-                  </h4>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">
-                    {item.title}
-                  </p>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
+
       </div>
     </section>
   );

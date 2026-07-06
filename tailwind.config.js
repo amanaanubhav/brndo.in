@@ -9,14 +9,23 @@ export default {
     extend: {
       colors: {
         brndo: {
-          red: '#6F4A4A',
-          darkRed: '#6b2121',
+          red: '#800000',
+          darkRed: '#4A0000',
           lightRed: '#EBD8D3',
         },
       },
       fontFamily: {
         sans: ['Outfit', 'Inter', 'sans-serif'],
         pangram: ['"PP Pangram"', 'sans-serif'],
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        }
+      },
+      animation: {
+        marquee: 'marquee 40s linear infinite',
       }
     },
   },
