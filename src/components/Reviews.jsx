@@ -12,39 +12,57 @@ export default function Reviews() {
   const displaySets = [...sets, ...sets];
 
   return (
-    <section id="reviews" className="py-24 bg-white dark:bg-gray-950 transition-colors duration-300 overflow-hidden">
+    <section id="reviews" className="min-h-screen py-16 md:py-20 flex flex-col justify-center bg-white dark:bg-gray-950 transition-colors duration-300 overflow-hidden">
       <div className="w-full">
         
-        {/* Header Block */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20 px-6">
+        {/* Header Block with Stats Box */}
+        <div className="text-center max-w-5xl mx-auto mb-8 md:mb-10 px-6 flex flex-col items-center">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-pangram text-3xl md:text-5xl font-black text-black dark:text-white tracking-tighter uppercase mb-6"
+            className="font-pangram text-5xl md:text-7xl lg:text-8xl font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-transparent via-gray-400 dark:via-gray-500 to-transparent pb-2"
           >
-            Our Results <span className="text-brndo-red">Speak Loudest</span>
+            TESTIMONIALS
           </motion.h2>
-          <motion.p 
+
+          {/* Stats Box */}
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg text-gray-600 dark:text-gray-400 font-light"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-brndo-lightRed dark:bg-brndo-red/10 rounded-3xl px-6 py-6 md:px-12 md:py-8 flex flex-col md:flex-row items-center justify-between w-full max-w-4xl gap-6 md:gap-4 shadow-sm border border-brndo-red/10"
           >
-            We don't focus on vanity metrics. We measure our performance based on scale, enterprise value, and profit margins.
-          </motion.p>
+            {/* Stat 1 */}
+            <div className="flex flex-col items-center justify-center">
+              <span className="font-pangram text-5xl md:text-6xl font-black text-brndo-red mb-1">24+</span>
+              <span className="text-xs md:text-sm font-bold text-gray-800 dark:text-gray-300 uppercase tracking-widest">finalised projects</span>
+            </div>
+
+            {/* Stat 2 */}
+            <div className="flex flex-col items-center justify-center">
+              <span className="font-pangram text-5xl md:text-6xl font-black text-brndo-red mb-1">98%</span>
+              <span className="text-xs md:text-sm font-bold text-gray-800 dark:text-gray-300 uppercase tracking-widest">client satisfaction rate</span>
+            </div>
+
+            {/* Stat 3 */}
+            <div className="flex flex-col items-center justify-center">
+              <span className="font-pangram text-5xl md:text-6xl font-black text-brndo-red mb-1">10M</span>
+              <span className="text-xs md:text-sm font-bold text-gray-800 dark:text-gray-300 uppercase tracking-widest">gross revenue</span>
+            </div>
+          </motion.div>
         </div>
 
         {/* Marquee Container */}
-        <div className="flex overflow-hidden group py-4">
+        <div className="flex overflow-hidden group py-2 mt-4 md:mt-6 w-full max-w-[1800px] mx-auto [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)] md:[mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] md:[-webkit-mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused]">
             {displaySets.map((setItem, index) => (
               <div key={index} className="flex flex-row items-center gap-3 md:gap-6 px-2 md:px-3">
                 
                 {/* Media Block (Video/Photo Placeholder) */}
-                <div className="relative rounded-2xl overflow-hidden w-[200px] h-[280px] md:w-[260px] md:h-[350px] shadow-md flex-shrink-0 bg-gray-100 dark:bg-gray-900 border border-gray-200/50 dark:border-gray-800/50 group/media cursor-pointer">
+                <div className="relative rounded-2xl overflow-hidden w-[200px] h-[220px] md:w-[260px] md:h-[280px] shadow-md flex-shrink-0 bg-gray-100 dark:bg-gray-900 border border-gray-200/50 dark:border-gray-800/50 group/media cursor-pointer">
                   <img 
                     src={mediaPlaceholders[setItem]} 
                     alt="Product Media Placeholder" 
@@ -59,7 +77,7 @@ export default function Reviews() {
                 </div>
 
                 {/* Testimonial Block */}
-                <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 dark:from-red-950/40 dark:via-orange-950/40 dark:to-amber-950/40 border border-gray-100 dark:border-gray-800 shadow-md p-6 md:p-8 w-[240px] h-[280px] md:w-[320px] md:h-[350px] flex-shrink-0 flex items-center justify-center cursor-default">
+                <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 dark:from-red-950/40 dark:via-orange-950/40 dark:to-amber-950/40 border border-gray-100 dark:border-gray-800 shadow-md p-6 md:p-8 w-[240px] h-[220px] md:w-[320px] md:h-[280px] flex-shrink-0 flex items-center justify-center cursor-default">
                   
                   {/* Bottom Left Text */}
                   <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 font-pangram font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest text-xs z-10">
