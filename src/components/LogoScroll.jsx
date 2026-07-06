@@ -43,7 +43,7 @@ export default function LogoScroll() {
     if (window.innerWidth >= 768) return; // Skip on desktop
     const mobileInterval = setInterval(() => {
       setMobileIndex((prev) => (prev + 1) % clientLogos.length);
-    }, 2500);
+    }, 1200);
     return () => clearInterval(mobileInterval);
   }, []);
 
@@ -129,7 +129,7 @@ export default function LogoScroll() {
                   filter: isCenter ? 'grayscale(0%)' : 'grayscale(100%)'
                 }}
                 exit={{ opacity: 0, x: -50, scale: 0.8 }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
                 className="h-12 sm:h-16 w-auto object-contain flex-shrink-0 mx-6"
               />
             );
