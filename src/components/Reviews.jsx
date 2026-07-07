@@ -35,21 +35,21 @@ export default function Reviews() {
   return (
     <section id="reviews" className="min-h-screen py-16 md:py-20 flex flex-col justify-center bg-white dark:bg-gray-950 transition-colors duration-300 overflow-hidden">
       <div className="w-full">
-        
+
         {/* Header Block with Stats Box */}
         <div className="text-center max-w-5xl mx-auto mb-8 md:mb-10 px-6 flex flex-col items-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-pangram text-5xl md:text-7xl lg:text-8xl font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-transparent via-gray-400 dark:via-gray-500 to-transparent pb-2"
+            className="font-pangram text-5xl md:text-7xl lg:text-[9rem] font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-transparent from-[15%] via-gray-500 dark:via-gray-300 via-50% to-transparent to-[85%] pb-4 whitespace-nowrap"
           >
             TESTIMONIALS
           </motion.h2>
 
           {/* Stats Box */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -81,12 +81,12 @@ export default function Reviews() {
           <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused]">
             {displaySets.map((setItem, index) => (
               <div key={index} className="flex flex-row items-center gap-3 md:gap-6 px-2 md:px-3">
-                
+
                 {/* Media Block (Video/Photo Placeholder) */}
                 <div className="relative rounded-2xl overflow-hidden w-[200px] h-[260px] md:w-[260px] md:h-[320px] shadow-md flex-shrink-0 bg-gray-100 dark:bg-gray-900 border border-gray-200/50 dark:border-gray-800/50 group/media cursor-pointer">
-                  <img 
-                    src={mediaPlaceholders[setItem]} 
-                    alt="Product Media Placeholder" 
+                  <img
+                    src={mediaPlaceholders[setItem]}
+                    alt="Product Media Placeholder"
                     className="w-full h-full object-cover filter brightness-90 transition-transform duration-700 ease-out group-hover/media:scale-105 group-hover/media:brightness-100"
                   />
                   {/* Subtle overlay icon representing video play, purely aesthetic placeholder */}
@@ -99,7 +99,7 @@ export default function Reviews() {
 
                 {/* Testimonial Block */}
                 <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 dark:from-red-950/40 dark:via-orange-950/40 dark:to-amber-950/40 border border-gray-100 dark:border-gray-800 shadow-md p-6 md:p-8 w-[280px] h-[260px] md:w-[380px] md:h-[320px] flex-shrink-0 flex flex-col justify-between cursor-default">
-                  
+
                   {/* Content Area */}
                   <div className="flex flex-col gap-3 md:gap-4">
                     <div className="flex items-center gap-3">
@@ -113,7 +113,7 @@ export default function Reviews() {
                       {testimonialData[setItem].text}
                     </p>
                   </div>
-                  
+
                   {/* Bottom Left Button */}
                   <div className="mt-auto pt-4 self-start">
                     <button className="bg-black text-white px-5 py-2 md:px-6 md:py-2.5 rounded-md text-xs md:text-sm font-semibold uppercase hover:bg-gray-900 dark:bg-brndo-red dark:hover:bg-brndo-darkRed cursor-pointer transition-colors shadow-sm">

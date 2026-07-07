@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import CaseStudies from './components/CaseStudies';
 import Services from './components/Services';
 import Metrics from './components/Metrics';
 import CTA from './components/CTA';
@@ -16,6 +17,7 @@ function App() {
         <Navbar />
         {/* Main Content Sections */}
         <Hero />
+        <CaseStudies />
         {/* <Services /> */}
         {/* <Metrics /> */}
         {/* <CTA /> */}
