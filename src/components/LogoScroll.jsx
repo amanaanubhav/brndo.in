@@ -75,7 +75,7 @@ export default function LogoScroll() {
               key={idx}
               src={`/${logo}`}
               alt={`Client Logo`}
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0 cursor-pointer"
+              className="h-10 md:h-14 lg:h-18 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0 cursor-pointer"
             />
           ))}
         </div>
@@ -102,7 +102,7 @@ export default function LogoScroll() {
                 }}
                 exit={{ opacity: 0, x: -50, scale: 0.8 }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="h-16 sm:h-20 w-auto object-contain flex-shrink-0 mx-6"
+                className="h-14 sm:h-16 w-auto object-contain flex-shrink-0 mx-6"
               />
             );
           })}
