@@ -7,7 +7,7 @@ export default function Hero() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-48 pb-20 overflow-hidden transition-colors duration-300">
+    <section className="relative min-h-screen flex items-center pt-32 md:pt-40 pb-16 overflow-hidden transition-colors duration-300">
       {/* Background Styling: Premium Gradients & Grid */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 bg-white dark:bg-gray-950">
         <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brndo-red/10 dark:bg-brndo-red/5 blur-[120px]" />
@@ -27,7 +27,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-pangram text-[40px] leading-none sm:text-6xl lg:text-7xl font-black text-black dark:text-white tracking-tighter mb-16 sm:mb-20 uppercase flex flex-col items-center w-full"
+          className="font-pangram text-[40px] leading-none sm:text-6xl lg:text-7xl font-black text-black dark:text-white tracking-tighter mb-10 sm:mb-12 uppercase flex flex-col items-center w-full"
         >
           <span className="flex flex-col md:flex-row items-center justify-center gap-1 sm:gap-3 md:gap-4 flex-nowrap whitespace-nowrap">
             <span className="block">Your Partner In</span>

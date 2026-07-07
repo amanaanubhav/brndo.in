@@ -1,4 +1,3 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -47,17 +46,6 @@ export default function LogoScroll() {
     return () => clearInterval(mobileInterval);
   }, []);
 
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -250, behavior: 'smooth' });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 250, behavior: 'smooth' });
-    }
-  };
 
   // Calculate visible indices for mobile
   const visibleIndices = [
@@ -71,23 +59,15 @@ export default function LogoScroll() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
-      className="mt-16 md:mt-36 w-full max-w-4xl mx-auto flex flex-col items-center relative"
+      className="mt-12 md:mt-20 w-full max-w-6xl mx-auto flex flex-col items-center relative"
     >
       {/* --- DESKTOP VIEW --- */}
-      <div className="hidden md:flex w-full items-center justify-between gap-8">
-        <button
-          onClick={scrollLeft}
-          className="flex-shrink-0 p-3 rounded-full bg-white text-black border border-gray-200 hover:bg-brndo-red hover:text-white hover:border-brndo-red transition-all duration-300 shadow-md"
-          aria-label="Scroll left"
-        >
-          <ChevronLeft size={20} />
-        </button>
-
+      <div className="hidden md:flex w-full items-center justify-center gap-8">
         <div
           ref={scrollRef}
           onMouseEnter={() => setIsAutoScrolling(false)}
           onMouseLeave={() => setIsAutoScrolling(true)}
-          className="flex items-center gap-16 overflow-x-hidden scroll-smooth w-full px-2 py-6"
+          className="flex items-center justify-center gap-16 md:gap-24 overflow-x-hidden scroll-smooth w-full px-2 py-6"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {displayLogos.map((logo, idx) => (
@@ -95,18 +75,10 @@ export default function LogoScroll() {
               key={idx}
               src={`/${logo}`}
               alt={`Client Logo`}
-              className="h-14 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0 cursor-pointer"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0 cursor-pointer"
             />
           ))}
         </div>
-
-        <button
-          onClick={scrollRight}
-          className="flex-shrink-0 p-3 rounded-full bg-white text-black border border-gray-200 hover:bg-brndo-red hover:text-white hover:border-brndo-red transition-all duration-300 shadow-md"
-          aria-label="Scroll right"
-        >
-          <ChevronRight size={20} />
-        </button>
       </div>
 
       {/* --- MOBILE VIEW --- */}
@@ -130,7 +102,7 @@ export default function LogoScroll() {
                 }}
                 exit={{ opacity: 0, x: -50, scale: 0.8 }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="h-12 sm:h-16 w-auto object-contain flex-shrink-0 mx-6"
+                className="h-16 sm:h-20 w-auto object-contain flex-shrink-0 mx-6"
               />
             );
           })}
