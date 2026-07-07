@@ -35,12 +35,12 @@ export default function FAQ() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
         
         {/* Top Tabs */}
-        <div className="flex justify-center gap-2 md:gap-4 mb-16 md:mb-24 overflow-x-auto pb-2">
+        <div className="flex justify-center gap-2 md:gap-4 mb-8 md:mb-12 overflow-x-auto pb-2">
           {tabs.map(tab => (
             <button
               key={tab}
               onClick={() => handleTabChange(tab)}
-              className={`px-5 py-3 md:px-8 md:py-4 rounded-xl font-pangram text-sm md:text-base transition-all duration-300 whitespace-nowrap ${
+              className={`px-5 py-2 md:px-8 md:py-2.5 rounded-lg font-pangram text-sm md:text-base transition-all duration-300 whitespace-nowrap ${
                 activeTab === tab
                   ? 'bg-brndo-lightRed text-brndo-red font-bold shadow-sm'
                   : 'text-black dark:text-white font-normal hover:bg-gray-100 dark:hover:bg-gray-900'
@@ -61,9 +61,9 @@ export default function FAQ() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="font-pangram text-4xl md:text-5xl lg:text-6xl font-light text-black dark:text-white uppercase leading-tight tracking-wide"
+              className="font-pangram text-3xl md:text-4xl lg:text-5xl font-light text-black dark:text-white uppercase leading-tight tracking-wide"
             >
-              FREQUENTLY ASKED<br/>QUESTIONS.
+              <span className="whitespace-nowrap">FREQUENTLY ASKED</span><br/>QUESTIONS.
             </motion.h2>
           </div>
 
