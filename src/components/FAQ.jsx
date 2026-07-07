@@ -33,18 +33,17 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
-        
+
         {/* Top Tabs */}
         <div className="flex justify-center gap-2 md:gap-4 mb-8 md:mb-12 overflow-x-auto pb-2">
           {tabs.map(tab => (
             <button
               key={tab}
               onClick={() => handleTabChange(tab)}
-              className={`px-5 py-2 md:px-8 md:py-2.5 rounded-lg font-pangram text-sm md:text-base transition-all duration-300 whitespace-nowrap ${
-                activeTab === tab
-                  ? 'bg-brndo-lightRed text-brndo-red font-bold shadow-sm'
-                  : 'text-black dark:text-white font-normal hover:bg-gray-100 dark:hover:bg-gray-900'
-              }`}
+              className={`px-5 py-1.2 md:px-8 md:py-1 rounded-lg font-pangram text-sm md:text-base transition-all duration-300 whitespace-nowrap ${activeTab === tab
+                ? 'bg-brndo-lightRed text-brndo-red font-bold shadow-sm'
+                : 'text-black dark:text-white font-normal hover:bg-gray-100 dark:hover:bg-gray-900'
+                }`}
             >
               {tab}
             </button>
@@ -53,17 +52,17 @@ export default function FAQ() {
 
         {/* Layout Container */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 w-full items-start">
-          
+
           {/* Left Side: Title */}
           <div className="lg:w-1/3 lg:sticky lg:top-32">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="font-pangram text-3xl md:text-4xl lg:text-5xl font-light text-black dark:text-white uppercase leading-tight tracking-wide"
             >
-              <span className="whitespace-nowrap">FREQUENTLY ASKED</span><br/>QUESTIONS.
+              <span className="whitespace-nowrap">FREQUENTLY ASKED</span><br />QUESTIONS.
             </motion.h2>
           </div>
 
@@ -81,7 +80,7 @@ export default function FAQ() {
                 {faqData[activeTab].map((faq, idx) => {
                   const isOpen = openIndex === idx;
                   return (
-                    <div 
+                    <div
                       key={idx}
                       className="bg-brndo-lightRed dark:bg-brndo-red/10 border border-brndo-red/10 rounded-xl overflow-hidden shadow-sm transition-colors duration-300"
                     >
@@ -121,7 +120,7 @@ export default function FAQ() {
               </motion.div>
             </AnimatePresence>
           </div>
-          
+
         </div>
       </div>
     </section>
