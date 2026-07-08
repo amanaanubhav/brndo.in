@@ -27,6 +27,60 @@ const testimonialData = [
   }
 ];
 
+const StatMeter = ({ value, label, percentage }) => {
+  const radius = 85;
+  const circumference = 2 * Math.PI * radius;
+  const arcLength = circumference * 0.75;
+  const gapLength = circumference * 0.25;
+  const strokeDasharray = `${arcLength} ${gapLength}`;
+  const progressLength = arcLength * (percentage / 100);
+  
+  // Calculate coordinates for the handle dot
+  const theta = (percentage / 100 * 270) * (Math.PI / 180);
+  const cx = 100 + radius * Math.cos(theta);
+  const cy = 100 + radius * Math.sin(theta);
+
+  return (
+    <div className="relative flex flex-col items-center justify-center w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80">
+      <svg className="absolute inset-0 w-full h-full transform rotate-[135deg] drop-shadow-sm" viewBox="0 0 200 200">
+        {/* Background Arc */}
+        <circle 
+          cx="100" cy="100" r={radius} 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="1.5" 
+          className="text-gray-200 dark:text-gray-800"
+          strokeDasharray={strokeDasharray}
+          strokeLinecap="round"
+        />
+        {/* Progress Arc */}
+        <circle 
+          cx="100" cy="100" r={radius} 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="2.5"
+          className="text-black dark:text-white transition-all duration-1000 ease-out"
+          strokeDasharray={`${progressLength} ${circumference}`}
+          strokeLinecap="round"
+        />
+        {/* Dot Handle */}
+        <circle 
+          cx={cx} cy={cy} r="3"
+          fill="white"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          className="text-black dark:text-white"
+        />
+      </svg>
+      {/* Content */}
+      <div className="flex flex-col items-center justify-center text-center mt-4">
+        <span className="font-pangram text-6xl md:text-7xl font-black text-brndo-red mb-2">{value}</span>
+        <span className="text-base md:text-lg font-light text-gray-800 dark:text-gray-300 px-6 leading-tight">{label}</span>
+      </div>
+    </div>
+  );
+};
+
 export default function Reviews() {
   const sets = [0, 1, 2];
   // To make infinite scroll seamless, we duplicate the sets
@@ -37,13 +91,13 @@ export default function Reviews() {
       <div className="w-full">
 
         {/* Header Block with Stats Box */}
-        <div className="text-center max-w-5xl mx-auto mb-8 md:mb-10 px-6 flex flex-col items-center">
+        <div className="text-center w-full px-6 flex flex-col items-center relative">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-pangram text-4xl md:text-6xl lg:text-[8rem] font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-gray-400 dark:from-gray-400 via-gray-400/40 dark:via-gray-400/40 to-transparent pb-0.75 whitespace-nowrap"
+            className="font-pangram text-4xl md:text-6xl lg:text-[8rem] font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-gray-400 dark:from-gray-400 via-gray-400/40 dark:via-gray-400/40 to-transparent pb-0.75 whitespace-nowrap relative z-0"
           >
             TESTIMONIALS
           </motion.h2>
@@ -54,25 +108,11 @@ export default function Reviews() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-brndo-lightRed dark:bg-brndo-red/10 rounded-md px-6 py-6 md:px-12 md:py-8 flex flex-col md:flex-row items-start md:items-center justify-between w-full max-w-4xl gap-6 md:gap-4 shadow-sm border border-brndo-red/10"
+            className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl gap-12 md:gap-24 lg:gap-32 relative z-10 -mt-2 md:-mt-4 lg:-mt-6"
           >
-            {/* Stat 1 */}
-            <div className="flex flex-col items-start justify-center">
-              <span className="font-pangram text-5xl md:text-6xl font-black text-brndo-red mb-1">24+</span>
-              <span className="text-xs md:text-sm font-light text-gray-800 dark:text-gray-300 uppercase tracking-widest text-left">finalised projects</span>
-            </div>
-
-            {/* Stat 2 */}
-            <div className="flex flex-col items-start justify-center">
-              <span className="font-pangram text-5xl md:text-6xl font-black text-brndo-red mb-1">98%</span>
-              <span className="text-xs md:text-sm font-light text-gray-800 dark:text-gray-300 uppercase tracking-widest text-left">client satisfaction rate</span>
-            </div>
-
-            {/* Stat 3 */}
-            <div className="flex flex-col items-start justify-center">
-              <span className="font-pangram text-5xl md:text-6xl font-black text-brndo-red mb-1">10M</span>
-              <span className="text-xs md:text-sm font-light text-gray-800 dark:text-gray-300 uppercase tracking-widest text-left">gross revenue</span>
-            </div>
+            <StatMeter value="26+" label="Finalised Projects" percentage={35} />
+            <StatMeter value="98%" label="Client Satisfaction" percentage={95} />
+            <StatMeter value="10M" label="Gross Revenue" percentage={15} />
           </motion.div>
         </div>
 
