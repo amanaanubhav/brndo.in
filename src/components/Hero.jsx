@@ -27,11 +27,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-pangram text-[40px] leading-none sm:text-6xl lg:text-7xl font-black text-black dark:text-white tracking-tighter mb-10 sm:mb-12 uppercase flex flex-col items-center w-full"
+          className="font-pangram text-[40px] leading-none sm:text-6xl lg:text-7xl font-light text-black dark:text-white tracking-wide mb-10 sm:mb-12 flex flex-col items-center w-full"
         >
           <span className="flex flex-col md:flex-row items-center justify-center gap-1 sm:gap-3 md:gap-4 flex-nowrap whitespace-nowrap">
             <span className="block">Your Partner In</span>
-            <span className="text-brndo-red flex items-center gap-3 md:gap-4 mt-2 md:mt-0">
+            <span className="text-brndo-darkRed flex items-center gap-3 md:gap-4 mt-2 md:mt-0">
               <span>Digital</span>
               <img 
                 src="/image.png" 

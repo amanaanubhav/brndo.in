@@ -10,7 +10,7 @@ export default {
       colors: {
         brndo: {
           red: '#800000',
-          darkRed: '#4A0000',
+          darkRed: '#673131',
           lightRed: '#EBD4CB',
         },
       },
