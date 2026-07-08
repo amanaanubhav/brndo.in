@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         brndo: {
-          red: '#800000',
+          red: '#673131',
           darkRed: '#673131',
           lightRed: '#EBD4CB',
         },

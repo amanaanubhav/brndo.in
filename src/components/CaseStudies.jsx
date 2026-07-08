@@ -50,7 +50,7 @@ export default function CaseStudies() {
              {/* Content Layer */}
              <div className="relative z-10 flex flex-col w-full h-full gap-10 md:gap-14 flex-1">
                 {/* Heading */}
-                <h3 className="font-pangram text-[24px] md:text-[32px] lg:text-[40px] leading-[1.1] md:leading-[60px] tracking-wide md:tracking-[-0.02em] text-white font-light md:whitespace-nowrap w-full">
+                <h3 className="font-pangram text-[20px] md:text-[28px] lg:text-[32px] leading-[1.1] md:leading-[60px] tracking-widest text-white font-thin md:whitespace-nowrap w-full">
                   Proven Transformations for Sustainable Business
                 </h3>
 
@@ -60,7 +60,7 @@ export default function CaseStudies() {
                    <div className="border border-white rounded-[20px] flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm group/card cursor-pointer transition-colors hover:bg-white/10 min-h-[300px] md:min-h-[344px]">
                       <div className="flex-1 w-[calc(100%+2px)] -ml-[1px] -mt-[1px] bg-transparent relative overflow-hidden border-b border-l border-r border-white rounded-b-[20px] z-10"></div>
                       <div className="h-[100px] md:h-[120px] flex flex-col justify-center px-6 md:px-8 bg-transparent -mt-[20px] pt-[20px]">
-                         <span className="font-pangram text-[18px] md:text-[24px] lg:text-[26px] leading-[1.2] md:leading-[30px] tracking-[-0.02em] text-white font-medium">
+                         <span className="font-pangram text-[14px] md:text-[18px] lg:text-[20px] leading-[1.3] md:leading-[26px] tracking-wide text-white font-thin opacity-90">
                            Logos that Authentically tell your<br className="hidden lg:block" /> brand story
                          </span>
                       </div>
@@ -70,7 +70,7 @@ export default function CaseStudies() {
                    <div className="border border-white rounded-[20px] flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm group/card cursor-pointer transition-colors hover:bg-white/10 min-h-[300px] md:min-h-[344px]">
                       <div className="flex-1 w-[calc(100%+2px)] -ml-[1px] -mt-[1px] bg-transparent relative overflow-hidden border-b border-l border-r border-white rounded-b-[20px] z-10"></div>
                       <div className="h-[100px] md:h-[120px] flex flex-col justify-center px-6 md:px-8 bg-transparent -mt-[20px] pt-[20px]">
-                         <span className="font-pangram text-[18px] md:text-[24px] lg:text-[26px] leading-[1.2] md:leading-[30px] tracking-[-0.02em] text-white font-medium">
+                         <span className="font-pangram text-[14px] md:text-[18px] lg:text-[20px] leading-[1.3] md:leading-[26px] tracking-wide text-white font-thin opacity-90">
                            Cohesive Brand Identity for<br className="hidden lg:block" /> Instant Customer Recognition
                          </span>
                       </div>
@@ -80,7 +80,7 @@ export default function CaseStudies() {
                    <div className="border border-white rounded-[20px] flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm group/card cursor-pointer transition-colors hover:bg-white/10 min-h-[300px] md:min-h-[344px]">
                       <div className="flex-1 w-[calc(100%+2px)] -ml-[1px] -mt-[1px] bg-transparent relative overflow-hidden border-b border-l border-r border-white rounded-b-[20px] z-10"></div>
                       <div className="h-[100px] md:h-[120px] flex flex-col justify-center px-6 md:px-8 bg-transparent -mt-[20px] pt-[20px]">
-                         <span className="font-pangram text-[18px] md:text-[24px] lg:text-[26px] leading-[1.2] md:leading-[30px] tracking-[-0.02em] text-white font-medium">
+                         <span className="font-pangram text-[14px] md:text-[18px] lg:text-[20px] leading-[1.3] md:leading-[26px] tracking-wide text-white font-thin opacity-90">
                            Strategic Packaging Design that builds<br className="hidden lg:block" /> deep emotional connections
                          </span>
                       </div>
@@ -90,7 +90,7 @@ export default function CaseStudies() {
                    <div className="border border-white rounded-[20px] flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm group/card cursor-pointer transition-colors hover:bg-white/10 min-h-[300px] md:min-h-[344px]">
                       <div className="flex-1 w-[calc(100%+2px)] -ml-[1px] -mt-[1px] bg-transparent relative overflow-hidden border-b border-l border-r border-white rounded-b-[20px] z-10"></div>
                       <div className="h-[100px] md:h-[120px] flex flex-col justify-center px-6 md:px-8 bg-transparent -mt-[20px] pt-[20px]">
-                         <span className="font-pangram text-[18px] md:text-[24px] lg:text-[26px] leading-[1.2] md:leading-[30px] tracking-[-0.02em] text-white font-medium">
+                         <span className="font-pangram text-[14px] md:text-[18px] lg:text-[20px] leading-[1.3] md:leading-[26px] tracking-wide text-white font-thin opacity-90">
                            Graphic Designs that<br className="hidden lg:block" /> Speak Directly to Audience
                          </span>
                       </div>

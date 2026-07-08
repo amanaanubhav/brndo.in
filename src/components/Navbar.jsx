@@ -109,9 +109,6 @@ export default function Navbar() {
           >
             Contact Us
           </a>
-          {/* <a href="#contact" className="flex items-center justify-center w-11 h-11 rounded-md bg-black text-white dark:bg-white dark:text-black shadow-sm transition-transform active:scale-95">
-            <i className="fi fi-sr-phone-call text-[18px] mt-[2px]"></i> 
-            / </a> */}
           <button
             className="p-2 -mr-2 text-gray-900 dark:text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
