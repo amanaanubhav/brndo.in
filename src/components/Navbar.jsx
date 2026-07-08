@@ -38,12 +38,12 @@ export default function Navbar() {
     <nav className={cn(
       'fixed top-0 w-full z-50 transition-all duration-300 ease-in-out',
       isScrolled
-        ? 'bg-white/60 dark:bg-gray-950/80 backdrop-blur-sm shadow-sm py-2'
-        : 'bg-white dark:bg-gray-950 py-3 md:py-4'
+        ? 'bg-white/60 dark:bg-gray-950/80 backdrop-blur-sm shadow-sm py-3'
+        : 'bg-white dark:bg-gray-950 py-4 md:py-5'
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex-none z-50 -ml-4 md:-ml-16 lg:-ml-20 -my-6 md:-my-10 lg:-my-12">
+        <div className="flex-none z-50 -ml-4 md:-ml-16 lg:-ml-20 -my-3 md:-my-5 lg:-my-6">
           <a href="#">
             <img src="/brndo_logo.svg" alt="Brndo Logo" className="h-24 md:h-28 lg:h-32 w-auto dark:brightness-0 dark:invert transition-all" />
           </a>
