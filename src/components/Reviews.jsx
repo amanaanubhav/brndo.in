@@ -74,8 +74,8 @@ const StatMeter = ({ value, label, percentage }) => {
       </svg>
       {/* Content */}
       <div className="flex flex-col items-center justify-center text-center mt-4">
-        <span className="font-pangram text-6xl md:text-7xl font-black text-brndo-red mb-2">{value}</span>
-        <span className="text-base md:text-lg font-light text-gray-800 dark:text-gray-300 px-6 leading-tight">{label}</span>
+        <span className="font-pangram text-[60px] md:text-[92px] leading-[1] md:leading-[100px] tracking-[-0.02em] font-semibold text-brndo-red mb-2">{value}</span>
+        <span className="font-pangram text-[18px] md:text-[25px] leading-[1.2] md:leading-[28px] tracking-[-0.02em] font-light text-black dark:text-white px-4 max-w-[220px]">{label}</span>
       </div>
     </div>
   );
