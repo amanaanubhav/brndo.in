@@ -59,7 +59,7 @@ export default function LogoScroll() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
-      className="mt-12 md:mt-20 w-full max-w-6xl mx-auto flex flex-col items-center relative"
+      className="mt-12 md:mt-20 w-full max-w-6xl mx-auto flex flex-col items-center relative [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]"
     >
       {/* --- DESKTOP VIEW --- */}
       <div className="hidden md:flex w-full items-center justify-center gap-8">
