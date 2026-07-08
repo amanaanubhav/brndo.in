@@ -18,22 +18,89 @@ export default function CaseStudies() {
           </motion.h2>
         </div>
 
-        {/* Big Image Block */}
+        {/* CSS Gradient Block (Replacing Image) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-6xl mx-auto relative z-10 group overflow-hidden rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800"
+          className="w-full max-w-6xl mx-auto relative z-10 group overflow-hidden rounded-[20px] shadow-2xl border border-brndo-red/10 dark:border-brndo-red/20"
         >
-          {/* Using comp2-gradient.png */}
-          <img
-            src="/comp2-gradient.png"
-            alt="Case Studies Compilation"
-            className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-[1.02]"
-          />
+          <div className="w-full min-h-[800px] flex flex-col p-6 sm:p-10 md:p-16 bg-gradient-to-br from-black via-[#1a0000] to-[#3a0000] relative overflow-hidden">
+             {/* Background Effects */}
+             <div className="absolute inset-0 w-full h-full pointer-events-none transform transition-transform duration-1000 ease-out group-hover:scale-[1.02]">
+               {/* Deep Black Core */}
+               <div className="absolute inset-0 bg-black/40"></div>
+               
+               {/* Glowing Red Orbs */}
+               <div className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] bg-brndo-red rounded-full blur-[130px] opacity-40 mix-blend-screen transition-transform duration-1000 group-hover:translate-x-8 group-hover:translate-y-8"></div>
+               
+               <div className="absolute -bottom-[40%] -right-[10%] w-[80%] h-[80%] bg-[#800000] rounded-full blur-[150px] opacity-50 mix-blend-screen transition-transform duration-1000 group-hover:-translate-x-8 group-hover:-translate-y-8"></div>
+               
+               {/* Center Dark Void */}
+               <div className="absolute top-[20%] left-[20%] w-[60%] h-[60%] bg-black rounded-full blur-[100px] opacity-80"></div>
+               
+               {/* Highlight Orb */}
+               <div className="absolute top-[40%] right-[30%] w-[30%] h-[30%] bg-brndo-lightRed rounded-full blur-[100px] opacity-20 mix-blend-overlay"></div>
+
+               {/* Texture Overlay */}
+               <div className="absolute inset-0 bg-[#D9D9D9] opacity-[0.03] mix-blend-overlay"></div>
+             </div>
+
+             {/* Content Layer */}
+             <div className="relative z-10 flex flex-col w-full h-full gap-10 md:gap-14 flex-1">
+                {/* Heading */}
+                <h3 className="font-pangram text-[24px] md:text-[32px] lg:text-[40px] leading-[1.1] md:leading-[60px] tracking-wide md:tracking-[-0.02em] text-white font-light md:whitespace-nowrap w-full">
+                  Proven Transformations for Sustainable Business
+                </h3>
+
+                {/* 2x2 Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 flex-1">
+                   {/* Box 1 */}
+                   <div className="border border-white rounded-[20px] flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm group/card cursor-pointer transition-colors hover:bg-white/10 min-h-[300px] md:min-h-[344px]">
+                      <div className="flex-1 w-[calc(100%+2px)] -ml-[1px] -mt-[1px] bg-transparent relative overflow-hidden border-b border-l border-r border-white rounded-b-[20px] z-10"></div>
+                      <div className="h-[100px] md:h-[120px] flex flex-col justify-center px-6 md:px-8 bg-transparent -mt-[20px] pt-[20px]">
+                         <span className="font-pangram text-[18px] md:text-[24px] lg:text-[26px] leading-[1.2] md:leading-[30px] tracking-[-0.02em] text-white font-medium">
+                           Logos that Authentically tell your<br className="hidden lg:block" /> brand story
+                         </span>
+                      </div>
+                   </div>
+                   
+                   {/* Box 2 */}
+                   <div className="border border-white rounded-[20px] flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm group/card cursor-pointer transition-colors hover:bg-white/10 min-h-[300px] md:min-h-[344px]">
+                      <div className="flex-1 w-[calc(100%+2px)] -ml-[1px] -mt-[1px] bg-transparent relative overflow-hidden border-b border-l border-r border-white rounded-b-[20px] z-10"></div>
+                      <div className="h-[100px] md:h-[120px] flex flex-col justify-center px-6 md:px-8 bg-transparent -mt-[20px] pt-[20px]">
+                         <span className="font-pangram text-[18px] md:text-[24px] lg:text-[26px] leading-[1.2] md:leading-[30px] tracking-[-0.02em] text-white font-medium">
+                           Cohesive Brand Identity for<br className="hidden lg:block" /> Instant Customer Recognition
+                         </span>
+                      </div>
+                   </div>
+
+                   {/* Box 3 */}
+                   <div className="border border-white rounded-[20px] flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm group/card cursor-pointer transition-colors hover:bg-white/10 min-h-[300px] md:min-h-[344px]">
+                      <div className="flex-1 w-[calc(100%+2px)] -ml-[1px] -mt-[1px] bg-transparent relative overflow-hidden border-b border-l border-r border-white rounded-b-[20px] z-10"></div>
+                      <div className="h-[100px] md:h-[120px] flex flex-col justify-center px-6 md:px-8 bg-transparent -mt-[20px] pt-[20px]">
+                         <span className="font-pangram text-[18px] md:text-[24px] lg:text-[26px] leading-[1.2] md:leading-[30px] tracking-[-0.02em] text-white font-medium">
+                           Strategic Packaging Design that builds<br className="hidden lg:block" /> deep emotional connections
+                         </span>
+                      </div>
+                   </div>
+
+                   {/* Box 4 */}
+                   <div className="border border-white rounded-[20px] flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm group/card cursor-pointer transition-colors hover:bg-white/10 min-h-[300px] md:min-h-[344px]">
+                      <div className="flex-1 w-[calc(100%+2px)] -ml-[1px] -mt-[1px] bg-transparent relative overflow-hidden border-b border-l border-r border-white rounded-b-[20px] z-10"></div>
+                      <div className="h-[100px] md:h-[120px] flex flex-col justify-center px-6 md:px-8 bg-transparent -mt-[20px] pt-[20px]">
+                         <span className="font-pangram text-[18px] md:text-[24px] lg:text-[26px] leading-[1.2] md:leading-[30px] tracking-[-0.02em] text-white font-medium">
+                           Graphic Designs that<br className="hidden lg:block" /> Speak Directly to Audience
+                         </span>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+
           {/* Subtle overlay for blending */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none mix-blend-overlay rounded-2xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none mix-blend-overlay rounded-[20px]"></div>
         </motion.div>
 
       </div>
