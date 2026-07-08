@@ -60,7 +60,7 @@ export default function FAQ() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="font-pangram text-3xl md:text-4xl lg:text-5xl font-light text-black dark:text-white uppercase leading-tight tracking-wide"
+              className="font-pangram text-3xl md:text-4xl lg:text-5xl font-light text-transparent bg-clip-text bg-gradient-to-b from-gray-400 dark:from-gray-400 via-gray-400/40 dark:via-gray-400/40 to-transparent uppercase leading-tight tracking-wide"
             >
               <span className="whitespace-nowrap">FREQUENTLY ASKED</span><br />QUESTIONS.
             </motion.h2>

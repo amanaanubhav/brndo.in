@@ -43,7 +43,7 @@ export default function Reviews() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-pangram text-4xl md:text-6xl lg:text-[8rem] font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-transparent from-[15%] via-gray-500 dark:via-gray-300 via-50% to-transparent to-[85%] pb-0.75 whitespace-nowrap"
+            className="font-pangram text-4xl md:text-6xl lg:text-[8rem] font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-gray-400 dark:from-gray-400 via-gray-400/40 dark:via-gray-400/40 to-transparent pb-0.75 whitespace-nowrap"
           >
             TESTIMONIALS
           </motion.h2>
