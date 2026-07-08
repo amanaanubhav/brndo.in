@@ -11,7 +11,7 @@ export default {
         brndo: {
           red: '#800000',
           darkRed: '#4A0000',
-          lightRed: '#EBD8D3',
+          lightRed: '#EBD4CB',
         },
       },
       fontFamily: {
