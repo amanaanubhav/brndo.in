@@ -27,7 +27,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-pangram text-[40px] leading-none sm:text-6xl lg:text-7xl font-light text-black dark:text-white tracking-wide mb-10 sm:mb-12 flex flex-col items-center w-full"
+          className="font-pangram text-[40px] leading-none sm:text-6xl lg:text-7xl font-light text-black dark:text-white tracking-wide mb-4 sm:mb-6 flex flex-col items-center w-full"
         >
           <span className="flex flex-col md:flex-row items-center justify-center gap-1 sm:gap-3 md:gap-4 flex-nowrap whitespace-nowrap">
             <span className="block">Your Partner In</span>
@@ -43,6 +43,16 @@ export default function Hero() {
           </span>
           <span className="block mt-2 sm:mt-3">& Development</span>
         </motion.h1>
+
+        {/* Hero Subheading */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="font-pangram text-sm sm:text-base md:text-lg font-light text-gray-600 dark:text-gray-400 max-w-2xl text-center mb-10 sm:mb-12"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </motion.p>
 
         {/* Call To Action Buttons */}
         <motion.div
