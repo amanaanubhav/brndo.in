@@ -43,9 +43,9 @@ export default function Navbar() {
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex-none z-50">
+        <div className="flex-none z-50 -ml-4 md:-ml-16 lg:-ml-20">
           <a href="#">
-            <img src="/brndo_logo.svg" alt="Brndo Logo" className="h-16 md:h-16 w-auto dark:brightness-0 dark:invert transition-all" />
+            <img src="/brndo_logo.svg" alt="Brndo Logo" className="h-24 md:h-28 lg:h-32 w-auto dark:brightness-0 dark:invert transition-all" />
           </a>
         </div>
 
