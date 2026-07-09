@@ -1,64 +1,31 @@
 import { motion } from 'framer-motion';
-import { Target, TrendingUp, Search, MousePointerClick, Smartphone, Mail } from 'lucide-react';
 
 const services = [
-  {
-    icon: <TrendingUp size={32} />,
-    title: 'Performance Ads',
-    description: 'Data-driven campaigns across Meta, Google, and TikTok designed to maximize ROAS and acquire high-LTV customers.',
-  },
-  {
-    icon: <Search size={32} />,
-    title: 'SEO & Content',
-    description: 'Dominate search rankings with technical SEO and intent-driven content that builds sustainable organic pipelines.',
-  },
-  {
-    icon: <MousePointerClick size={32} />,
-    title: 'Conversion Optimization',
-    description: 'A/B testing and UX enhancements to ensure every click counts, turning your traffic into revenue.',
-  },
-  {
-    icon: <Target size={32} />,
-    title: 'Programmatic Advertising',
-    description: 'Automated, highly targeted ad buying across the open web to reach your audience exactly where they are.',
-  },
-  {
-    icon: <Smartphone size={32} />,
-    title: 'App Growth',
-    description: 'End-to-end app store optimization (ASO) and user acquisition strategies to scale mobile apps globally.',
-  },
-  {
-    icon: <Mail size={32} />,
-    title: 'Retention Marketing',
-    description: 'Email and SMS automation flows that build loyalty, increase repeat purchase rates, and maximize lifetime value.',
-  },
+  { title: 'Branding' },
+  { title: 'UI/UX Design' },
+  { title: 'Strategy' },
+  { title: 'Design' },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-gray-50 dark:bg-transparent transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
+    <section id="services" className="py-16 md:py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
+        
+        {/* Header Block */}
+        <div className="text-center w-full -mb-4 md:-mb-10 relative z-0">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-6 tracking-tight transition-colors"
+            transition={{ duration: 0.8 }}
+            className="font-pangram text-5xl md:text-7xl lg:text-[9rem] font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-gray-400 dark:from-gray-400 via-gray-400/40 dark:via-gray-400/40 to-transparent pb-4 whitespace-nowrap"
           >
-            Full-Funnel <span className="text-brndo-red">Domination.</span>
+            SERVICES
           </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg text-gray-600 dark:text-gray-400 font-light transition-colors"
-          >
-            We don't just run ads. We engineer comprehensive growth systems tailored to your unit economics.
-          </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="w-full relative z-10 flex flex-col gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -66,15 +33,11 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-xl hover:shadow-brndo-red/5 hover:-translate-y-2 transition-all duration-300 group cursor-default"
+              className="w-full bg-brndo-lightRed rounded-[35px] p-3 flex min-h-[351px]"
             >
-              <div className="w-16 h-16 bg-red-50 dark:bg-gray-800 text-brndo-red rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brndo-red group-hover:text-white transition-colors duration-300">
-                {service.icon}
+              <div className="bg-white rounded-[31px] w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-start">
+                <h3 className="text-[30px] md:text-[50px] font-light tracking-[-0.02em] font-pangram text-black leading-tight">{service.title}</h3>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">{service.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400 font-light leading-relaxed transition-colors">
-                {service.description}
-              </p>
             </motion.div>
           ))}
         </div>

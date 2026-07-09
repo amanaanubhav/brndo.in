@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import CaseStudies from './components/CaseStudies';
 import Services from './components/Services';
+import Team from './components/Team';
 import Metrics from './components/Metrics';
 import CTA from './components/CTA';
 import Reviews from './components/Reviews';
@@ -18,7 +19,8 @@ function App() {
         {/* Main Content Sections */}
         <Hero />
         <CaseStudies />
-        {/* <Services /> */}
+        <Services />
+        <Team />
         {/* <Metrics /> */}
         {/* <CTA /> */}
         <Reviews />
