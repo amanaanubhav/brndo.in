@@ -9,6 +9,7 @@ import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Footer2 from './components/Footer2';
 import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
         <Reviews />
         <FAQ />
         <Contact />
-        <Footer />
+        {/* <Footer /> */}
+        <Footer2 />
       </div>
     </ThemeProvider>
   );
