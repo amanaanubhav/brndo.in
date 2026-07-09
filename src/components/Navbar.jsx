@@ -94,7 +94,7 @@ export default function Navbar() {
           <ThemeToggle />
           <a
             href="#contact"
-            className="bg-black text-white px-8 py-3 rounded-md text-base font-semibold uppercase hover:bg-gray-900 dark:bg-brndo-red dark:hover:bg-brndo-darkRed cursor-pointer transition-colors"
+            className="bg-black text-white px-8 py-3 rounded-md text-base font-semibold uppercase hover:bg-white hover:text-black hover:shadow-[4px_4px_12px_rgba(0,0,0,0.1)] dark:bg-brndo-red dark:hover:bg-white dark:hover:text-black transition-all duration-300 cursor-pointer"
           >
             Contact Us
           </a>
@@ -105,7 +105,7 @@ export default function Navbar() {
           <ThemeToggle />
           <a
             href="#contact"
-            className="bg-black text-white px-4 py-2 rounded-md text-xs font-bold uppercase hover:bg-gray-900 dark:bg-brndo-red dark:hover:bg-brndo-darkRed transition-colors whitespace-nowrap"
+            className="bg-black text-white px-4 py-2 rounded-md text-xs font-bold uppercase hover:bg-white hover:text-black hover:shadow-[4px_4px_12px_rgba(0,0,0,0.1)] dark:bg-brndo-red dark:hover:bg-white dark:hover:text-black transition-all duration-300 whitespace-nowrap"
           >
             Contact Us
           </a>
@@ -156,7 +156,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-6 w-full bg-black dark:bg-brndo-red text-white px-8 py-4 rounded-md text-lg font-bold hover:bg-gray-900 dark:hover:bg-brndo-darkRed transition-all duration-300 flex items-center justify-center gap-2 group"
+              className="mt-6 w-full bg-black dark:bg-brndo-red text-white px-8 py-4 rounded-md text-lg font-bold hover:bg-white hover:text-black hover:shadow-[4px_4px_12px_rgba(0,0,0,0.1)] dark:hover:bg-white dark:hover:text-black transition-all duration-300 flex items-center justify-center gap-2 group"
             >
               Contact Us
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
