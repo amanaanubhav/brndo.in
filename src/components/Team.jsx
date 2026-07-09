@@ -11,7 +11,7 @@ export default function Team() {
   return (
     <section id="team" className="py-16 md:py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
-        
+
         {/* Header Block */}
         <div className="text-center w-full -mb-4 md:-mb-10 relative z-0">
           <motion.h2
@@ -26,7 +26,7 @@ export default function Team() {
         </div>
 
         {/* Team Cards Grid */}
-        <div className="w-full relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mt-8 md:mt-12">
+        <div className="w-full relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mt-1 md:mt-2">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
@@ -38,7 +38,7 @@ export default function Team() {
             >
               {/* Profile Card Rectangle */}
               <div className="w-full h-[394px] bg-brndo-lightRed rounded-[20px] mb-4"></div>
-              
+
               {/* Profile Details */}
               <div className="flex flex-col text-left">
                 <h3 className="font-pangram font-semibold text-[32px] md:text-[40px] text-gray-900 dark:text-white leading-tight tracking-[-0.02em] transition-colors">
