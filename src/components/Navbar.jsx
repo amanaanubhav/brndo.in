@@ -102,19 +102,20 @@ export default function Navbar() {
 
         {/* Mobile Toggle & Icons */}
         <div className="md:hidden flex items-center gap-3 z-50">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <a
             href="#contact"
-            className="bg-black text-white px-4 py-2 rounded-md text-xs font-bold uppercase hover:bg-white hover:text-black hover:shadow-[4px_4px_12px_rgba(0,0,0,0.1)] dark:bg-brndo-red dark:hover:bg-white dark:hover:text-black transition-all duration-300 whitespace-nowrap"
+            className="bg-black text-white p-2 rounded-md hover:bg-white hover:text-black hover:shadow-[4px_4px_12px_rgba(0,0,0,0.1)] dark:bg-brndo-red dark:hover:bg-white dark:hover:text-black transition-all duration-300 flex items-center justify-center"
+            aria-label="Contact Us"
           >
-            Contact Us
+            <Phone size={20} />
           </a>
-          <button
+          {/* <button
             className="p-2 -mr-2 text-gray-900 dark:text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={34} /> : <Menu size={34} />}
-          </button>
+          </button> */}
         </div>
       </div>
 

@@ -20,14 +20,14 @@ export default function Hero() {
         ></div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 md:px-12 flex flex-col items-center text-center w-full relative z-10">
+      <div className="max-w-5xl mx-auto px-6 md:px-12 flex flex-col justify-evenly md:justify-start items-center text-center w-full min-h-[60vh] md:min-h-0 relative z-10">
 
         {/* Hero Title Area */}
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-pangram text-[40px] leading-none sm:text-6xl lg:text-7xl font-light text-black dark:text-white tracking-wide mb-4 sm:mb-6 flex flex-col items-center w-full"
+          className="font-pangram text-[40px] leading-none sm:text-6xl lg:text-7xl font-light text-black dark:text-white tracking-wide mb-0 md:mb-4 sm:mb-6 flex flex-col items-center w-full"
         >
           <span className="flex flex-col md:flex-row items-center justify-center gap-1 sm:gap-3 md:gap-4 flex-nowrap whitespace-nowrap">
             <span className="block">Your Partner In</span>
@@ -49,7 +49,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="font-pangram text-sm sm:text-base md:text-lg font-light text-gray-600 dark:text-gray-400 max-w-2xl text-center mb-10 sm:mb-12"
+          className="font-pangram text-sm sm:text-base md:text-lg font-light text-gray-600 dark:text-gray-400 max-w-2xl text-center mb-0 md:mb-10 sm:mb-12"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </motion.p>
