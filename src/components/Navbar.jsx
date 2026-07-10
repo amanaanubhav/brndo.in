@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Phone, ArrowRight } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { cn } from '../lib/utils';
 import ThemeToggle from './ThemeToggle';
 
@@ -105,10 +105,17 @@ export default function Navbar() {
           {/* <ThemeToggle /> */}
           <a
             href="#contact"
-            className="bg-black text-white p-2 rounded-md hover:bg-white hover:text-black hover:shadow-[4px_4px_12px_rgba(0,0,0,0.1)] dark:bg-brndo-red dark:hover:bg-white dark:hover:text-black transition-all duration-300 flex items-center justify-center"
+            className="w-[38px] h-[38px] bg-[#2B2B2B] rounded-[5px] flex items-center justify-center hover:scale-105 transition-all duration-300 shadow-md"
             aria-label="Contact Us"
           >
-            <Phone size={20} />
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="animate-ring">
+              {/* Solid Handset */}
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="white" />
+              {/* Wave 1 (Inner) */}
+              <path d="M15 6 A 5 5 0 0 1 20 11" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+              {/* Wave 2 (Outer) */}
+              <path d="M15 2 A 9 9 0 0 1 24 11" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
+            </svg>
           </a>
           {/* <button
             className="p-2 -mr-2 text-gray-900 dark:text-white"

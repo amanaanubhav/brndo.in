@@ -22,10 +22,20 @@ export default {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        ring: {
+          '0%': { transform: 'rotate(0)' },
+          '10%': { transform: 'rotate(15deg)' },
+          '20%': { transform: 'rotate(-10deg)' },
+          '30%': { transform: 'rotate(15deg)' },
+          '40%': { transform: 'rotate(-10deg)' },
+          '50%': { transform: 'rotate(0)' },
+          '100%': { transform: 'rotate(0)' },
         }
       },
       animation: {
         marquee: 'marquee 25s linear infinite',
+        ring: 'ring 2s ease-in-out infinite',
       }
     },
   },
