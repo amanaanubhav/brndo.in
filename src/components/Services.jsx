@@ -25,7 +25,8 @@ export default function Services() {
           </motion.h2>
         </div>
 
-        <div className="w-full relative z-10 flex flex-col gap-8">
+
+        <div className="w-full relative z-10 flex flex-col items-center md:items-stretch gap-6 md:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -33,11 +34,16 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="w-full bg-brndo-lightRed rounded-[35px] p-3 flex min-h-[351px]"
+              className="w-full bg-brndo-lightRed flex flex-col md:flex-row max-w-[370px] md:max-w-none h-[342px] md:h-auto md:min-h-[351px] rounded-[10px] md:rounded-[35px] p-[10px] md:p-3"
             >
-              <div className="bg-white rounded-[31px] w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-start">
-                <h3 className="text-[30px] md:text-[50px] font-light tracking-[-0.02em] font-pangram text-black leading-tight">{service.title}</h3>
+              {/* Inner White Box */}
+              <div className="bg-white flex flex-col justify-start w-full md:w-1/2 h-[138px] md:h-auto rounded-[10px] md:rounded-[31px] pt-[17px] pl-[19px] pr-[19px] pb-[17px] md:p-8 lg:p-12">
+                <h3 className="font-pangram text-black tracking-[-0.02em] text-[23.8px] md:text-[30px] lg:text-[50px] leading-[24px] md:leading-tight font-medium md:font-light">
+                  {service.title}
+                </h3>
               </div>
+              {/* Lower Area (remaining 50% light red box - hidden on desktop) */}
+              <div className="flex-1 w-full md:hidden"></div>
             </motion.div>
           ))}
         </div>
