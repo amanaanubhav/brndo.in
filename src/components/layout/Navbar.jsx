@@ -1,9 +1,10 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
-import { cn } from '../lib/utils';
-import ThemeToggle from './ThemeToggle';
-
+import { cn } from '@/lib/utils';
+import ThemeToggle from '@/components/ThemeToggle';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
