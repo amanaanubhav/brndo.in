@@ -1,3 +1,61 @@
+/* ============================================
+   BRNDO Global Styles
+   Merged from: index.css + App.css
+   ============================================ */
+
+/* ---- Font Imports ---- */
+/* Google Fonts (Inter, Outfit) loaded via next/font in layout.jsx */
+
+/* Setup for PP Pangram Font */
+@font-face {
+  font-family: 'PP Pangram';
+  src: url('/fonts/Pangram-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Pangram';
+  src: url('/fonts/Pangram-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Pangram';
+  src: url('/fonts/Pangram-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Pangram';
+  src: url('/fonts/Pangram-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-gray-900 font-sans antialiased overflow-x-hidden;
+  }
+}
+
+/* ============================================
+   App-level Styles (from App.css)
+   ============================================ */
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;

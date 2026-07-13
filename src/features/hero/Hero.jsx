@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
-import LogoScroll from './LogoScroll';
+import LogoScroll from '@/components/ui/LogoScroll';
 
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false);
@@ -41,7 +41,7 @@ export default function Hero() {
               <span>Design</span>
             </span>
           </span>
-          <span className="block mt-2 sm:mt-3">& Development</span>
+          <span className="block mt-2 sm:mt-3">&amp; Development</span>
         </motion.h1>
 
         {/* Hero Subheading */}
