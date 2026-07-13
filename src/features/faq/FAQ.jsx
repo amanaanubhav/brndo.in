@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
+import Button from '@/components/ui/Button';
+import { buttonData } from '@/data/buttons';
 
 export default function FAQ({ data }) {
   const [openIndex, setOpenIndex] = useState(null);
@@ -81,6 +83,19 @@ export default function FAQ({ data }) {
             })}
           </motion.div>
         </div>
+
+        {/* CTA Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-12 md:mt-16 relative z-10"
+        >
+          <Button href="#contact" variant="primary" className="px-8 py-4 sm:px-12 sm:py-5 text-base sm:text-lg">
+            {buttonData.hero.primary}
+          </Button>
+        </motion.div>
         
       </div>
     </section>

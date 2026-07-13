@@ -11,12 +11,12 @@ export const caseStudiesData = {
   },
   performanceMarketing: {
     heading: "CASE STUDIES",
-    subheading: "Proven Marketing Strategies for High Growth",
+    subheading: "Proven Transformations for<br class=\"hidden md:block\" /> Sustainable Business Growth",
     items: [
-      { text: "Ad Campaigns that Dramatically reduce<br class=\"hidden lg:block\" /> Cost Per Acquisition" },
-      { text: "SEO Strategies for<br class=\"hidden lg:block\" /> Long-term Organic Traffic" },
-      { text: "Conversion Optimization that multiplies<br class=\"hidden lg:block\" /> your Return on Ad Spend" },
-      { text: "Programmatic Advertising that<br class=\"hidden lg:block\" /> Targets the Perfect Audience" }
+      { text: "Leveraged YouTube Ads potential to achieve 2.63 ROAS" },
+      { text: "Scaled IAS Institute to ₹2.3+ Crore Revenue in 90 Days" },
+      { text: "1.74L+ Gross Sales in<br class=\"hidden lg:block\" /> First 20 days" },
+      { text: "Amazon Seller to D2C<br class=\"hidden lg:block\" /> Breakeven in 2 Months" }
     ]
   }
 };

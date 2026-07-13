@@ -44,9 +44,10 @@ export default function CaseStudies({ data }) {
              {/* Content Layer */}
              <div className="relative z-10 flex flex-col w-full h-full gap-10 md:gap-14 flex-1">
                 {/* Subheading */}
-                <h3 className="font-pangram text-[20px] md:text-[28px] lg:text-[32px] leading-[1.1] md:leading-[60px] tracking-widest text-white font-thin md:whitespace-nowrap w-full">
-                  {data.subheading}
-                </h3>
+                <h3 
+                  className="font-pangram text-[20px] md:text-[28px] lg:text-[32px] leading-[1.1] md:leading-[60px] tracking-widest text-white font-thin md:whitespace-nowrap w-full"
+                  dangerouslySetInnerHTML={{ __html: data.subheading }}
+                />
 
                 {/* Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 flex-1">
