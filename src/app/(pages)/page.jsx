@@ -1,7 +1,7 @@
 'use client';
 
 import Navbar from '@/components/layout/Navbar';
-import Hero from '@/features/hero/Hero';
+import Hero from '@/features/home/Hero';
 import CaseStudies from '@/features/case-studies/CaseStudies';
 import Services from '@/features/services/Services';
 import Team from '@/features/team/Team';
@@ -12,6 +12,8 @@ import FAQ from '@/features/faq/FAQ';
 import Contact from '@/features/contact/Contact';
 import Footer from '@/components/layout/Footer';
 import Footer2 from '@/components/layout/Footer2';
+import { caseStudiesData } from '@/data/caseStudies';
+import { faqsData } from '@/data/faqs';
 
 export default function HomePage() {
   return (
@@ -19,13 +21,13 @@ export default function HomePage() {
       <Navbar />
       {/* Main Content Sections */}
       <Hero />
-      <CaseStudies />
+      <CaseStudies data={caseStudiesData.home} />
       <Services />
       <Team />
       {/* <Metrics /> */}
       {/* <CTA /> */}
       <Reviews />
-      <FAQ />
+      <FAQ data={faqsData.home} />
       <Contact />
       {/* <Footer /> */}
       <Footer2 />

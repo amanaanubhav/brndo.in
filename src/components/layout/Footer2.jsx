@@ -1,3 +1,7 @@
+import { Instagram, Youtube } from 'lucide-react';
+import Button from '@/components/ui/Button';
+import { buttonData } from '@/data/buttons';
+
 export default function Footer2() {
   return (
     <footer className="bg-white dark:bg-gray-950 relative w-full pt-12 pb-6 overflow-hidden font-pangram transition-colors duration-300 border-t border-gray-100 dark:border-gray-900">
@@ -74,9 +78,9 @@ export default function Footer2() {
               <div className="w-full bg-white dark:bg-gray-900 border border-[#707070] dark:border-gray-700 rounded-[13px] h-[62px] flex items-center px-6 transition-colors">
                 <span className="font-light text-[18px] md:text-[21px] text-black dark:text-white opacity-40 tracking-[-0.02em]">Email</span>
               </div>
-              <button className="w-full sm:w-[300px] bg-[#2B2B2B] hover:bg-black dark:bg-brndo-red dark:hover:bg-red-700 transition-colors rounded-[13px] h-[61px] px-8 flex items-center justify-center self-start">
-                <span className="font-light text-[18px] md:text-[21px] text-white tracking-[-0.02em]">Subscribe</span>
-              </button>
+              <Button variant="primary" className="w-full sm:w-[300px] h-[61px]">
+                {buttonData.footer.subscribe}
+              </Button>
             </div>
           </div>
 
@@ -130,9 +134,9 @@ export default function Footer2() {
             <div className="w-full bg-white dark:bg-gray-900 border border-[#707070] dark:border-gray-700 rounded-[13px] h-[50px] flex items-center px-4 transition-colors">
               <span className="font-light text-[16px] text-black dark:text-white opacity-40 tracking-[-0.02em]">Email</span>
             </div>
-            <button className="w-full bg-[#2B2B2B] hover:bg-black dark:bg-brndo-red dark:hover:bg-red-700 transition-colors rounded-[13px] h-[50px] px-8 flex items-center justify-center self-start">
-              <span className="font-light text-[16px] text-white tracking-[-0.02em]">Subscribe</span>
-            </button>
+            <Button variant="primary" className="w-full h-[50px]">
+              {buttonData.footer.subscribe}
+            </Button>
           </div>
         </div>
 

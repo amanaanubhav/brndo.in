@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import ThemeToggle from '@/components/ThemeToggle';
+import Button from '@/components/ui/Button';
+import { buttonData } from '@/data/buttons';
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,7 +21,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Work', href: '#work' },
+    { name: 'Work', href: '/performance-marketing' },
     {
       name: 'Services',
       href: '#services',
@@ -93,12 +96,13 @@ export default function Navbar() {
         {/* Right side: Toggle & Contact */}
         <div className="hidden md:flex flex-none items-center gap-4 md:gap-6 z-50">
           <ThemeToggle />
-          <a
+          <Button
             href="#contact"
-            className="bg-black text-white px-8 py-3 rounded-md text-base font-semibold uppercase hover:bg-white hover:text-black hover:shadow-[4px_4px_12px_rgba(0,0,0,0.1)] dark:bg-brndo-red dark:hover:bg-white dark:hover:text-black transition-all duration-300 cursor-pointer"
+            variant="primary"
+            className="px-8 py-3"
           >
-            Contact Us
-          </a>
+            {buttonData.nav.contact}
+          </Button>
         </div>
 
         {/* Mobile Toggle & Icons */}
@@ -162,14 +166,15 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <a
+            <Button
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-6 w-full bg-black dark:bg-brndo-red text-white px-8 py-4 rounded-md text-lg font-bold hover:bg-white hover:text-black hover:shadow-[4px_4px_12px_rgba(0,0,0,0.1)] dark:hover:bg-white dark:hover:text-black transition-all duration-300 flex items-center justify-center gap-2 group"
+              variant="primary"
+              className="mt-6 w-full px-8 py-4 text-lg dark:bg-brndo-red group gap-2"
             >
-              Contact Us
+              {buttonData.nav.contact}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Button>
           </motion.div>
         )}
       </AnimatePresence>

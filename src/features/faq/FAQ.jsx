@@ -2,13 +2,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
 
-const faqs = Array(6).fill({
-  question: "QUESTION",
-  answer: "Sample answer content. Lorem ipsum dolor sit amet."
-});
-
-export default function FAQ() {
+export default function FAQ({ data }) {
   const [openIndex, setOpenIndex] = useState(null);
+
+  if (!data) return null;
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -27,7 +24,7 @@ export default function FAQ() {
             transition={{ duration: 0.8 }}
             className="font-pangram text-5xl md:text-7xl lg:text-[9rem] font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-gray-400 dark:from-gray-400 via-gray-400/40 dark:via-gray-400/40 to-transparent pb-4 whitespace-nowrap"
           >
-            FAQS
+            {data.heading}
           </motion.h2>
         </div>
 
@@ -40,7 +37,7 @@ export default function FAQ() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-4"
           >
-            {faqs.map((faq, idx) => {
+            {data.items.map((faq, idx) => {
               const isOpen = openIndex === idx;
               return (
                 <div
