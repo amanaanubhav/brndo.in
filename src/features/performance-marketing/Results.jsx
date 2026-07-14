@@ -43,7 +43,7 @@ export default function Results() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-pangram text-3xl md:text-[42.6px] font-semibold text-center text-black dark:text-white leading-tight md:leading-[75px] w-full"
+            className="font-pangram text-3xl md:text-[38px] font-light tracking-tight text-center text-black dark:text-white leading-tight md:leading-snug w-full px-4"
           >
             Real Numbers From Real Brands We Transformed
           </motion.h3>
@@ -53,7 +53,7 @@ export default function Results() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-pangram text-xl md:text-[26.2px] font-normal text-center text-black dark:text-gray-300 mt-2 mb-16 md:mb-24 w-full"
+            className="font-pangram text-lg md:text-[20px] font-extralight tracking-wide text-center text-gray-700 dark:text-gray-400 mt-4 mb-14 md:mb-20 w-full px-4 leading-relaxed"
           >
             Through advanced audience targeting, 100+ creative testing<br className="hidden md:block" /> & server-side tracking optimization
           </motion.h5>
