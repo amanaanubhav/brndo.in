@@ -107,7 +107,12 @@ export default function Navbar() {
 
         {/* Mobile Toggle & Icons */}
         <div className="md:hidden flex items-center gap-3 z-50">
-          {/* <ThemeToggle /> */}
+          <button
+            className="p-2 text-gray-900 dark:text-white"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={34} /> : <Menu size={34} />}
+          </button>
           <a
             href="#contact"
             className="w-[38px] h-[38px] bg-[#2B2B2B] rounded-[5px] flex items-center justify-center hover:scale-105 transition-all duration-300 shadow-md"
@@ -122,12 +127,6 @@ export default function Navbar() {
               <path d="M15 2 A 9 9 0 0 1 24 11" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
             </svg>
           </a>
-          {/* <button
-            className="p-2 -mr-2 text-gray-900 dark:text-white"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X size={34} /> : <Menu size={34} />}
-          </button> */}
         </div>
       </div>
 
