@@ -1,6 +1,7 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer2 from '@/components/layout/Footer2';
 import PerformanceHero from '@/features/performance-marketing/Hero';
+import Results from '@/features/performance-marketing/Results';
 import CaseStudies from '@/features/case-studies/CaseStudies';
 import FAQ from '@/features/faq/FAQ';
 import { caseStudiesData } from '@/data/caseStudies';
@@ -16,6 +17,7 @@ export default function PerformanceMarketingPage() {
     <div className="min-h-screen bg-white dark:bg-gray-950 selection:bg-brndo-red/30 selection:text-brndo-red transition-colors duration-300">
       <Navbar />
       <PerformanceHero />
+      <Results />
       <CaseStudies data={caseStudiesData.performanceMarketing} />
       <FAQ data={faqsData.performanceMarketing} />
       <Footer2 />
