@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
+import SectionHeading from '@/components/ui/SectionHeading';
+import { sectionHeadings } from '@/data/headings';
 
 export default function Results() {
   const cards = [
@@ -32,17 +34,7 @@ export default function Results() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
         
         {/* Header Block */}
-        <div className="text-center w-full -mb-16 md:-mb-24 relative z-0 mt-8">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="font-pangram text-6xl md:text-8xl lg:text-[150px] font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#C7C7C7] dark:from-gray-600 via-[#959595]/50 dark:via-gray-700/50 to-transparent pb-4 whitespace-nowrap leading-none"
-          >
-            RESULTS
-          </motion.h2>
-        </div>
+        <SectionHeading title={sectionHeadings.performanceMarketingResults} className="-mb-16 md:-mb-24 mt-8" />
 
         {/* Content Block */}
         <div className="relative z-10 w-full flex flex-col items-center mt-12 md:mt-16">

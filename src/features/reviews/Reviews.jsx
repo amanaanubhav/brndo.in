@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import SectionHeading from '@/components/ui/SectionHeading';
+import { sectionHeadings } from '@/data/headings';
 
 const mediaPlaceholders = [
   'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80',
@@ -92,15 +94,7 @@ export default function Reviews() {
 
         {/* Header Block with Stats Box */}
         <div className="text-center w-full px-6 flex flex-col items-center relative">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="font-pangram text-4xl md:text-6xl lg:text-[8rem] font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-gray-400 dark:from-gray-400 via-gray-400/40 dark:via-gray-400/40 to-transparent pb-0.75 whitespace-nowrap relative z-0"
-          >
-            TESTIMONIALS
-          </motion.h2>
+          <SectionHeading title={sectionHeadings.reviews} className="pb-0.75" />
 
           {/* Stats Box */}
           <motion.div

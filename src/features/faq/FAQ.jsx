@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { buttonData } from '@/data/buttons';
+import SectionHeading from '@/components/ui/SectionHeading';
+import { sectionHeadings } from '@/data/headings';
 
 export default function FAQ({ data }) {
   const [openIndex, setOpenIndex] = useState(null);
@@ -20,17 +22,7 @@ export default function FAQ({ data }) {
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
 
         {/* Header Block */}
-        <div className="text-center w-full -mb-4 md:-mb-10 relative z-0">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="font-pangram text-5xl md:text-7xl lg:text-[9rem] font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-gray-400 dark:from-gray-400 via-gray-400/40 dark:via-gray-400/40 to-transparent pb-4 whitespace-nowrap"
-          >
-            {data.heading}
-          </motion.h2>
-        </div>
+        <SectionHeading title={sectionHeadings.faq} className="-mb-4 md:-mb-10" />
 
         {/* FAQ Blocks Container */}
         <div className="w-full max-w-4xl mx-auto space-y-4 relative z-10">

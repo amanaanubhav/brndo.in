@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import SectionHeading from '@/components/ui/SectionHeading';
+import { sectionHeadings } from '@/data/headings';
 
 const teamMembers = [
   { name: 'Ashwani singh', role: 'Founder' },
@@ -13,17 +15,7 @@ export default function Team() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
 
         {/* Header Block */}
-        <div className="text-center w-full -mb-4 md:-mb-10 relative z-0">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="font-pangram text-5xl md:text-7xl lg:text-[9rem] font-black tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-b from-gray-400 dark:from-gray-400 via-gray-400/40 dark:via-gray-400/40 to-transparent pb-4 whitespace-nowrap"
-          >
-            OUR TEAM
-          </motion.h2>
-        </div>
+        <SectionHeading title={sectionHeadings.team} className="-mb-4 md:-mb-10" />
 
         {/* Team Cards Grid */}
         <div 
