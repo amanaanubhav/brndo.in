@@ -43,9 +43,9 @@ export default function Results() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-pangram text-3xl md:text-[42.6px] font-semibold text-center text-black dark:text-white leading-tight md:leading-[75px] max-w-4xl"
+            className="font-pangram text-3xl md:text-[42.6px] font-semibold text-center text-black dark:text-white leading-tight md:leading-[75px] w-full"
           >
-            Your Partner in Digital Design & Development
+            Real Numbers From Real Brands We Transformed
           </motion.h3>
           
           <motion.h5
@@ -53,9 +53,9 @@ export default function Results() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-pangram text-xl md:text-[26.2px] font-normal text-center text-black dark:text-gray-300 mt-2 mb-16 md:mb-24"
+            className="font-pangram text-xl md:text-[26.2px] font-normal text-center text-black dark:text-gray-300 mt-2 mb-16 md:mb-24 w-full"
           >
-            How it Works
+            Through advanced audience targeting, 100+ creative testing<br className="hidden md:block" /> & server-side tracking optimization
           </motion.h5>
 
           {/* Cards Grid */}
