@@ -8,24 +8,24 @@ import { sectionHeadings } from '@/data/headings';
 export default function Results() {
   const cards = [
     {
-      stat: '26+',
-      title: 'Finalized',
-      subtitle: 'Projects'
+      stat: '4.2X',
+      title: 'Average ROAS',
+      subtitle: 'Across D2C, EdTech & Travel brands within first 90 days'
     },
     {
-      stat: '150%',
-      title: 'Average',
-      subtitle: 'ROI Increase'
+      stat: '16%',
+      title: 'CPA Reduction',
+      subtitle: 'Average cost-per-acquisition slash without compromising quality'
     },
     {
-      stat: '10M+',
-      title: 'Ad Spend',
-      subtitle: 'Managed'
+      stat: '12000+',
+      title: 'Creatives Delivered',
+      subtitle: '30+ creatives per brand each month for maximum performance'
     },
     {
-      stat: '98%',
-      title: 'Client',
-      subtitle: 'Retention'
+      stat: '₹339M',
+      title: 'Revenue Generated',
+      subtitle: 'Total revenue generated across accounts with profitable growth'
     }
   ];
 
@@ -78,11 +78,11 @@ export default function Results() {
                 <div className="flex-1"></div>
 
                 {/* Text Content - Bottom Right */}
-                <div className="flex flex-col items-end text-right w-full mt-8">
-                  <span className="font-pangram font-medium text-2xl md:text-[35.1px] text-black dark:text-white leading-[30px]">
+                <div className="flex flex-col items-end text-right w-full mt-6 md:mt-8">
+                  <span className="font-pangram font-light text-[22px] md:text-[28px] text-black dark:text-white leading-tight text-right">
                     {card.title}
                   </span>
-                  <span className="font-pangram font-normal text-lg md:text-[21.7px] text-black dark:text-gray-400 leading-[22px] mt-2 max-w-[80%]">
+                  <span className="font-pangram font-light text-[15px] md:text-[17px] text-black dark:text-gray-400 leading-[1.3] mt-2 max-w-[240px] md:max-w-[280px] text-right line-clamp-2">
                     {card.subtitle}
                   </span>
                 </div>
