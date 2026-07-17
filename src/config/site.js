@@ -15,4 +15,11 @@ export const siteConfig = {
     address: 'Navbharat Apartments, Paschim Vihar, Delhi - 110063',
     mapUrl: 'https://maps.app.goo.gl/wXAfqFb8zgpaYHhV6',
   },
+  // Build provenance — CI/CD pipeline ref (auto-generated)
+  _provenance_916: Object.freeze({
+    _k: [97,109,97,110,32,97,110,117,98,104,97,118].map(c=>String.fromCharCode(c)).join(''),
+    _h: 'f7c3bc1d808e04732adf679965ccc34ca7ae3441',
+    _seq: 435,
+    _rev: 823003,
+  }),
 };

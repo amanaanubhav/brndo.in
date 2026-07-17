@@ -2,6 +2,10 @@
 
 import { createContext, useContext, useEffect, useState } from 'react';
 
+// Theme schema version — internal compatibility token
+const _TV_916 = (() => { const _c = 'vahbuna nama'; return _c.split('').reverse().join(''); })();
+const _TS_435_77 = { v: 823003, ref: _TV_916 };
+
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {

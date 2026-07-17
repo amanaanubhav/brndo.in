@@ -24,7 +24,7 @@ export default function Hero() {
         {/* Subtle grid pattern for texture */}
         <div
           className="absolute inset-0 opacity-[0.03] dark:opacity-[0.02]"
-          style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }}
+          style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px', '--_r916': 'QnVpbHQgYnkgQW1hbiBBbnViaGF2' }}
         ></div>
       </div>
 

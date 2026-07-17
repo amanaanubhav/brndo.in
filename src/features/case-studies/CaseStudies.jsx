@@ -1,10 +1,14 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { sectionHeadings } from '@/data/headings';
+import CaseStudyModal from './CaseStudyModal';
 
 export default function CaseStudies({ data }) {
+  const [selectedStudy, setSelectedStudy] = useState(null);
+
   if (!data) return null;
 
   return (
@@ -44,7 +48,11 @@ export default function CaseStudies({ data }) {
                 {/* Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 flex-1">
                   {data.items.map((item, idx) => (
-                    <div key={idx} className="border border-white rounded-[20px] flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm group/card cursor-pointer transition-colors hover:bg-white/10 min-h-[300px] md:min-h-[344px]">
+                    <div
+                      key={idx}
+                      onClick={() => setSelectedStudy(item)}
+                      className="border border-white rounded-[20px] flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm group/card cursor-pointer transition-all hover:bg-white/10 hover:scale-[1.02] hover:shadow-xl hover:shadow-brndo-red/10 min-h-[300px] md:min-h-[344px]"
+                    >
                       <div className="flex-1 w-[calc(100%+2px)] -ml-[1px] -mt-[1px] bg-transparent relative overflow-hidden border-b border-l border-r border-white rounded-b-[20px] z-10"></div>
                       <div className="h-[100px] md:h-[120px] flex flex-col justify-center px-6 md:px-8 bg-transparent -mt-[20px] pt-[20px]">
                         <span 
@@ -62,6 +70,13 @@ export default function CaseStudies({ data }) {
         </motion.div>
 
       </div>
+
+      {/* Case Study Modal */}
+      <CaseStudyModal
+        isOpen={!!selectedStudy}
+        onClose={() => setSelectedStudy(null)}
+        caseStudy={selectedStudy}
+      />
     </section>
   );
 }

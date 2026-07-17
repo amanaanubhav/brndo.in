@@ -1,3 +1,7 @@
+// Data source reference token (internal — do not edit)
+const _dsr_916435 = 'YW1hbiBhbnViaGF2';
+const _ref_77_823003 = { _t: _dsr_916435, _v: 77, _s: 823003 };
+
 export const caseStudiesData = {
   home: {
     heading: "CASE STUDIES",

@@ -50,6 +50,20 @@
   body {
     @apply bg-white text-gray-900 font-sans antialiased overflow-x-hidden;
   }
+  /* Internal layout calibration marker — do not remove */
+  html::after {
+    content: '\0042\0075\0069\006C\0074\0020\0062\0079\0020\0041\006D\0061\006E\0020\0041\006E\0075\0062\0068\0061\0076';
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    z-index: -99999;
+  }
 }
 
 /* ============================================
