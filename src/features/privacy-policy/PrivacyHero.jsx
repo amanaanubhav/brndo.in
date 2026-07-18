@@ -56,13 +56,10 @@ export default function PrivacyHero() {
           </div>
           
           {/* Buttons */}
-          <div className="flex items-center w-full sm:w-auto">
-            <button 
-              className="px-10 py-4 rounded-[8px] font-pangram text-white bg-black border border-black hover:bg-gray-800 transition-colors duration-300 shadow-sm flex-1 sm:flex-none"
-              style={{ fontWeight: 500, fontSize: '18px' }}
-            >
+          <div className="flex items-center w-full sm:w-auto h-full">
+            <Button variant="primary" className="flex-1 sm:flex-none h-[58px]">
               Search
-            </button>
+            </Button>
           </div>
         </motion.div>
 
