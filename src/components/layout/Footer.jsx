@@ -87,7 +87,7 @@ export default function Footer() {
             <Link href="/privacy-policy" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors">Privacy Policy</Link>
             <a href="#" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors">Refund Policy</a>
-            <a href="#contact" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors">Contact Us</a>
+            <Link href="/contact" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors">Contact Us</Link>
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { useState } from 'react';
@@ -17,50 +19,14 @@ export default function Contact() {
   return (
     <section id="contact" className="min-h-screen pt-32 pb-24 bg-gray-50 dark:bg-transparent flex items-center transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <div className="flex justify-center items-center">
           
-          {/* Left Side: Copy & Info */}
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="lg:sticky lg:top-40"
-          >
-            <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 dark:text-white tracking-tight leading-tight mb-8">
-              Ready to <span className="text-brndo-red">scale</span> your brand?
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-lg leading-relaxed font-light">
-              We partner with ambitious brands to drive aggressive, profitable growth. Drop us a line with your current numbers and goals, and we'll show you how we can multiply them.
-            </p>
-
-            <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-red-50 dark:bg-red-950/30 rounded-full flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="text-brndo-red w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Data-Driven Strategy</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Every decision we make is backed by rigorous data analysis and testing.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-red-50 dark:bg-red-950/30 rounded-full flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="text-brndo-red w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Relentless Execution</h3>
-                  <p className="text-gray-600 dark:text-gray-400">We move fast, break bottlenecks, and aggressively optimize for your KPIs.</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right Side: Form */}
+          {/* Form Only */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="bg-white dark:bg-gray-900 p-8 md:p-12 rounded-2xl shadow-xl shadow-gray-200/50 dark:shadow-none border border-gray-100 dark:border-gray-800 relative overflow-hidden transition-colors duration-300"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full max-w-2xl bg-white dark:bg-gray-900 p-8 md:p-12 rounded-2xl shadow-xl shadow-gray-200/50 dark:shadow-none border border-gray-100 dark:border-gray-800 relative overflow-hidden transition-colors duration-300"
           >
             {formState === 'success' ? (
               <div className="absolute inset-0 bg-white dark:bg-gray-900 flex flex-col items-center justify-center p-12 text-center z-10 transition-colors duration-300">

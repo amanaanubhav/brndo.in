@@ -98,7 +98,7 @@ export default function Navbar() {
         <div className="hidden md:flex flex-none items-center gap-4 md:gap-6 z-50">
           <ThemeToggle />
           <Button
-            href="#contact"
+            href="/contact"
             variant="primary"
             className="px-8 py-3"
           >
@@ -114,8 +114,8 @@ export default function Navbar() {
           >
             {mobileMenuOpen ? <X size={34} /> : <Menu size={34} />}
           </button>
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="w-[38px] h-[38px] bg-[#2B2B2B] rounded-[5px] flex items-center justify-center hover:scale-105 transition-all duration-300 shadow-md"
             aria-label="Contact Us"
           >
@@ -127,7 +127,7 @@ export default function Navbar() {
               {/* Wave 2 (Outer) */}
               <path d="M15 2 A 9 9 0 0 1 24 11" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -167,7 +167,7 @@ export default function Navbar() {
               </div>
             ))}
             <Button
-              href="#contact"
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               variant="primary"
               className="mt-6 w-full px-8 py-4 text-lg dark:bg-brndo-red group gap-2"

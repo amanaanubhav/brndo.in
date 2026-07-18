@@ -151,7 +151,7 @@ export default function Footer2() {
               <li className="whitespace-nowrap"><Link href="/privacy-policy" className="font-medium text-[14px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Privacy Policy</Link></li>
               <li className="whitespace-nowrap"><Link href="/privacy-policy" className="font-medium text-[14px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Terms & Service</Link></li>
               <li className="whitespace-nowrap"><a href="#" className="font-medium text-[14px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Refund Policy</a></li>
-              <li className="whitespace-nowrap"><a href="#contact" className="font-medium text-[14px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Contact Us</a></li>
+              <li className="whitespace-nowrap"><Link href="/contact" className="font-medium text-[14px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
