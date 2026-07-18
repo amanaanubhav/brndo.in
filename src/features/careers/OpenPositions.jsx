@@ -62,37 +62,47 @@ export default function OpenPositions() {
               className="bg-white rounded-xl md:rounded-[20px] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:shadow-lg transition-shadow duration-300 min-h-[177px] border border-gray-100"
             >
               {/* Left Column: Title & Info */}
-              <div className="flex flex-col gap-3">
-                <div className="flex items-center gap-3">
-                  <h3 className="font-pangram text-2xl md:text-3xl font-bold text-black">
-                    {position.title}
-                  </h3>
-                  {position.isNew && (
-                    <span className="bg-[#800000] text-white text-xs font-bold px-2 py-1 rounded-[4px] uppercase tracking-wide">
-                      New
-                    </span>
-                  )}
-                </div>
+              <div className="flex flex-col gap-2 md:gap-3">
+                {/* Title */}
+                <h3 className="font-pangram text-2xl md:text-3xl font-normal text-black tracking-[-0.02em]">
+                  {position.title}
+                </h3>
                 
-                <div className="flex flex-wrap items-center gap-4 text-sm md:text-base text-gray-600 font-medium">
+                {/* Location & Closes */}
+                <div className="flex flex-wrap items-center gap-4 text-sm md:text-base text-gray-600 font-normal">
                   <span className="flex items-center gap-1.5">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     {position.location}
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    {position.type}
                   </span>
                   <span className="text-gray-400 hidden md:block">•</span>
                   <span className="text-gray-500">Closes {position.closes}</span>
+                </div>
+
+                {/* Tags: Full Time & New */}
+                <div className="flex flex-wrap items-center gap-3 mt-1">
+                  <div className="flex items-center justify-center bg-[#D9D9D9]/50 rounded-[5px] px-4 py-1">
+                    <span 
+                      className="font-pangram text-black text-center tracking-[-0.02em]"
+                      style={{ fontWeight: 336, fontSize: '16.19px', lineHeight: '17px' }}
+                    >
+                      {position.type}
+                    </span>
+                  </div>
+                  
+                  {position.isNew && (
+                    <div className="flex items-center justify-center bg-white border border-[#800000] rounded-[5px] px-4 py-1">
+                      <span 
+                        className="font-pangram text-[#800000] text-center tracking-[-0.02em]"
+                        style={{ fontWeight: 336, fontSize: '16.19px', lineHeight: '17px' }}
+                      >
+                        New
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
 
               {/* Right Column: Actions */}
               <div className="flex items-center gap-4 w-full md:w-auto mt-4 md:mt-0">
-                <a href={position.contactLink} className="font-pangram font-bold text-black hover:text-[#800000] transition-colors whitespace-nowrap text-sm sm:text-base hidden sm:block px-4">
-                  Contact Us
-                </a>
                 <Button variant="primary" href={position.link} className="w-full sm:w-auto rounded-[8px] px-8">
                   Apply Now
                 </Button>
