@@ -94,7 +94,7 @@ export default function Footer2() {
                 <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Home</a></li>
                 <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">About us</a></li>
                 <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Pricing</a></li>
-                <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Contact</a></li>
+                <li className="whitespace-nowrap"><Link href="/contact" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Contact</Link></li>
               </ul>
             </div>
             

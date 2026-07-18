@@ -99,7 +99,7 @@ export default function Results() {
             className="w-full flex justify-center"
           >
             <Button
-              href="#contact"
+              href="/contact"
               variant="primary"
             >
               Book a free call

@@ -46,7 +46,7 @@ export default function Hero() {
           className="flex flex-row items-center justify-center gap-3 sm:gap-8 w-full sm:w-auto px-2"
         >
           {/* Primary CTA Button */}
-          <Button href="#contact" variant="primary">
+          <Button href="/contact" variant="primary">
             {btnData.primary}
           </Button>
 
