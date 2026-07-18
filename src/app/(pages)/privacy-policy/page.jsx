@@ -1,7 +1,7 @@
 import PrivacyHero from '@/features/privacy-policy/PrivacyHero';
 import PrivacyContent from '@/features/privacy-policy/PrivacyContent';
 import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+import Footer2 from '@/components/layout/Footer2';
 
 export const metadata = {
   title: 'Privacy Policy - BRNDO',
@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
       <Navbar />
       <PrivacyHero />
       <PrivacyContent />
-      <Footer />
+      <Footer2 />
     </main>
   );
 }

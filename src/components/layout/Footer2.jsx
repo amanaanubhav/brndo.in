@@ -1,6 +1,7 @@
 import { Instagram, Youtube } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { buttonData } from '@/data/buttons';
+import Link from 'next/link';
 
 export default function Footer2() {
   return (
@@ -101,8 +102,8 @@ export default function Footer2() {
             <div className="flex flex-col gap-6 flex-1">
               <h3 className="font-normal text-[18px] md:text-[20px] text-black dark:text-gray-400 tracking-[-0.02em] transition-colors">Legal</h3>
               <ul className="flex flex-col gap-4 font-sans list-disc list-inside marker:text-black dark:marker:text-white">
-                <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Privacy Policy</a></li>
-                <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Terms & Service</a></li>
+                <li className="whitespace-nowrap"><Link href="/privacy-policy" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Privacy Policy</Link></li>
+                <li className="whitespace-nowrap"><Link href="/privacy-policy" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Terms & Service</Link></li>
               </ul>
             </div>
           </div>
@@ -147,8 +148,8 @@ export default function Footer2() {
           <div className="flex flex-col flex-1 pr-2">
             <h3 className="font-normal text-[18px] text-black dark:text-gray-400 tracking-[-0.02em] transition-colors mb-4">Quick Links</h3>
             <ul className="flex flex-col gap-3 font-sans list-disc list-inside marker:text-black dark:marker:text-white">
-              <li className="whitespace-nowrap"><a href="#" className="font-medium text-[14px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Privacy Policy</a></li>
-              <li className="whitespace-nowrap"><a href="#" className="font-medium text-[14px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Terms & Service</a></li>
+              <li className="whitespace-nowrap"><Link href="/privacy-policy" className="font-medium text-[14px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Privacy Policy</Link></li>
+              <li className="whitespace-nowrap"><Link href="/privacy-policy" className="font-medium text-[14px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Terms & Service</Link></li>
               <li className="whitespace-nowrap"><a href="#" className="font-medium text-[14px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Refund Policy</a></li>
               <li className="whitespace-nowrap"><a href="#contact" className="font-medium text-[14px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Contact Us</a></li>
             </ul>

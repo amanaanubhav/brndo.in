@@ -27,13 +27,13 @@ export default function PrivacyContent() {
     <section className="w-full pb-32 px-4 md:px-8 bg-white flex justify-center">
       <div className="w-full max-w-[1440px] flex flex-col lg:flex-row gap-12 items-start px-4 lg:px-12">
         
-        {/* Content Box (70%) */}
+        {/* Content Box (75%) */}
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full lg:w-[70%] bg-white border border-black rounded-[20px] p-8 md:p-16 lg:p-20 overflow-hidden relative"
+          className="w-full lg:w-[75%] bg-white border border-black rounded-[20px] p-8 md:p-16 lg:p-20 overflow-hidden relative"
           style={{ boxShadow: '10px 10px 10px rgba(0, 0, 0, 0.1)' }}
         >
           <div className="flex flex-col gap-[72px]">
@@ -43,8 +43,8 @@ export default function PrivacyContent() {
                 className="flex flex-col gap-4"
               >
                 <h3 
-                  className="font-pangram text-black tracking-[-0.03em]"
-                  style={{ fontWeight: 336, fontSize: '48px', lineHeight: '52px' }}
+                  className="font-pangram text-black tracking-[-0.02em]"
+                  style={{ fontWeight: 500, fontSize: '32px', lineHeight: '36px' }}
                 >
                   {section.title}
                 </h3>
@@ -59,14 +59,14 @@ export default function PrivacyContent() {
           </div>
         </motion.div>
 
-        {/* Quick Navigation Box (30%) */}
-        <div className="w-full lg:w-[30%] sticky top-32 flex justify-start lg:justify-end">
+        {/* Quick Navigation Box (25%) */}
+        <div className="w-full lg:w-[25%] sticky top-32 flex justify-start lg:justify-start">
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white border border-black rounded-[20px] p-8 flex flex-col w-full max-w-[273px]"
+            className="bg-white border border-black rounded-[20px] p-8 flex flex-col w-full"
             style={{ 
               boxShadow: '10px 10px 10px rgba(0, 0, 0, 0.1)',
               minHeight: '477px'
