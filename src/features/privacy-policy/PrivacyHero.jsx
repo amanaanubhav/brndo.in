@@ -13,8 +13,8 @@ export default function PrivacyHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="font-pangram text-black tracking-[-0.02em] mb-4"
-          style={{ fontSize: '69px', fontWeight: 617, lineHeight: '75px' }}
+          className="font-pangram text-black tracking-[-0.03em] mb-4"
+          style={{ fontSize: '92px', fontWeight: 336, lineHeight: '100px' }}
         >
           Privacy Policy
         </motion.h1>
@@ -24,8 +24,8 @@ export default function PrivacyHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-pangram text-black tracking-[-0.02em] mb-16"
-          style={{ fontSize: '26.2px', fontWeight: 336, lineHeight: '31px' }}
+          className="font-pangram font-normal text-black tracking-[-0.02em] mb-16"
+          style={{ fontSize: '26.2px', lineHeight: '31px' }}
         >
           Latest Update : 24 June 2025
         </motion.p>
@@ -38,26 +38,27 @@ export default function PrivacyHero() {
           className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-2xl mx-auto"
         >
           {/* Search Bar */}
-          <div className="relative flex-grow w-full">
+          <div className="relative flex-grow w-full flex items-center">
+            {/* Outline Magnifying Glass Icon */}
+            <div className="absolute left-4 text-gray-400 pointer-events-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            
             <input 
               type="text" 
               placeholder="Search any topic..." 
-              className="w-full px-8 py-4 rounded-full border border-gray-300 bg-white focus:outline-none focus:border-[#800000] font-pangram text-[18px] transition-colors placeholder:text-gray-400 text-black shadow-sm"
+              className="w-full pl-12 pr-6 py-4 rounded-[8px] border border-gray-300 bg-white focus:outline-none focus:border-[#800000] font-pangram text-[18px] transition-colors placeholder:text-gray-400 text-black shadow-sm"
               style={{ fontWeight: 400 }}
             />
           </div>
           
           {/* Buttons */}
-          <div className="flex items-center gap-4 w-full sm:w-auto">
-            <a 
-              href="#contact" 
-              className="px-8 py-4 rounded-full font-pangram text-black bg-white border border-black hover:bg-black hover:text-white transition-colors duration-300 shadow-sm text-center flex-1 sm:flex-none"
-              style={{ fontWeight: 500, fontSize: '18px' }}
-            >
-              Contact Us
-            </a>
+          <div className="flex items-center w-full sm:w-auto">
             <button 
-              className="px-8 py-4 rounded-full font-pangram text-white bg-black border border-black hover:bg-gray-800 transition-colors duration-300 shadow-sm flex-1 sm:flex-none"
+              className="px-10 py-4 rounded-[8px] font-pangram text-white bg-black border border-black hover:bg-gray-800 transition-colors duration-300 shadow-sm flex-1 sm:flex-none"
               style={{ fontWeight: 500, fontSize: '18px' }}
             >
               Search

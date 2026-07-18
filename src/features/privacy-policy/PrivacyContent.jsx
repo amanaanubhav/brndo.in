@@ -43,14 +43,14 @@ export default function PrivacyContent() {
                 className="flex flex-col gap-4"
               >
                 <h3 
-                  className="font-pangram text-black tracking-[-0.02em]"
-                  style={{ fontWeight: 600, fontSize: '26.21px', lineHeight: '30px' }}
+                  className="font-pangram text-black tracking-[-0.03em]"
+                  style={{ fontWeight: 336, fontSize: '48px', lineHeight: '52px' }}
                 >
                   {section.title}
                 </h3>
                 <p 
-                  className="font-pangram text-black tracking-[-0.02em] whitespace-pre-line"
-                  style={{ fontWeight: 336, fontSize: '26.21px', lineHeight: '27px' }}
+                  className="font-pangram text-black tracking-[-0.01em] whitespace-pre-line"
+                  style={{ fontWeight: 336, fontSize: '20px', lineHeight: '30px' }}
                 >
                   {section.content}
                 </p>
@@ -59,13 +59,46 @@ export default function PrivacyContent() {
           </div>
         </motion.div>
 
-        {/* Navigation Box (30%) - Placeholder */}
-        <div className="w-full lg:w-[30%] sticky top-32">
-          {/* This matches the 30% width allocation for the navigation element mentioned by user */}
-          <div className="w-full bg-gray-50/50 border border-dashed border-gray-300 rounded-[20px] p-12 flex flex-col items-center justify-center min-h-[400px]">
-            <span className="text-gray-400 font-pangram text-center font-medium mb-2">Navigation Component</span>
-            <span className="text-gray-400/80 font-pangram text-center text-sm">Reserved layout space (30%)</span>
-          </div>
+        {/* Quick Navigation Box (30%) */}
+        <div className="w-full lg:w-[30%] sticky top-32 flex justify-start lg:justify-end">
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-white border border-black rounded-[20px] p-8 flex flex-col w-full max-w-[273px]"
+            style={{ 
+              boxShadow: '10px 10px 10px rgba(0, 0, 0, 0.1)',
+              minHeight: '477px'
+            }}
+          >
+            <h4 
+              className="font-pangram text-black tracking-[-0.02em] mb-8"
+              style={{ fontWeight: 600, fontSize: '16.12px', lineHeight: '30px' }}
+            >
+              Quick Navigation
+            </h4>
+            
+            <ul className="flex flex-col gap-5 flex-grow">
+              {sections.map((section, index) => (
+                <li key={index}>
+                  <a 
+                    href={`#section-${index}`}
+                    className="flex items-center gap-3 hover:text-[#800000] transition-colors group"
+                  >
+                    {/* Placeholder for Icon (14x16 etc) */}
+                    <span className="w-4 h-4 bg-gray-200 group-hover:bg-[#800000] transition-colors flex-shrink-0" style={{ maskImage: 'linear-gradient(white, white)', WebkitMaskImage: 'linear-gradient(white, white)' }}></span>
+                    <span 
+                      className="font-pangram text-black group-hover:text-[#800000] tracking-[-0.02em] transition-colors"
+                      style={{ fontWeight: 336, fontSize: '16.12px', lineHeight: '17px' }}
+                    >
+                      {section.title}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
         </div>
 
       </div>

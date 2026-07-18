@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -83,7 +84,7 @@ export default function Footer() {
         <div className="border-t border-gray-200 dark:border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-400 dark:text-gray-500 font-light transition-colors">
           <p>&copy; {new Date().getFullYear()} BRNDO. All rights reserved.</p>
           <div className="flex flex-wrap gap-x-8 gap-y-4 justify-center md:justify-end">
-            <a href="/privacy-policy" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors">Privacy Policy</a>
+            <Link href="/privacy-policy" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors">Privacy Policy</Link>
             <a href="#" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors">Refund Policy</a>
             <a href="#contact" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors">Contact Us</a>
