@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -48,9 +49,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
         <div className="flex-none z-50 -ml-4 md:-ml-16 lg:-ml-20 -my-3 md:-my-5 lg:-my-6">
-          <a href="#">
+          <Link href="/">
             <img src="/brndo_logo.svg" alt="Brndo Logo" className="h-24 md:h-28 lg:h-32 w-auto dark:brightness-0 dark:invert transition-all" />
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Nav */}

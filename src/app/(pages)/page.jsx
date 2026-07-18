@@ -9,7 +9,6 @@ import Metrics from '@/features/metrics/Metrics';
 import CTA from '@/features/cta/CTA';
 import Reviews from '@/features/reviews/Reviews';
 import FAQ from '@/features/faq/FAQ';
-import Contact from '@/features/contact/Contact';
 import Footer from '@/components/layout/Footer';
 import Footer2 from '@/components/layout/Footer2';
 import { caseStudiesData } from '@/data/caseStudies';
@@ -27,8 +26,7 @@ export default function HomePage() {
       {/* <Metrics /> */}
       {/* <CTA /> */}
       <Reviews />
-      <FAQ data={faqsData.home} />
-      <Contact />
+      <FAQ data={faqsData.home} showCta={false} />
       {/* <Footer /> */}
       <Footer2 />
     </div>
