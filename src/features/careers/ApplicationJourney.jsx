@@ -69,10 +69,8 @@ export default function ApplicationJourney() {
                     <div className="absolute left-0 right-0 h-[1px] bg-[#800000] z-0" />
                     
                     {/* The Swipe Arrow */}
-                    <div className="z-10 flex items-center justify-center">
-                      <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1L8 8.5L1 16" stroke="#800000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+                    <div className="z-10 flex items-center justify-center bg-white px-2">
+                      <img src="/swipe.svg" alt="arrow" className="h-[20px] object-contain" />
                     </div>
                   </div>
                 )}
@@ -97,23 +95,29 @@ export default function ApplicationJourney() {
                   <span className="text-[16px] font-bold text-[#800000]">{step.step}</span>
                 </div>
 
-                {/* Image Box Placeholder */}
-                <div className="bg-gray-100 rounded-lg flex items-center justify-center mb-6 shadow-sm border border-gray-200"
+                {/* Image Box */}
+                <div className="flex items-center justify-center mb-4 h-[45px] w-full">
+                   <div 
+                     className="w-full h-full bg-[#800000]"
                      style={{ 
-                       width: getImageWidth(index), 
-                       height: '81px' 
-                     }}>
-                   <span className="text-gray-400 text-xs">img</span>
+                       maskImage: `url('/${step.image.replace(' 1', '.svg')}')`,
+                       WebkitMaskImage: `url('/${step.image.replace(' 1', '.svg')}')`,
+                       maskSize: 'contain',
+                       WebkitMaskSize: 'contain',
+                       maskRepeat: 'no-repeat',
+                       WebkitMaskRepeat: 'no-repeat',
+                       maskPosition: 'center',
+                       WebkitMaskPosition: 'center',
+                     }}
+                   />
                 </div>
 
                 {/* Title */}
                 <h4 
-                  className="font-pangram text-black text-center tracking-[-0.02em]"
-                  style={{ fontWeight: 600, fontSize: '16.19px', lineHeight: '17px' }}
+                  className="font-pangram text-black text-center tracking-[-0.02em] whitespace-nowrap"
+                  style={{ fontWeight: 336, fontSize: '16.19px', lineHeight: '17px' }}
                 >
-                  {titleSplit(step.title)[0]}
-                  <br />
-                  {titleSplit(step.title)[1]}
+                  {step.title}
                 </h4>
               </motion.div>
             ))}
@@ -126,19 +130,5 @@ export default function ApplicationJourney() {
 }
 
 // Helpers
-function titleSplit(title) {
-  const words = title.split(' ');
-  if (words.length >= 2) {
-    if (title === "HR Review") return ["HR", "Review"];
-    if (title === "Candidate Pool") return ["Candidate", "Pool"];
-    if (title === "Application Completion") return ["Application", "Completion"];
-    if (title === "Fast Form") return ["Fast", "Form"];
-    return [title, ''];
-  }
-  return [title, ''];
-}
 
-function getImageWidth(index) {
-  const widths = ['61px', '59px', '76px', '123px', '80px', '134px'];
-  return widths[index] || '80px';
-}
+

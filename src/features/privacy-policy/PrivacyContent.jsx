@@ -14,13 +14,13 @@ to protecting your privacy and ensuring that your personal information is
 handled securely, responsibly, and transparently.`;
 
 const sections = [
-  { title: "Introduction", content: DUMMY_TEXT, icon: Info },
-  { title: "Data Collection", content: DUMMY_TEXT, icon: Database },
-  { title: "Use of Data", content: DUMMY_TEXT, icon: Settings },
-  { title: "Cookies", content: DUMMY_TEXT, icon: Shield },
-  { title: "Third-party Services", content: DUMMY_TEXT, icon: Globe },
-  { title: "Your Rights", content: DUMMY_TEXT, icon: UserCheck },
-  { title: "Contact Us", content: DUMMY_TEXT, icon: PhoneCall },
+  { title: "Introduction", content: DUMMY_TEXT, svgSrc: "/introduction.svg" },
+  { title: "Data Collection", content: DUMMY_TEXT, svgSrc: "/collection b.svg" },
+  { title: "Use of Data", content: DUMMY_TEXT, svgSrc: "/setting d.svg" },
+  { title: "Cookies", content: DUMMY_TEXT, svgSrc: "/svg gg p.svg" },
+  { title: "Third-party Services", content: DUMMY_TEXT, svgSrc: "/third.svg" },
+  { title: "Your Rights", content: DUMMY_TEXT, svgSrc: "/rights d.svg" },
+  { title: "Contact Us", content: DUMMY_TEXT, svgSrc: "/call ciont.svg" },
 ];
 
 export default function PrivacyContent() {
@@ -83,17 +83,20 @@ export default function PrivacyContent() {
             
             <ul className="flex flex-col gap-3 flex-grow">
               {sections.map((section, index) => {
-                const Icon = section.icon;
                 return (
                   <li key={index} className="w-full">
                     <a 
                       href={`#section-${index}`}
                       className="flex items-center px-4 h-[38px] rounded-[10px] gap-3 transition-all duration-300 group bg-white text-black hover:bg-[#800000] hover:text-white"
                     >
-                      <Icon size={16} strokeWidth={1.5} className="text-black group-hover:text-white transition-colors flex-shrink-0" />
+                      <img 
+                        src={section.svgSrc} 
+                        alt={section.title} 
+                        className="w-4 h-4 flex-shrink-0 transition-all duration-300 group-hover:brightness-0 group-hover:invert" 
+                      />
                       <span 
-                        className="font-pangram tracking-[-0.02em] transition-colors"
-                        style={{ fontWeight: 336, fontSize: '16.12px', lineHeight: '17px' }}
+                        className="font-pangram tracking-[-0.02em] transition-colors antialiased"
+                        style={{ fontWeight: 300, fontSize: '16.12px', lineHeight: '17px' }}
                       >
                         {section.title}
                       </span>
