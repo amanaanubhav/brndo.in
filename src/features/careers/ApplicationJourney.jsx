@@ -44,8 +44,17 @@ export default function ApplicationJourney() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="font-pangram text-black text-center tracking-[-0.02em] mb-24 max-w-3xl"
-          style={{ fontWeight: 336, fontSize: '26.2px', lineHeight: '31px' }}
+          className="font-pangram text-black text-center mb-24 max-w-3xl antialiased"
+          style={{ 
+            fontFamily: '"PP Pangram", sans-serif',
+            fontWeight: 336, 
+            fontStyle: 'normal',
+            fontSize: '26.2px', 
+            lineHeight: '31px', 
+            letterSpacing: '-0.02em',
+            textAlign: 'center',
+            WebkitFontSmoothing: 'antialiased' 
+          }}
         >
           Fast, Clear and Modern Hiring Process
         </motion.p>
