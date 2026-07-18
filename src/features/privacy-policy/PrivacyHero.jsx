@@ -50,7 +50,7 @@ export default function PrivacyHero() {
             <input 
               type="text" 
               placeholder="Search any topic..." 
-              className="w-full pl-12 pr-6 py-4 rounded-[8px] border border-gray-300 bg-white focus:outline-none focus:border-[#800000] font-pangram text-[18px] transition-colors placeholder:text-gray-400 text-black shadow-sm"
+              className="w-full pl-12 pr-6 py-4 rounded-[8px] border border-gray-300 bg-white focus:outline-none focus:border-black font-pangram text-[18px] transition-colors placeholder:text-gray-400 text-black shadow-sm"
               style={{ fontWeight: 400 }}
             />
           </div>
