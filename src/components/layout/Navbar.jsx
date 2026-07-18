@@ -35,7 +35,7 @@ export default function Navbar() {
       ]
     },
     { name: 'About', href: '#about' },
-    { name: 'Studio', href: '#studio' },
+    { name: 'Studio', href: '/career' },
   ];
 
   return (
