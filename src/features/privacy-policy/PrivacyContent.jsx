@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Info, Database, Settings, Shield, Globe, UserCheck, PhoneCall } from 'lucide-react';
 
 const DUMMY_TEXT = `Welcome to BRNDO. This Privacy Policy explains how BRNDO collects, uses, 
 discloses, and safeguards your information when you visit our website, interact 
@@ -13,13 +14,13 @@ to protecting your privacy and ensuring that your personal information is
 handled securely, responsibly, and transparently.`;
 
 const sections = [
-  { title: "Introduction", content: DUMMY_TEXT },
-  { title: "Data Collection", content: DUMMY_TEXT },
-  { title: "Use of Data", content: DUMMY_TEXT },
-  { title: "Cookies", content: DUMMY_TEXT },
-  { title: "Third-party Services", content: DUMMY_TEXT },
-  { title: "Your Rights", content: DUMMY_TEXT },
-  { title: "Contact Us", content: DUMMY_TEXT },
+  { title: "Introduction", content: DUMMY_TEXT, icon: Info },
+  { title: "Data Collection", content: DUMMY_TEXT, icon: Database },
+  { title: "Use of Data", content: DUMMY_TEXT, icon: Settings },
+  { title: "Cookies", content: DUMMY_TEXT, icon: Shield },
+  { title: "Third-party Services", content: DUMMY_TEXT, icon: Globe },
+  { title: "Your Rights", content: DUMMY_TEXT, icon: UserCheck },
+  { title: "Contact Us", content: DUMMY_TEXT, icon: PhoneCall },
 ];
 
 export default function PrivacyContent() {
@@ -40,7 +41,8 @@ export default function PrivacyContent() {
             {sections.map((section, index) => (
               <div 
                 key={index}
-                className="flex flex-col gap-4"
+                id={`section-${index}`}
+                className="flex flex-col gap-4 scroll-mt-32"
               >
                 <h3 
                   className="font-pangram text-black tracking-[-0.02em]"
@@ -74,29 +76,31 @@ export default function PrivacyContent() {
           >
             <h4 
               className="font-pangram text-black tracking-[-0.02em] mb-8"
-              style={{ fontWeight: 600, fontSize: '16.12px', lineHeight: '30px' }}
+              style={{ fontWeight: 600, fontSize: '20px', lineHeight: '30px' }}
             >
               Quick Navigation
             </h4>
             
-            <ul className="flex flex-col gap-5 flex-grow">
-              {sections.map((section, index) => (
-                <li key={index}>
-                  <a 
-                    href={`#section-${index}`}
-                    className="flex items-center gap-3 hover:text-[#800000] transition-colors group"
-                  >
-                    {/* Placeholder for Icon (14x16 etc) */}
-                    <span className="w-4 h-4 bg-gray-200 group-hover:bg-[#800000] transition-colors flex-shrink-0" style={{ maskImage: 'linear-gradient(white, white)', WebkitMaskImage: 'linear-gradient(white, white)' }}></span>
-                    <span 
-                      className="font-pangram text-black group-hover:text-[#800000] tracking-[-0.02em] transition-colors"
-                      style={{ fontWeight: 336, fontSize: '16.12px', lineHeight: '17px' }}
+            <ul className="flex flex-col gap-3 flex-grow">
+              {sections.map((section, index) => {
+                const Icon = section.icon;
+                return (
+                  <li key={index} className="w-full">
+                    <a 
+                      href={`#section-${index}`}
+                      className="flex items-center px-4 h-[38px] rounded-[10px] gap-3 transition-all duration-300 group bg-white text-black hover:bg-[#800000] hover:text-white"
                     >
-                      {section.title}
-                    </span>
-                  </a>
-                </li>
-              ))}
+                      <Icon size={16} strokeWidth={1.5} className="text-black group-hover:text-white transition-colors flex-shrink-0" />
+                      <span 
+                        className="font-pangram tracking-[-0.02em] transition-colors"
+                        style={{ fontWeight: 336, fontSize: '16.12px', lineHeight: '17px' }}
+                      >
+                        {section.title}
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </motion.div>
         </div>
