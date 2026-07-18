@@ -1,42 +1,13 @@
 export const careersData = {
-  openPositions: [
-    {
-      id: 1,
-      title: "Senior Performance Marketer",
-      department: "Marketing",
-      location: "Remote / New York",
-      type: "Full-Time",
-      description: "Lead high-budget ad campaigns across Meta, Google, and TikTok to maximize ROI for our top-tier clients.",
-      link: "#apply-now"
-    },
-    {
-      id: 2,
-      title: "UI/UX Designer",
-      department: "Design",
-      location: "Remote",
-      type: "Full-Time",
-      description: "Create stunning, high-converting digital experiences. Work closely with development and strategy teams.",
-      link: "#apply-now"
-    },
-    {
-      id: 3,
-      title: "Full Stack Developer",
-      department: "Engineering",
-      location: "Remote / London",
-      type: "Full-Time",
-      description: "Build robust, scalable web applications using Next.js, React, and Node.js. Join our fast-paced dev team.",
-      link: "#apply-now"
-    },
-    {
-      id: 4,
-      title: "Account Executive",
-      department: "Sales",
-      location: "New York",
-      type: "Full-Time",
-      description: "Drive growth by acquiring new enterprise clients and maintaining strong relationships with key stakeholders.",
-      link: "#apply-now"
-    }
-  ],
+  openPositions: Array(6).fill({
+    title: "Graphic Designer",
+    location: "Delhi, India",
+    closes: "Sep 30, 2025",
+    type: "Full Time",
+    isNew: true,
+    link: "#apply-now",
+    contactLink: "#contact-us"
+  }).map((item, i) => ({ ...item, id: i + 1 })),
   applicationJourney: [
     {
       step: "01",
