@@ -11,13 +11,9 @@ export default function SectionHeading({ title, className }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="font-pangram text-5xl md:text-7xl lg:text-[120px] xl:text-[130px] font-bold tracking-[0.1em] uppercase pb-4 whitespace-nowrap leading-none"
+        className="font-pangram text-5xl md:text-7xl lg:text-[120px] xl:text-[150px] font-black tracking-[-0.02em] uppercase mb-4 whitespace-nowrap leading-none bg-clip-text text-transparent"
         style={{
-          background: 'linear-gradient(180deg, #C7C7C7 -21.43%, rgba(149, 149, 149, 0.514133) 46.09%, rgba(97, 97, 97, 0) 96.64%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          color: '#000000', // Fallback color as specified
+          backgroundImage: 'linear-gradient(180deg, #C7C7C7 -21.43%, #95959583 45%, #61616100 85%)',
         }}
       >
         {title}
