@@ -53,9 +53,9 @@ export default function Results() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-pangram text-lg md:text-[20px] font-extralight tracking-wide text-center text-gray-700 dark:text-gray-400 mt-4 mb-14 md:mb-20 w-full px-4 leading-relaxed"
+            className="font-pangram text-base md:text-[20px] font-extralight tracking-tight md:tracking-wide text-center text-gray-700 dark:text-gray-400 mt-4 mb-14 md:mb-20 w-full px-2 md:px-4 leading-snug md:leading-relaxed"
           >
-            Through advanced audience targeting, 100+ creative testing<br className="hidden md:block" /> & server-side tracking optimization
+            Through advanced audience targeting, 100+ creative testing<br className="hidden lg:block" /> & server-side tracking optimization
           </motion.h5>
 
           {/* Cards Grid */}
@@ -70,7 +70,7 @@ export default function Results() {
                 className="bg-white dark:bg-gray-900 rounded-[20px] shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.4)] p-8 md:p-12 flex flex-col justify-between relative min-h-[280px] md:min-h-[315px]"
               >
                 {/* Stat - Top Left */}
-                <div className="text-[#800000] font-pangram font-semibold text-5xl md:text-7xl lg:text-[72px] leading-none self-start text-left">
+                <div className="text-[#800000] font-pangram font-bold md:font-semibold text-[72px] md:text-[80px] lg:text-[88px] leading-none self-start text-left">
                   {card.stat}
                 </div>
                 
@@ -79,10 +79,10 @@ export default function Results() {
 
                 {/* Text Content - Bottom Right */}
                 <div className="flex flex-col items-end text-right w-full mt-6 md:mt-8">
-                  <span className="font-pangram font-light text-[22px] md:text-[28px] text-black dark:text-white leading-tight text-right">
+                  <span className="font-pangram font-normal text-[32px] md:text-[40px] lg:text-[44px] text-black dark:text-white leading-tight text-right">
                     {card.title}
                   </span>
-                  <span className="font-pangram font-light text-[15px] md:text-[17px] text-black dark:text-gray-400 leading-[1.3] mt-2 max-w-[240px] md:max-w-[280px] text-right line-clamp-2">
+                  <span className="font-pangram font-normal text-[20px] md:text-[24px] text-black dark:text-gray-400 leading-[1.25] tracking-tight mt-2 w-full max-w-[320px] md:max-w-[400px] text-right line-clamp-2 overflow-hidden text-ellipsis">
                     {card.subtitle}
                   </span>
                 </div>

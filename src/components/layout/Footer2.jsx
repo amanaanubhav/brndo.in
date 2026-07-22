@@ -87,25 +87,30 @@ export default function Footer2() {
 
           {/* Links Section */}
           <div className="flex flex-row gap-8 sm:gap-16 w-full max-w-[457px] justify-start text-left">
-            {/* Navigation */}
-            <div className="flex flex-col gap-6 flex-1">
-              <h3 className="font-normal text-[18px] md:text-[20px] text-black dark:text-gray-400 tracking-[-0.02em] transition-colors">Navigation</h3>
-              <ul className="flex flex-col gap-4 font-sans list-disc list-inside marker:text-black dark:marker:text-white">
-                <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Home</a></li>
-                <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">About us</a></li>
-                <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Pricing</a></li>
-                <li className="whitespace-nowrap"><Link href="/contact" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Contact</Link></li>
-              </ul>
+            <div className="flex flex-col gap-10 flex-1">
+              {/* Navigation */}
+              <div className="flex flex-col gap-6">
+                <h3 className="font-normal text-[18px] md:text-[20px] text-black dark:text-gray-400 tracking-[-0.02em] transition-colors">Navigation</h3>
+                <ul className="flex flex-col gap-4 font-sans list-disc list-inside marker:text-black dark:marker:text-white">
+                  <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Home</a></li>
+                  <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">About us</a></li>
+                  <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Pricing</a></li>
+                  <li className="whitespace-nowrap"><Link href="/contact" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Contact</Link></li>
+                </ul>
+              </div>
+              
+              {/* Legal */}
+              <div className="flex flex-col gap-6">
+                <h3 className="font-normal text-[18px] md:text-[20px] text-black dark:text-gray-400 tracking-[-0.02em] transition-colors">Legal</h3>
+                <ul className="flex flex-col gap-4 font-sans list-disc list-inside marker:text-black dark:marker:text-white">
+                  <li className="whitespace-nowrap"><Link href="/privacy-policy" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Privacy Policy</Link></li>
+                  <li className="whitespace-nowrap"><Link href="/privacy-policy" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Terms & Service</Link></li>
+                </ul>
+              </div>
             </div>
             
-            {/* Legal */}
-            <div className="flex flex-col gap-6 flex-1">
-              <h3 className="font-normal text-[18px] md:text-[20px] text-black dark:text-gray-400 tracking-[-0.02em] transition-colors">Legal</h3>
-              <ul className="flex flex-col gap-4 font-sans list-disc list-inside marker:text-black dark:marker:text-white">
-                <li className="whitespace-nowrap"><Link href="/privacy-policy" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Privacy Policy</Link></li>
-                <li className="whitespace-nowrap"><Link href="/privacy-policy" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Terms & Service</Link></li>
-              </ul>
-            </div>
+            {/* Empty column placeholder to maintain width and spacing equivalent to before */}
+            <div className="flex flex-col gap-6 flex-1"></div>
           </div>
 
         </div>
