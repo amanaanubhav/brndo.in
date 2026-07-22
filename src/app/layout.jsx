@@ -1,25 +1,9 @@
-import { Inter, Outfit } from 'next/font/google';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import { siteConfig } from '@/config/site';
 import { analyticsConfig } from '@/config/analytics';
 import { __BUILD_HASH_916__ } from '@/config/manifest';
 import './globals.css';
-
-// Google Fonts — self-hosted via next/font for zero layout shift
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-const outfit = Outfit({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-outfit',
-  display: 'swap',
-});
 
 // Next.js Metadata API — SEO tags, OG, Twitter, favicon
 export const metadata = {
@@ -63,7 +47,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Flaticon UIcons CDN */}
         <link

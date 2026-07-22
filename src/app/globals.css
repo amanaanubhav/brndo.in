@@ -9,6 +9,22 @@
 /* Setup for PP Pangram Font */
 @font-face {
   font-family: 'PP Pangram';
+  src: url('/fonts/Pangram-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Pangram';
+  src: url('/fonts/Pangram-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Pangram';
   src: url('/fonts/Pangram-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
@@ -27,6 +43,14 @@
   font-family: 'PP Pangram';
   src: url('/fonts/Pangram-Bold.otf') format('opentype');
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Pangram';
+  src: url('/fonts/Pangram-ExtraBold.otf') format('opentype');
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }

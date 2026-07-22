@@ -17,7 +17,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Outfit', 'Inter', 'sans-serif'],
+        sans: ['"PP Pangram"', 'sans-serif'],
         pangram: ['"PP Pangram"', 'sans-serif'],
       },
       keyframes: {
