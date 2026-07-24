@@ -3,13 +3,14 @@
 import HeroHeading from '@/components/ui/HeroHeading';
 import HeroSubheading from '@/components/ui/HeroSubheading';
 import Button from '@/components/ui/Button';
+import LogoScroll from '@/components/ui/LogoScroll';
 import { heroData } from '@/data/hero';
 
 export default function SMMAHero() {
   const data = heroData.smma;
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-16 overflow-hidden transition-colors duration-300">
+    <section className="relative min-h-screen flex items-center justify-center pt-28 pb-8 overflow-hidden transition-colors duration-300">
       {/* Background Styling */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 bg-white dark:bg-gray-950 flex items-center justify-center">
         <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brndo-red/10 dark:bg-brndo-red/5 blur-[120px]" />
@@ -26,13 +27,16 @@ export default function SMMAHero() {
         
         <HeroHeading {...data.heading} />
         
-        <HeroSubheading className="mb-8 md:mb-12">
+        <HeroSubheading className="mb-6 md:mb-10">
           {data.subheading}
         </HeroSubheading>
 
         <Button href="/contact" variant="primary">
           Book a free call
         </Button>
+
+        {/* Logo Scroll Marquee */}
+        <LogoScroll />
       </div>
     </section>
   );
