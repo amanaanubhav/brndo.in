@@ -55,7 +55,7 @@ export default function SMMAPricing() {
         "Advanced email marketing funnels"
       ],
       icon: "/third.svg",
-      highlight: true
+      highlight: false
     }
   ];
 
@@ -78,69 +78,75 @@ export default function SMMAPricing() {
             Choose the Perfect Plan for Your Brand
           </motion.h3>
 
-          <div className="flex flex-col gap-8 w-full max-w-5xl mx-auto mb-16">
+          <div className="flex flex-col gap-8 w-full max-w-[1000px] mx-auto mb-16">
             {pricingPlans.map((plan, index) => {
               const isGlobalGradient = index === 1;
 
               const content = (
                 <>
-                  {plan.highlight && !isGlobalGradient && (
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:top-0 md:right-8 md:left-auto md:translate-x-0">
-                      <span className="bg-[#800000] text-white text-[18.5px] font-bold px-4 py-1.5 rounded-[10px] uppercase tracking-wider shadow-md">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  {/* Left Section: Name & Price */}
-                  <div className="flex-1 w-full text-center md:text-left flex flex-col justify-center">
-                    <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-2">
-                      <div className="w-[51px] h-[51px] bg-[#2B2B2B] rounded-[10px] flex items-center justify-center shrink-0">
-                        <img src={plan.icon} alt={plan.name} className="w-[24px] h-[24px] object-contain invert brightness-0" style={{ filter: 'brightness(0) invert(1)' }} />
+
+                  {/* Left Half */}
+                  <div className="flex flex-col w-[50%] text-left pr-0 md:pr-8 justify-between min-h-[280px]">
+                    <div>
+                      {/* Icon */}
+                      <div className="w-[45px] h-[45px] bg-[#2B2B2B] rounded-[8px] flex items-center justify-center shrink-0 mb-4">
+                        <img src={plan.icon} alt={plan.name} className="w-[20px] h-[20px] object-contain invert brightness-0" style={{ filter: 'brightness(0) invert(1)' }} />
                       </div>
-                      <div className="flex flex-col">
-                        <h3 className={`font-pangram text-[30px] leading-[35px] font-medium tracking-[-0.02em] ${isGlobalGradient ? 'text-white' : 'text-black dark:text-white'}`}>
-                          {plan.name}
-                        </h3>
-                        <div className={`font-pangram font-semibold text-[56.63px] leading-[58px] tracking-[-0.02em] mt-2 mb-4 ${isGlobalGradient ? 'text-white' : 'text-black dark:text-white'}`}>
-                          {plan.price}
-                        </div>
-                      </div>
+                      
+                      {/* Plan Name */}
+                      <h3 className={`font-pangram text-[26px] leading-[30px] font-medium tracking-[-0.02em] mb-2 ${isGlobalGradient ? 'text-white' : 'text-black dark:text-white'}`}>
+                        {plan.name}
+                      </h3>
+                      
+                      {/* Plan Description */}
+                      <p className={`font-pangram text-[16px] leading-[22px] font-light tracking-[-0.02em] mb-4 max-w-sm ${isGlobalGradient ? 'text-white/70' : 'text-black/50 dark:text-white/50'}`}>
+                        {plan.description}
+                      </p>
                     </div>
-                    <p className={`font-pangram text-[18.5px] leading-[19px] font-light tracking-[-0.02em] mt-2 max-w-sm mx-auto md:mx-0 ${isGlobalGradient ? 'text-white/70' : 'text-black/50 dark:text-white/50'}`}>
-                      {plan.description}
-                    </p>
+                    
+                    {/* Duration Details at Bottom Edge */}
+                    <div className="mt-auto pt-4">
+                      <div className={`font-pangram text-[16px] leading-[19px] tracking-[-0.02em] ${isGlobalGradient ? 'text-white' : 'text-black/50 dark:text-white/50'}`}>
+                        <span className={`font-medium mr-1 ${isGlobalGradient ? 'text-white' : 'text-black dark:text-white'}`}>Duration Time:</span> 
+                        {plan.duration}
+                      </div>
+                      <div className={`h-[1px] w-full max-w-[344px] mt-3 ${isGlobalGradient ? 'bg-white' : 'bg-black/20 dark:bg-white/20'}`}></div>
+                    </div>
                   </div>
 
-                  {/* Middle Section: Features */}
-                  <div className={`flex-1 w-full border-t border-b md:border-t-0 md:border-b-0 md:border-l py-6 md:py-0 md:px-8 flex flex-col justify-center ${isGlobalGradient ? 'border-white/20' : 'border-black/20 dark:border-white/20'}`}>
-                    <div className={`mb-6 p-3 inline-block self-center md:self-start rounded-[10px] ${isGlobalGradient ? 'bg-white/10 backdrop-blur-sm' : 'bg-transparent'}`}>
-                      <div className={`flex items-center font-pangram text-[18.5px] leading-[19px] font-light tracking-[-0.02em] ${isGlobalGradient ? 'text-white/90' : 'text-black/50 dark:text-white/50'}`}>
-                        <span className={`${isGlobalGradient ? 'text-white' : 'text-black dark:text-white'} font-medium mr-2`}>Duration Time:</span> {plan.duration}
+                  {/* Right Half */}
+                  <div className="flex flex-col w-[50%] text-left pl-0 md:pl-8 pt-6 md:pt-0 relative justify-between min-h-[280px]">
+                    {/* Invisible Border between halves on desktop */}
+                    <div className="hidden md:block absolute left-0 top-0 bottom-0 w-[1px] bg-transparent"></div>
+                    
+                    <div>
+                      {/* Price */}
+                      <div className={`font-pangram font-semibold text-[46px] leading-[50px] tracking-[-0.02em] mb-2 ${isGlobalGradient ? 'text-[#EBD4CB]' : 'text-black dark:text-white'}`}>
+                        {plan.price}
                       </div>
+                      
+                      {/* Fine Underline */}
+                      <div className={`h-[1px] w-full max-w-[344px] mb-4 ${isGlobalGradient ? 'bg-white' : 'bg-black/50 dark:bg-white/50'}`}></div>
+
+                      {/* Features List */}
+                      <ul className="space-y-2 mb-6">
+                        {plan.features.map((feature, fIndex) => (
+                          <li key={fIndex} className="flex items-start">
+                            <Check className={`w-[16px] h-[16px] shrink-0 mr-3 mt-1 ${isGlobalGradient ? 'text-white' : 'text-black dark:text-white'}`} strokeWidth={3} />
+                            <span className={`font-pangram text-[16px] leading-[24px] font-semibold tracking-[-0.02em] ${isGlobalGradient ? 'text-white' : 'text-black/50 dark:text-white/50'}`}>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
 
-                    <ul className="space-y-2">
-                      {plan.features.map((feature, fIndex) => (
-                        <li key={fIndex} className="flex items-start">
-                          <Check className={`w-5 h-5 shrink-0 mr-3 mt-[6px] ${isGlobalGradient ? 'text-white' : 'text-black dark:text-white'}`} strokeWidth={2} />
-                          <span className={`font-pangram text-[18.5px] leading-[33px] font-light tracking-[-0.02em] ${isGlobalGradient ? 'text-white/70' : 'text-black/50 dark:text-white/50'}`}>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Right Section: CTA */}
-                  <div className="w-full md:w-[250px] flex items-center justify-center pt-4 md:pt-0">
-                    <button
-                      className={`w-full text-center justify-center flex py-[15px] px-[16px] rounded-[10px] font-pangram text-[18.5px] leading-[21px] font-light tracking-[-0.02em] transition-colors ${
-                        isGlobalGradient 
-                          ? 'bg-white text-black hover:bg-gray-200' 
-                          : 'bg-[#2B2B2B] text-white hover:bg-black dark:hover:bg-gray-800'
-                      }`}
-                    >
-                      Get started
-                    </button>
+                    {/* Get Started Button */}
+                    <div className="w-full mt-auto">
+                      <button
+                        className="bg-[#2B2B2B] text-white hover:bg-black dark:hover:bg-gray-800 w-full max-w-[200px] text-center justify-center flex py-[12px] px-[16px] rounded-[8px] font-pangram text-[16px] leading-[20px] font-light tracking-[-0.02em] transition-colors shadow-sm"
+                      >
+                        Get started
+                      </button>
+                    </div>
                   </div>
                 </>
               );
@@ -154,17 +160,13 @@ export default function SMMAPricing() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   {isGlobalGradient ? (
-                    <GlobalGradient className="flex flex-col md:flex-row rounded-[20px] p-8 md:p-10 items-center md:items-stretch gap-8 shadow-2xl border border-brndo-red/20 w-full">
-                      <div className="flex flex-col md:flex-row w-full items-center md:items-stretch gap-8 z-10 relative">
+                    <GlobalGradient className="rounded-[20px] shadow-2xl border border-brndo-red/20 w-full">
+                      <div className="flex flex-col md:flex-row w-full items-stretch p-6 md:p-8 gap-8 md:gap-0 z-10 relative">
                         {content}
                       </div>
                     </GlobalGradient>
                   ) : (
-                    <div className={`flex flex-col md:flex-row rounded-[20px] p-8 md:p-10 border relative items-center md:items-stretch gap-8 w-full ${
-                      plan.highlight 
-                        ? 'border-[#800000] shadow-[0_8px_30px_rgb(128,0,0,0.12)] bg-gray-50 dark:bg-gray-900/40' 
-                        : 'border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.4)]'
-                    }`}>
+                    <div className="flex flex-col md:flex-row rounded-[20px] p-6 md:p-8 border relative items-stretch gap-8 md:gap-0 w-full border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.4)]">
                       {content}
                     </div>
                   )}
