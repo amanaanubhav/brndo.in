@@ -1,6 +1,7 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer2 from '@/components/layout/Footer2';
 import SMMAHero from '@/features/smma/Hero';
+import SMMAReels from '@/features/smma/Reels';
 import SMMAResults from '@/features/smma/Results';
 import CaseStudies from '@/features/case-studies/CaseStudies';
 import SMMAPricing from '@/features/smma/Pricing';
@@ -18,6 +19,7 @@ export default function SMMAPage() {
     <div className="min-h-screen bg-white dark:bg-gray-950 selection:bg-brndo-red/30 selection:text-brndo-red transition-colors duration-300 overflow-hidden w-full">
       <Navbar />
       <SMMAHero />
+      <SMMAReels />
       <SMMAResults />
       <CaseStudies data={caseStudiesData.smma} />
       <SMMAPricing />
