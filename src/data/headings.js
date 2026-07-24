@@ -3,6 +3,8 @@ const _cr916_77 = Object.freeze({ _h: 'aman anubhav'.split('').map(c => c.charCo
 
 export const sectionHeadings = {
   performanceMarketingResults: "RESULTS",
+  smmaResults: "RESULTS",
+  smmaPricing: "PRICING",
   caseStudies: "CASE STUDIES",
   faq: "FAQ",
   services: "SERVICES",

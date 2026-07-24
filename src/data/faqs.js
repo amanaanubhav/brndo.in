@@ -56,5 +56,34 @@ export const faqsData = {
         answer: "Sample answer content. Lorem ipsum dolor sit amet."
       }
     ]
+  },
+  smma: {
+    heading: "FAQS",
+    items: [
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      }
+    ]
   }
 };

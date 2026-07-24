@@ -22,5 +22,15 @@ export const caseStudiesData = {
       { text: "1.74L+ Gross Sales in<br class=\"hidden lg:block\" /> First 20 days" },
       { text: "Amazon Seller to D2C<br class=\"hidden lg:block\" /> Breakeven in 2 Months" }
     ]
+  },
+  smma: {
+    heading: "CASE STUDIES",
+    subheading: "Proven Transformations for<br class=\"hidden md:block\" /> Sustainable Business Growth",
+    items: [
+      { text: "Increased 6000 Followers in First 30 Days For a Cricket Gear Brand" },
+      { text: "50K to 100K Followers For<br class=\"hidden lg:block\" /> a Yoga Influencer" },
+      { text: "10+ Brand Collabs For a<br class=\"hidden lg:block\" /> Travel Influencer in 3 Months" },
+      { text: "Scaled From Scratch For a<br class=\"hidden lg:block\" /> Lifestyle Influencer" }
+    ]
   }
 };

@@ -28,5 +28,15 @@ export const heroData = {
       line2: "Team Today"
     },
     subheading: "We are always looking for passionate, creative, and driven individuals to join our team. Explore our open positions and discover your next big career move with BRNDO.",
+  },
+  smma: {
+    heading: {
+      line1Prefix: "Empowering Your",
+      highlightStart: "",
+      icon: null,
+      highlightEnd: "Success",
+      line2: "with Digital Expertise"
+    },
+    subheading: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
   }
 };
