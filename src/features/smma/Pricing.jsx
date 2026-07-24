@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import SectionHeading from '@/components/ui/SectionHeading';
+import GlobalGradient from '@/components/ui/GlobalGradient';
 import { sectionHeadings } from '@/data/headings';
 import { Check } from 'lucide-react';
 
@@ -21,6 +22,7 @@ export default function SMMAPricing() {
         "PPC or paid ads management",
         "Email marketing or CRO services"
       ],
+      icon: "/sss.svg",
       highlight: false
     },
     {
@@ -36,6 +38,7 @@ export default function SMMAPricing() {
         "Dedicated account manager",
         "Basic Community Engagement"
       ],
+      icon: "/growth plan c.svg",
       highlight: false
     },
     {
@@ -51,6 +54,7 @@ export default function SMMAPricing() {
         "Instagram DM Automation",
         "Advanced email marketing funnels"
       ],
+      icon: "/third.svg",
       highlight: true
     }
   ];
@@ -75,70 +79,98 @@ export default function SMMAPricing() {
           </motion.h3>
 
           <div className="flex flex-col gap-8 w-full max-w-5xl mx-auto mb-16">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={index}
-                className={`flex flex-col md:flex-row rounded-[20px] p-8 md:p-10 border relative items-center md:items-stretch gap-8 ${
-                  plan.highlight 
-                    ? 'border-[#800000] shadow-[0_8px_30px_rgb(128,0,0,0.12)] bg-gray-50 dark:bg-gray-900/40' 
-                    : 'border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.4)]'
-                }`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                {plan.highlight && (
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:top-0 md:right-8 md:left-auto md:translate-x-0">
-                    <span className="bg-[#800000] text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                {/* Left Section: Name & Price */}
-                <div className="flex-1 w-full text-center md:text-left flex flex-col justify-center">
-                  <h3 className="font-pangram text-[24px] md:text-[32px] text-black dark:text-white mb-2">
-                    {plan.name}
-                  </h3>
-                  <div className="font-pangram font-semibold text-[40px] md:text-[56px] text-[#800000] leading-none mb-4">
-                    {plan.price}
-                  </div>
-                  <p className="font-pangram text-[16px] md:text-[18px] text-gray-700 dark:text-gray-400 mt-2 max-w-sm mx-auto md:mx-0 leading-snug">
-                    {plan.description}
-                  </p>
-                </div>
+            {pricingPlans.map((plan, index) => {
+              const isGlobalGradient = index === 1;
 
-                {/* Middle Section: Features */}
-                <div className="flex-1 w-full border-t border-b md:border-t-0 md:border-b-0 md:border-l border-gray-200 dark:border-gray-800 py-6 md:py-0 md:px-8 flex flex-col justify-center">
-                  <div className="mb-6 bg-gray-100 dark:bg-gray-800/50 rounded-lg p-3 inline-block self-center md:self-start">
-                    <div className="flex items-center font-pangram text-[15px] font-medium text-black dark:text-white">
-                      <span className="text-[#800000] font-semibold mr-2">Duration Time:</span> {plan.duration}
+              const content = (
+                <>
+                  {plan.highlight && !isGlobalGradient && (
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:top-0 md:right-8 md:left-auto md:translate-x-0">
+                      <span className="bg-[#800000] text-white text-[18.5px] font-bold px-4 py-1.5 rounded-[10px] uppercase tracking-wider shadow-md">
+                        Most Popular
+                      </span>
                     </div>
+                  )}
+                  
+                  {/* Left Section: Name & Price */}
+                  <div className="flex-1 w-full text-center md:text-left flex flex-col justify-center">
+                    <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-2">
+                      <div className="w-[51px] h-[51px] bg-[#2B2B2B] rounded-[10px] flex items-center justify-center shrink-0">
+                        <img src={plan.icon} alt={plan.name} className="w-[24px] h-[24px] object-contain invert brightness-0" style={{ filter: 'brightness(0) invert(1)' }} />
+                      </div>
+                      <div className="flex flex-col">
+                        <h3 className={`font-pangram text-[30px] leading-[35px] font-medium tracking-[-0.02em] ${isGlobalGradient ? 'text-white' : 'text-black dark:text-white'}`}>
+                          {plan.name}
+                        </h3>
+                        <div className={`font-pangram font-semibold text-[56.63px] leading-[58px] tracking-[-0.02em] mt-2 mb-4 ${isGlobalGradient ? 'text-white' : 'text-black dark:text-white'}`}>
+                          {plan.price}
+                        </div>
+                      </div>
+                    </div>
+                    <p className={`font-pangram text-[18.5px] leading-[19px] font-light tracking-[-0.02em] mt-2 max-w-sm mx-auto md:mx-0 ${isGlobalGradient ? 'text-white/70' : 'text-black/50 dark:text-white/50'}`}>
+                      {plan.description}
+                    </p>
                   </div>
 
-                  <ul className="space-y-4">
-                    {plan.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex items-start">
-                        <Check className="w-5 h-5 text-[#800000] shrink-0 mr-3 mt-0.5" strokeWidth={3} />
-                        <span className="font-pangram text-[16px] text-gray-800 dark:text-gray-300 leading-snug">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                  {/* Middle Section: Features */}
+                  <div className={`flex-1 w-full border-t border-b md:border-t-0 md:border-b-0 md:border-l py-6 md:py-0 md:px-8 flex flex-col justify-center ${isGlobalGradient ? 'border-white/20' : 'border-black/20 dark:border-white/20'}`}>
+                    <div className={`mb-6 p-3 inline-block self-center md:self-start rounded-[10px] ${isGlobalGradient ? 'bg-white/10 backdrop-blur-sm' : 'bg-transparent'}`}>
+                      <div className={`flex items-center font-pangram text-[18.5px] leading-[19px] font-light tracking-[-0.02em] ${isGlobalGradient ? 'text-white/90' : 'text-black/50 dark:text-white/50'}`}>
+                        <span className={`${isGlobalGradient ? 'text-white' : 'text-black dark:text-white'} font-medium mr-2`}>Duration Time:</span> {plan.duration}
+                      </div>
+                    </div>
 
-                {/* Right Section: CTA */}
-                <div className="w-full md:w-[250px] flex items-center justify-center pt-4 md:pt-0">
-                  <Button
-                    href="/contact"
-                    variant={plan.highlight ? "primary" : "secondary"}
-                    className="w-full text-center justify-center flex py-4 text-lg whitespace-nowrap"
-                  >
-                    Get started
-                  </Button>
-                </div>
-              </motion.div>
-            ))}
+                    <ul className="space-y-2">
+                      {plan.features.map((feature, fIndex) => (
+                        <li key={fIndex} className="flex items-start">
+                          <Check className={`w-5 h-5 shrink-0 mr-3 mt-[6px] ${isGlobalGradient ? 'text-white' : 'text-black dark:text-white'}`} strokeWidth={2} />
+                          <span className={`font-pangram text-[18.5px] leading-[33px] font-light tracking-[-0.02em] ${isGlobalGradient ? 'text-white/70' : 'text-black/50 dark:text-white/50'}`}>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Right Section: CTA */}
+                  <div className="w-full md:w-[250px] flex items-center justify-center pt-4 md:pt-0">
+                    <button
+                      className={`w-full text-center justify-center flex py-[15px] px-[16px] rounded-[10px] font-pangram text-[18.5px] leading-[21px] font-light tracking-[-0.02em] transition-colors ${
+                        isGlobalGradient 
+                          ? 'bg-white text-black hover:bg-gray-200' 
+                          : 'bg-[#2B2B2B] text-white hover:bg-black dark:hover:bg-gray-800'
+                      }`}
+                    >
+                      Get started
+                    </button>
+                  </div>
+                </>
+              );
+
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  {isGlobalGradient ? (
+                    <GlobalGradient className="flex flex-col md:flex-row rounded-[20px] p-8 md:p-10 items-center md:items-stretch gap-8 shadow-2xl border border-brndo-red/20 w-full">
+                      <div className="flex flex-col md:flex-row w-full items-center md:items-stretch gap-8 z-10 relative">
+                        {content}
+                      </div>
+                    </GlobalGradient>
+                  ) : (
+                    <div className={`flex flex-col md:flex-row rounded-[20px] p-8 md:p-10 border relative items-center md:items-stretch gap-8 w-full ${
+                      plan.highlight 
+                        ? 'border-[#800000] shadow-[0_8px_30px_rgb(128,0,0,0.12)] bg-gray-50 dark:bg-gray-900/40' 
+                        : 'border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.4)]'
+                    }`}>
+                      {content}
+                    </div>
+                  )}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>

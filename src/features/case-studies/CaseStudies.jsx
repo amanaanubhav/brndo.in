@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { sectionHeadings } from '@/data/headings';
+import GlobalGradient from '@/components/ui/GlobalGradient';
 import CaseStudyModal from './CaseStudyModal';
 
 export default function CaseStudies({ data }) {
@@ -24,21 +25,11 @@ export default function CaseStudies({ data }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full max-w-6xl mx-auto relative z-10 group overflow-hidden rounded-[20px] shadow-2xl border border-brndo-red/10 dark:border-brndo-red/20"
+          className="w-full max-w-6xl mx-auto relative z-10 shadow-2xl border border-brndo-red/10 dark:border-brndo-red/20 rounded-[20px]"
         >
-          <div className="w-full min-h-[800px] flex flex-col p-6 sm:p-10 md:p-16 bg-gradient-to-br from-black via-[#1a0000] to-[#3a0000] relative overflow-hidden">
-             {/* Background Effects */}
-             <div className="absolute inset-0 w-full h-full pointer-events-none transform transition-transform duration-1000 ease-out group-hover:scale-[1.02]">
-               <div className="absolute inset-0 bg-black/40"></div>
-               <div className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] bg-brndo-red rounded-full blur-[130px] opacity-40 mix-blend-screen transition-transform duration-1000 group-hover:translate-x-8 group-hover:translate-y-8"></div>
-               <div className="absolute -bottom-[40%] -right-[10%] w-[80%] h-[80%] bg-[#800000] rounded-full blur-[150px] opacity-50 mix-blend-screen transition-transform duration-1000 group-hover:-translate-x-8 group-hover:-translate-y-8"></div>
-               <div className="absolute top-[20%] left-[20%] w-[60%] h-[60%] bg-black rounded-full blur-[100px] opacity-80"></div>
-               <div className="absolute top-[40%] right-[30%] w-[30%] h-[30%] bg-brndo-lightRed rounded-full blur-[100px] opacity-20 mix-blend-overlay"></div>
-               <div className="absolute inset-0 bg-[#D9D9D9] opacity-[0.03] mix-blend-overlay"></div>
-             </div>
-
+          <GlobalGradient className="w-full min-h-[800px] flex flex-col p-6 sm:p-10 md:p-16 rounded-[20px]">
              {/* Content Layer */}
-             <div className="relative z-10 flex flex-col w-full h-full gap-10 md:gap-14 flex-1">
+             <div className="flex flex-col w-full h-full gap-10 md:gap-14 flex-1">
                 {/* Subheading */}
                 <h3 
                   className="font-pangram text-[20px] md:text-[28px] lg:text-[32px] leading-[1.1] md:leading-[60px] tracking-widest text-white font-thin md:whitespace-nowrap w-full"
@@ -64,9 +55,7 @@ export default function CaseStudies({ data }) {
                   ))}
                 </div>
              </div>
-          </div>
-
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none mix-blend-overlay rounded-[20px]"></div>
+          </GlobalGradient>
         </motion.div>
 
       </div>

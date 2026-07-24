@@ -31,12 +31,14 @@ export const heroData = {
   },
   smma: {
     heading: {
-      line1Prefix: "Empowering Your",
+      line1Prefix: "Empowering",
       highlightStart: "",
-      icon: null,
-      highlightEnd: "Success",
+      icon: "/a-woman-is-writing-on-a-piece-of-paper-photo.jpeg",
+      highlightEnd: "Your Success",
       line2: "with Digital Expertise"
     },
     subheading: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
+    buttonText: "Book a Free Call",
+    buttonLink: "/contact"
   }
 };
