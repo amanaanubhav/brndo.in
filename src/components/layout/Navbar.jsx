@@ -25,7 +25,7 @@ export default function Navbar() {
     { name: 'Work', href: '/performance-marketing' },
     {
       name: 'Services',
-      href: '#services',
+      href: '/smma',
       dropdown: [
         { name: 'Performance Ads', href: '#ads' },
         { name: 'SEO & Content', href: '#seo' },

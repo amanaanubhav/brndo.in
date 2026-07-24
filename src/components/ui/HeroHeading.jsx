@@ -24,7 +24,7 @@ export default function HeroHeading({
             <img 
               src={icon} 
               alt="" 
-              className="h-12 sm:h-16 lg:h-20 w-auto object-contain rounded-md" 
+              className="h-10 sm:h-12 lg:h-[60px] w-auto object-contain rounded-full sm:rounded-[20px] shadow-sm" 
             />
           )}
           {highlightEnd && <span>{highlightEnd}</span>}
