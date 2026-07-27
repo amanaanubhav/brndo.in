@@ -85,5 +85,34 @@ export const faqsData = {
         answer: "Sample answer content. Lorem ipsum dolor sit amet."
       }
     ]
+  },
+  branding: {
+    heading: "FAQS",
+    items: [
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      }
+    ]
   }
 };
