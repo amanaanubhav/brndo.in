@@ -11,7 +11,7 @@ export default function BrandingHero() {
     heading: {
       line1Prefix: "Your Next",
       highlightStart: "",
-      icon: "/a-woman-is-writing-on-a-piece-of-paper-photo.jpeg",
+      icon: "/brnding-icon.png",
       highlightEnd: "Big Brand",
       line2: (
         <span className="flex items-center justify-center gap-2 sm:gap-3">
@@ -27,7 +27,7 @@ export default function BrandingHero() {
       {/* Background Styling */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 bg-white dark:bg-gray-950 flex items-center justify-center">
         <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brndo-red/10 dark:bg-brndo-red/5 blur-[120px]" />
-        
+
         {/* Background Text: BRANDING */}
         <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] dark:opacity-[0.05] pointer-events-none select-none overflow-hidden">
           <span className="font-pangram text-[100px] md:text-[200px] font-black tracking-[0.2em] md:tracking-[0.5em] whitespace-nowrap text-gray-500">
@@ -36,12 +36,12 @@ export default function BrandingHero() {
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col justify-between items-center text-center relative z-10 w-full max-w-[1197px] mx-auto px-4 md:px-12 h-full">
-        
-        {/* Main Content - Centered */}
-        <div className="flex-1 flex flex-col justify-center items-center w-full max-w-5xl mx-auto">
+      <div className="flex-1 flex flex-col justify-center items-center text-center relative z-10 w-full max-w-[1197px] mx-auto px-4 md:px-12 h-full">
+
+        {/* Main Content */}
+        <div className="flex flex-col items-center w-full max-w-5xl mx-auto">
           <HeroHeading {...data.heading} />
-          
+
           <HeroSubheading className="mt-6 md:mt-8 mb-8 md:mb-12 max-w-[739px] font-[336] text-[18px] md:text-[26.2px] leading-tight md:leading-[31px]">
             {data.subheading}
           </HeroSubheading>
@@ -51,8 +51,8 @@ export default function BrandingHero() {
           </Button>
         </div>
 
-        {/* Logo Scroll - Anchored to Bottom */}
-        <div className="w-full shrink-0 pt-8 pb-12 md:pb-16">
+        {/* Logo Scroll - Positioned Below Button */}
+        <div className="w-full shrink-0">
           <LogoScroll />
         </div>
       </div>
