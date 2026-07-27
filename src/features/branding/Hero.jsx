@@ -23,7 +23,7 @@ export default function BrandingHero() {
   };
 
   return (
-    <section className="relative w-full h-[100dvh] min-h-[700px] flex flex-col overflow-hidden transition-colors duration-300 pt-24 pb-8">
+    <section className="relative w-full min-h-[100dvh] flex flex-col overflow-hidden transition-colors duration-300 pt-32 md:pt-40 pb-8">
       {/* Background Styling */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 bg-white dark:bg-gray-950 flex items-center justify-center">
         <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-brndo-red/10 dark:bg-brndo-red/5 blur-[120px]" />
@@ -52,7 +52,7 @@ export default function BrandingHero() {
         </div>
 
         {/* Logo Scroll - Anchored to Bottom */}
-        <div className="w-full shrink-0 pt-8 pb-4">
+        <div className="w-full shrink-0 pt-8 pb-12 md:pb-16">
           <LogoScroll />
         </div>
       </div>
