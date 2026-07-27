@@ -2,6 +2,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer2 from '@/components/layout/Footer2';
 import BrandingHero from '@/features/branding/Hero';
 import VisionSection from '@/features/branding/VisionSection';
+import WorkSection from '@/features/branding/WorkSection';
 import FAQ from '@/features/faq/FAQ';
 import { faqsData } from '@/data/faqs';
 import GradientBox from '@/components/ui/GradientBox';
@@ -19,6 +20,8 @@ export default function BrandingPage() {
       <BrandingHero />
       
       <VisionSection />
+
+      <WorkSection />
 
       <div className="min-h-[100dvh] flex flex-col justify-center">
         <FAQ data={faqsData.branding} />
