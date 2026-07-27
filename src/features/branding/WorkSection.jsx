@@ -22,7 +22,7 @@ export default function WorkSection() {
           <div key={idx} className="flex flex-col w-full">
             <GradientBox className="w-full h-[400px] md:h-[520px] rounded-[20px] border border-brndo-red/10 shadow-xl mb-6" />
             
-            <div className="flex justify-between items-start w-full px-1 mt-2">
+            <div className="flex justify-between items-center w-full px-1 mt-2">
               <span className="font-pangram text-black dark:text-white text-2xl md:text-[35.4px] font-[469] leading-tight md:leading-[36px] tracking-[-0.02em]">
                 {work.brand}
               </span>

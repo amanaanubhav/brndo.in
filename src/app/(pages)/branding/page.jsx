@@ -24,7 +24,7 @@ export default function BrandingPage() {
       <WorkSection />
 
       <div className="min-h-[100dvh] flex flex-col justify-center">
-        <FAQ data={faqsData.branding} />
+        <FAQ data={faqsData.branding} showCta={false} />
       </div>
 
       <div className="min-h-[100dvh] flex items-center justify-center px-4 md:px-12 py-12">
