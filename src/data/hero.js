@@ -44,9 +44,9 @@ export const heroData = {
   videoShoot: {
     heading: {
       line1Prefix: "Professional",
-      highlightStart: "Video",
+      highlightStart: "",
       icon: "/videoshoot.png",
-      highlightEnd: "Production",
+      highlightEnd: "Video Production",
       line2: "Services for Businesses"
     },
     subheading: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
