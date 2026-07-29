@@ -4,8 +4,8 @@ import Hero from '@/features/video-shoot/Hero';
 import Reels from '@/features/video-shoot/Reels';
 import MediaPlayback from '@/features/video-shoot/MediaPlayback';
 import WorkGrid from '@/features/video-shoot/WorkGrid';
+import Testimonial from '@/features/video-shoot/Testimonial';
 import EnterpriseReliability from '@/features/video-shoot/EnterpriseReliability';
-import HowItWorks from '@/features/video-shoot/HowItWorks';
 import FAQ from '@/features/faq/FAQ';
 import GlobalGradient from '@/components/ui/GlobalGradient';
 import { faqsData } from '@/data/faqs';
@@ -24,8 +24,8 @@ export default function VideoShootPage() {
       <Reels />
       <MediaPlayback />
       <WorkGrid />
+      <Testimonial />
       <EnterpriseReliability />
-      <HowItWorks />
 
       <div className="min-h-[100dvh] flex flex-col justify-center">
         <FAQ data={faqsData.videoShoot} showCta={false} />
