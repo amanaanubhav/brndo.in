@@ -14,12 +14,12 @@ export default function EnterpriseReliability() {
         </p>
         
         <h3 className="font-instrument text-2xl font-medium text-[#071E22] dark:text-gray-100 tracking-tight">
-          Book a Call and Talk to our Production Experts Today.
+          Book a Call and Talk to our Production Experts Today
         </h3>
 
         <div className="mt-4">
-          <Button variant="primary" className="bg-[#2B2B2B] hover:bg-black text-white px-10 py-3 rounded-[10px] font-pangram text-lg">
-            Book a Free Call
+          <Button variant="primary" className="bg-[#2B2B2B] hover:bg-black text-white px-10 py-3 rounded-[10px] font-pangram text-lg uppercase tracking-wide">
+            Get a Quick Call
           </Button>
         </div>
       </div>
