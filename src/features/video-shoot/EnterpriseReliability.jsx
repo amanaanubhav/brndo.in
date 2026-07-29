@@ -18,7 +18,11 @@ export default function EnterpriseReliability() {
         </h3>
 
         <div className="mt-4">
-          <Button variant="primary" className="bg-[#2B2B2B] hover:bg-black text-white px-10 py-3 rounded-[10px] font-pangram text-lg uppercase tracking-wide">
+          <Button 
+            variant="primary" 
+            href="/contact"
+            className="!w-[195px] !h-[48px] !rounded-[10px] !px-[60px] !py-[21px] flex items-center justify-center gap-[10px]"
+          >
             Get a Quick Call
           </Button>
         </div>
