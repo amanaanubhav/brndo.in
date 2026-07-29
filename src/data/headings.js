@@ -9,5 +9,6 @@ export const sectionHeadings = {
   faq: "FAQ",
   services: "SERVICES",
   reviews: "REVIEWS",
-  team: "TEAM"
+  team: "TEAM",
+  videoShootOurWork: "OUR WORK"
 };

@@ -40,5 +40,15 @@ export const heroData = {
     subheading: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
     buttonText: "Book a Free Call",
     buttonLink: "/contact"
+  },
+  videoShoot: {
+    heading: {
+      line1Prefix: "Professional",
+      highlightStart: "Video",
+      icon: "/videoshoot.png",
+      highlightEnd: "Production",
+      line2: "Services for Businesses"
+    },
+    subheading: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
   }
 };
