@@ -1,4 +1,5 @@
-'use client';
+import SectionHeading from '@/components/ui/SectionHeading';
+import { sectionHeadings } from '@/data/headings';
 
 export default function WorkGrid() {
   const categories = [
@@ -13,7 +14,7 @@ export default function WorkGrid() {
   return (
     <section className="w-full pb-16 md:pb-24 px-4 md:px-12 bg-white dark:bg-gray-950 flex flex-col items-center">
       {/* Container simulating max-width 1280px */}
-      <div className="w-full max-w-[1280px]">
+      <div className="w-full max-w-[1280px] relative z-10">
         
         {/* 3 columns grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">

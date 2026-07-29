@@ -26,9 +26,9 @@ export default function Reels() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-white dark:bg-gray-950 transition-colors duration-300 overflow-hidden">
-      {/* Reduced bottom margin from mb-8 md:mb-12 to mb-0 and added negative z-index/translate to blend closely with cards */}
-      <div className="w-full max-w-[1400px] mx-auto px-4 md:px-8 mb-2 md:-mb-6 relative z-0">
+    <section className="py-8 md:py-12 bg-white dark:bg-gray-950 transition-colors duration-300 overflow-hidden flex flex-col">
+      {/* Restored heading with reduced gap and higher z-index to prevent disappearing */}
+      <div className="w-full max-w-[1400px] mx-auto mb-2 md:-mb-10 relative z-20 pointer-events-none flex justify-center">
         <SectionHeading title={sectionHeadings.videoShootOurWork} className="!mb-0" />
       </div>
 
