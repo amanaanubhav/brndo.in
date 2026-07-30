@@ -31,7 +31,7 @@ export default function VideoShootPage() {
         <FAQ data={faqsData.videoShoot} showCta={false} />
       </div>
       
-      <section className="w-full px-4 md:px-12 py-12 md:py-24">
+      <section className="hidden md:block w-full px-4 md:px-12 py-12 md:py-24">
         <GlobalGradient className="w-full h-[400px] md:h-[600px] rounded-[20px]" />
       </section>
 
