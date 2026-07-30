@@ -6,7 +6,7 @@ export default function EnterpriseReliability() {
       
       <div className="flex flex-col max-w-[650px] gap-8">
         <h2 className="font-pangram text-[1.6rem] sm:text-3xl md:text-5xl font-bold tracking-tight text-[#800000] leading-[1.25] md:leading-tight">
-          Video Production Services For <br className="md:hidden" /> Enterprise-grade Reliability
+          Video Production Engineered for <br className="md:hidden" /> Enterprise Reliability
         </h2>
         
         <h3 className="font-instrument text-2xl md:text-3xl font-medium text-[#071E22] dark:text-gray-100 tracking-tight mt-[-10px]">
