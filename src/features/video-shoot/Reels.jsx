@@ -47,7 +47,7 @@ export default function Reels() {
         <div className="relative w-full overflow-hidden">
           <div
             ref={scrollRef}
-            className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar py-8 px-2"
+            className="grid grid-cols-2 gap-3 sm:gap-4 md:flex md:gap-6 overflow-x-hidden md:overflow-x-auto md:snap-x md:snap-mandatory hide-scrollbar py-4 md:py-8 px-2 mx-auto justify-items-center w-full"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {placeholderReels.map((reel, index) => (
@@ -58,23 +58,28 @@ export default function Reels() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 onClick={() => console.log(`Clicked on ${reel.title}`)}
-                className="snap-center shrink-0 w-[260px] sm:w-[300px] aspect-[9/16] bg-gray-100 dark:bg-gray-900 rounded-[20px] relative overflow-hidden group shadow-md border border-gray-200 dark:border-gray-800 text-left cursor-pointer hover:shadow-xl transition-all"
+                className={`snap-center shrink-0 w-full max-w-[177px] aspect-[177/313] md:w-[260px] lg:w-[300px] md:aspect-[9/16] md:max-w-none bg-black md:bg-gray-100 dark:md:bg-gray-900 rounded-[10px] md:rounded-[20px] relative overflow-hidden group shadow-md border border-gray-800 md:border-gray-200 dark:md:border-gray-800 text-left cursor-pointer hover:shadow-xl transition-all ${index === 4 ? 'hidden md:block' : 'block'}`}
               >
                 {/* Placeholder Content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
-                  <div className="w-16 h-16 bg-[#2B2B2B] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <Play className="text-white ml-1 w-8 h-8" fill="currentColor" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-3 md:p-6 text-center z-10">
+                  <div className="w-10 h-10 md:w-16 md:h-16 bg-[#2B2B2B] rounded-full flex items-center justify-center mb-2 md:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <Play className="text-white ml-0.5 md:ml-1 w-5 h-5 md:w-8 md:h-8" fill="currentColor" />
                   </div>
-                  <h3 className="font-pangram text-xl font-medium text-gray-800 dark:text-gray-200">
+                  <h3 className="font-pangram text-sm md:text-xl font-medium text-white md:text-gray-800 dark:md:text-gray-200">
                     {reel.title}
                   </h3>
-                  <p className="font-pangram text-sm font-light text-gray-500 dark:text-gray-400 mt-2">
+                  <p className="font-pangram text-[10px] md:text-sm font-light text-gray-400 md:text-gray-500 dark:md:text-gray-400 mt-1 md:mt-2">
                     Media will be added here
                   </p>
                 </div>
                 
+                {/* Decorative Yellow Bar (like TikTok/Reels timeline) */}
+                <div className="absolute bottom-[20px] left-[10%] right-[10%] h-[3px] bg-gray-700 rounded-full md:hidden">
+                  <div className="absolute left-0 top-0 bottom-0 w-[40%] bg-[#FFC107] rounded-full"></div>
+                </div>
+                
                 {/* Gradient Overlay for aesthetic */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 md:from-black/20 to-transparent pointer-events-none opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity" />
               </motion.button>
             ))}
           </div>

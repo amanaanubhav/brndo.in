@@ -32,15 +32,42 @@ export default function Hero() {
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 flex flex-col justify-center items-center text-center relative z-10 w-full">
         
-        <HeroHeading {...data.heading} />
+        {/* Desktop Heading */}
+        <div className="hidden md:block w-full">
+          <HeroHeading {...data.heading} />
+        </div>
+
+        {/* Mobile Heading */}
+        <h1 className="md:hidden font-pangram text-[2rem] sm:text-4xl leading-[1.2] font-bold text-black dark:text-white tracking-wide flex flex-col items-center w-full">
+          <span className="flex items-center justify-center gap-2 w-full">
+            Professional 
+            {data.heading.icon && (
+              <img 
+                src={data.heading.icon} 
+                alt="" 
+                className="h-10 sm:h-12 w-auto object-contain rounded-full shadow-sm" 
+              />
+            )}
+          </span>
+          <span className="text-brndo-darkRed mt-3 w-full text-center">
+            Video Production
+          </span>
+          <span className="mt-3 w-full text-center">
+            Services for Business
+          </span>
+        </h1>
         
-        <HeroSubheading className="mb-6 md:mb-10">
+        <HeroSubheading className="mt-8 mb-8 md:mt-0 md:mb-10">
           {data.subheading}
         </HeroSubheading>
 
         <Button href="/contact" variant="primary">
           Book a Free Call
         </Button>
+
+        <div className="mt-12 md:mt-6 md:-mb-10 text-brndo-darkRed font-semibold text-sm md:text-base tracking-wider text-center leading-loose">
+          Trusted by 20+ Brands for <br className="md:hidden" /> Video Production
+        </div>
 
         {/* Logo Scroll Marquee */}
         <LogoScroll />

@@ -41,11 +41,10 @@ export default function Testimonial() {
             {displaySets.map((setItem, index) => (
               <div key={index} className="flex flex-row items-center gap-3 md:gap-6 px-2 md:px-3">
                 {/* Media Block (Colored Placeholder) */}
-                <div className="relative rounded-2xl overflow-hidden w-[200px] h-[260px] md:w-[260px] md:h-[320px] shadow-md flex-shrink-0 bg-brndo-lightRed border border-red-200 dark:border-red-900/50 group/media cursor-pointer flex items-center justify-center">
-                  
-                  {/* Subtle overlay icon representing video play */}
-                  <div className="w-14 h-14 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center transition-transform duration-300 group-hover/media:scale-110">
-                    <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
+                <div className="relative rounded-2xl overflow-hidden w-[200px] h-[260px] md:w-[260px] md:h-[320px] shadow-md flex-shrink-0 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 group/media cursor-pointer flex items-center justify-center">
+                  {/* Play Button Icon */}
+                  <div className="w-14 h-14 bg-white/50 dark:bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover/media:scale-110">
+                    <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-brndo-red dark:border-l-white border-b-[8px] border-b-transparent ml-1"></div>
                   </div>
                 </div>
 
@@ -55,7 +54,7 @@ export default function Testimonial() {
                   <div className="flex flex-col gap-3 md:gap-4">
                     <div className="flex items-center gap-3">
                       {/* Avatar Placeholder */}
-                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full shadow-sm bg-brndo-lightRed flex items-center justify-center text-white font-bold text-lg">
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full shadow-sm bg-brndo-red flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
                         {testimonialData[setItem].name.charAt(0)}
                       </div>
                       <div className="flex flex-col">
