@@ -5,8 +5,8 @@ export default function EnterpriseReliability() {
     <section className="w-full py-32 px-4 md:px-12 bg-white dark:bg-gray-950 flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-24 overflow-hidden">
       
       <div className="flex flex-col max-w-[650px] gap-8">
-        <h2 className="font-pangram text-4xl md:text-5xl font-bold tracking-tight text-[#800000] leading-tight">
-          Video Production Services For Enterprise-grade Reliability
+        <h2 className="font-pangram text-[1.6rem] sm:text-3xl md:text-5xl font-bold tracking-tight text-[#800000] leading-[1.25] md:leading-tight">
+          Video Production Services For <br className="md:hidden" /> Enterprise-grade Reliability
         </h2>
         
         <p className="font-pangram text-lg md:text-xl text-gray-600 dark:text-gray-300 font-light leading-relaxed">
