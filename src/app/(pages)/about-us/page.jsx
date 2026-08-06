@@ -33,11 +33,7 @@ export default function AboutUsPage() {
 
       {/* Placeholder Gradient Horizontal Block */}
       <section className="py-24 px-6 md:px-12 w-full max-w-[1920px] mx-auto bg-white dark:bg-gray-950 transition-colors duration-300">
-        <GradientBox className="w-full h-[400px] md:h-[600px] flex items-center justify-center rounded-[30px] md:rounded-[50px] shadow-2xl">
-          <h2 className="font-pangram font-bold text-4xl md:text-6xl lg:text-[100px] leading-[1.1] text-white text-center max-w-4xl px-4">
-            {aboutUsData.footer.text}
-          </h2>
-        </GradientBox>
+        <GradientBox className="w-full h-[400px] md:h-[600px] flex items-center justify-center rounded-[30px] md:rounded-[50px] shadow-2xl" />
       </section>
 
       <Footer2 />
