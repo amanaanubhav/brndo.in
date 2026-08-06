@@ -6,10 +6,10 @@ import SectionHeading from '@/components/ui/SectionHeading';
 export default function AboutServices({ data }) {
   return (
     <section className="py-20 md:py-32 bg-white dark:bg-gray-950 transition-colors duration-300 overflow-hidden relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12 w-full flex flex-col items-center">
         
         {/* Title */}
-        <div className="w-full max-w-5xl flex justify-start mb-8 md:mb-16">
+        <div className="w-full flex justify-start mb-8 md:mb-16">
           <h2 className="font-pangram font-normal text-[67px] leading-[70px] tracking-[-0.02em] text-black dark:text-white max-w-[473px]">
             Everything Your<br />Brand Needs
           </h2>
@@ -24,12 +24,22 @@ export default function AboutServices({ data }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className={`w-full max-w-5xl h-32 md:h-[180px] rounded-[20px] flex items-center px-8 md:px-16 ${item.bg} rotate-[0.29deg] hover:scale-[1.01] transition-transform duration-300 shadow-xl`}
+              className={`group w-full h-32 md:h-[180px] rounded-[20px] flex items-center px-8 md:px-16 ${item.bg} rotate-[0.29deg] hover:scale-[1.01] transition-transform duration-300 shadow-xl`}
               style={{ zIndex: data.items.length - idx }}
             >
-              <h3 className="font-pangram font-medium text-4xl md:text-6xl lg:text-[97px] leading-[1.13] tracking-[-0.02em] text-white">
-                {item.title}
-              </h3>
+              <div className="w-full flex justify-between items-center">
+                <h3 className="font-pangram font-medium text-4xl md:text-6xl lg:text-[97px] leading-[1.13] tracking-[-0.02em] text-white">
+                  {item.title}
+                </h3>
+                {/* Thick sleek arrow on the right - Only on Branding Design */}
+                {item.title === 'Branding Design' && (
+                  <div className="hidden sm:flex items-center justify-center text-white mr-4 md:mr-8 group-hover:translate-x-2 transition-transform duration-300">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 md:w-16 md:h-16">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
