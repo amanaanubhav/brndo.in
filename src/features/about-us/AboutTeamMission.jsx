@@ -8,6 +8,9 @@ export default function AboutTeamMission({ data }) {
     <section className="py-20 md:py-24 bg-white dark:bg-gray-950 transition-colors duration-300 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
         
+        {/* Centered Heading */}
+        <SectionHeading title={data.team.sectionHeading} className="mb-12 md:mb-20" />
+        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-start">
           
           {/* Team / Founder Section */}
@@ -17,19 +20,7 @@ export default function AboutTeamMission({ data }) {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="flex flex-col"
-          >
-            {/* Using standard SectionHeading but aligned left by overriding styles or wrapping it */}
-            <div className="text-left w-full relative z-0 mb-8 md:mb-12">
-               <h2
-                  className="font-pangram text-5xl md:text-7xl lg:text-[100px] font-black tracking-[-0.02em] uppercase mb-4 leading-none bg-clip-text text-transparent"
-                  style={{
-                    backgroundImage: 'linear-gradient(180deg, #C7C7C7 -21.43%, #95959583 45%, #61616100 85%)',
-                  }}
-                >
-                  {data.team.sectionHeading}
-                </h2>
-            </div>
-            
+          >            
             <div className="flex flex-col">
               <div className="w-full max-w-sm aspect-[4/5] bg-brndo-lightRed dark:bg-brndo-red/20 rounded-2xl mb-8 shadow-sm"></div>
               <h3 className="font-pangram font-medium text-3xl md:text-5xl leading-[1.07] tracking-[-0.02em] text-black dark:text-white mb-2">
@@ -42,7 +33,8 @@ export default function AboutTeamMission({ data }) {
           </motion.div>
 
           {/* Mission & Vision Section */}
-          <motion.div 
+          {/* Mission & Vision Section - hidden for now */}
+          {/* <motion.div 
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -66,7 +58,7 @@ export default function AboutTeamMission({ data }) {
                 {data.missionVision.vision.description}
               </p>
             </div>
-          </motion.div>
+          </motion.div> */}
 
         </div>
       </div>
