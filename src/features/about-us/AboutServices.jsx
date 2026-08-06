@@ -9,7 +9,11 @@ export default function AboutServices({ data }) {
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
         
         {/* Title */}
-        <SectionHeading title={data.title} className="mb-8 md:mb-16" />
+        <div className="w-full max-w-5xl flex justify-start mb-8 md:mb-16">
+          <h2 className="font-pangram font-normal text-[67px] leading-[70px] tracking-[-0.02em] text-black dark:text-white max-w-[473px]">
+            Everything Your<br />Brand Needs
+          </h2>
+        </div>
 
         {/* Stacked Cards */}
         <div className="w-full flex flex-col items-center gap-6 md:-space-y-4 pt-8">
