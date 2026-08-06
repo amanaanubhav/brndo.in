@@ -6,6 +6,9 @@ import AboutServices from '@/features/about-us/AboutServices';
 import AboutTeamMission from '@/features/about-us/AboutTeamMission';
 import FAQ from '@/features/faq/FAQ';
 import LogoScroll from '@/components/ui/LogoScroll';
+import Navbar from '@/components/layout/Navbar';
+import Footer2 from '@/components/layout/Footer2';
+import GradientBox from '@/components/ui/GradientBox';
 
 export const metadata = {
   title: 'About Us - BRNDO',
@@ -14,12 +17,11 @@ export const metadata = {
 
 export default function AboutUsPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-950 transition-colors duration-300">
-      <AboutHero data={aboutUsData.hero} />
+    <div className="min-h-screen bg-white dark:bg-gray-950 selection:bg-brndo-red/30 selection:text-brndo-red transition-colors duration-300">
+      <Navbar />
       
-      <div className="pb-16 bg-white dark:bg-gray-950">
-        <LogoScroll />
-      </div>
+      {/* Main Content Sections */}
+      <AboutHero data={aboutUsData.hero} />
 
       <AboutStats data={aboutUsData.stats} />
       
@@ -29,22 +31,16 @@ export default function AboutUsPage() {
       
       <FAQ data={faqsData.aboutUs} showCta={false} />
 
-      {/* Footer Gradient Text Block */}
-      <section className="py-24 md:py-40 bg-white dark:bg-gray-950 overflow-hidden flex justify-center items-center px-4">
-        <h2 
-          className="font-pangram font-extrabold text-[40px] md:text-[80px] lg:text-[150px] leading-[1.0] text-center tracking-[-0.02em] bg-clip-text text-transparent"
-          style={{
-            backgroundImage: "linear-gradient(180deg, #C7C7C7 -106.72%, rgba(97, 97, 97, 0) 71.43%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent"
-          }}
-        >
-          {aboutUsData.footer.text.split('\n').map((line, i) => (
-            <span key={i} className="block">{line}</span>
-          ))}
-        </h2>
+      {/* Placeholder Gradient Horizontal Block */}
+      <section className="py-24 px-6 md:px-12 w-full max-w-[1920px] mx-auto bg-white dark:bg-gray-950 transition-colors duration-300">
+        <GradientBox className="w-full h-[400px] md:h-[600px] flex items-center justify-center rounded-[30px] md:rounded-[50px] shadow-2xl">
+          <h2 className="font-pangram font-bold text-4xl md:text-6xl lg:text-[100px] leading-[1.1] text-white text-center max-w-4xl px-4">
+            {aboutUsData.footer.text}
+          </h2>
+        </GradientBox>
       </section>
 
-    </main>
+      <Footer2 />
+    </div>
   );
 }

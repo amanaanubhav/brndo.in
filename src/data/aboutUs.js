@@ -1,16 +1,16 @@
 export const aboutUsData = {
   hero: {
-    title: "Meet BRNDO",
+    title: "MEET BRNDO",
     subtitle1: "Design Creative Design",
     subtitle2: "Studio Focused",
     description: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
-    cta: "How it Works"
+    cta: "View Projects"
   },
   stats: [
-    { number: "99+", label: "Finalized Projects" },
-    { number: "98%", label: "Client satisfaction" },
-    { number: "120+", label: "Brands Elevated" },
-    { number: "26+", label: "Awards & Recognition" } 
+    { number: "19+", label: "Industries served as professionals" },
+    { number: "99+", label: "Websites brought to life with framer." },
+    { number: "98%", label: "Client satisfaction through our journey" },
+    { number: "120+", label: "Brands Elevated Over the Years Purpose" } 
   ],
   services: {
     title: "Everything Your Brand Needs",

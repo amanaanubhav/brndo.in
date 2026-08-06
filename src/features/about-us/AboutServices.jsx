@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import SectionHeading from '@/components/ui/SectionHeading';
 
 export default function AboutServices({ data }) {
   return (
@@ -8,15 +9,7 @@ export default function AboutServices({ data }) {
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col items-center">
         
         {/* Title */}
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="font-pangram text-4xl md:text-6xl lg:text-[67px] leading-[1.04] font-normal tracking-[-0.02em] text-black dark:text-white mb-16 max-w-lg text-center md:text-left"
-        >
-          {data.title}
-        </motion.h2>
+        <SectionHeading title={data.title} className="mb-8 md:mb-16" />
 
         {/* Stacked Cards */}
         <div className="w-full flex flex-col items-center gap-6 md:-space-y-4 pt-8">
