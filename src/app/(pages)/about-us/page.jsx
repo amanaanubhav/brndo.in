@@ -6,7 +6,6 @@ import AboutServices from '@/features/about-us/AboutServices';
 import AboutTeamMission from '@/features/about-us/AboutTeamMission';
 import FAQ from '@/features/faq/FAQ';
 import LogoScroll from '@/components/ui/LogoScroll';
-import { motion } from 'framer-motion';
 
 export const metadata = {
   title: 'About Us - BRNDO',
