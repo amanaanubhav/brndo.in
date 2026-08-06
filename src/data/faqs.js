@@ -143,5 +143,34 @@ export const faqsData = {
         answer: "Sample answer content. Lorem ipsum dolor sit amet."
       }
     ]
+  },
+  aboutUs: {
+    heading: "FAQS",
+    items: [
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      },
+      {
+        question: "Questions",
+        answer: "Sample answer content. Lorem ipsum dolor sit amet."
+      }
+    ]
   }
 };

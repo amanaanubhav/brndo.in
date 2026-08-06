@@ -10,5 +10,6 @@ export const sectionHeadings = {
   services: "SERVICES",
   reviews: "REVIEWS",
   team: "TEAM",
-  videoShootOurWork: "OUR WORK"
+  videoShootOurWork: "OUR WORK",
+  aboutUs: "ABOUT US"
 };
