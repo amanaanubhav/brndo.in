@@ -33,32 +33,31 @@ export default function AboutTeamMission({ data }) {
           </motion.div>
 
           {/* Mission & Vision Section */}
-          {/* Mission & Vision Section - hidden for now */}
-          {/* <motion.div 
+          <motion.div 
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col justify-center space-y-16 lg:mt-32"
+            className="flex flex-col justify-center space-y-12 lg:space-y-16 mt-8 lg:mt-0"
           >
-            <div className="bg-gray-50 dark:bg-gray-900/50 rounded-[26px] p-8 md:p-12 border border-gray-100 dark:border-gray-800 shadow-sm">
-              <h3 className="font-pangram font-bold text-3xl md:text-5xl leading-[1.04] tracking-[-0.02em] text-black dark:text-white mb-6">
+            <div className="flex flex-col">
+              <h3 className="font-pangram font-bold text-3xl md:text-5xl leading-[1.04] tracking-[-0.02em] text-black dark:text-white mb-4 md:mb-6">
                 {data.missionVision.mission.title}
               </h3>
-              <p className="font-pangram font-light text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300">
+              <p className="font-pangram font-light text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 text-justify">
                 {data.missionVision.mission.description}
               </p>
             </div>
 
-            <div className="bg-brndo-red/5 dark:bg-brndo-red/10 rounded-[26px] p-8 md:p-12 border border-brndo-red/10 shadow-sm">
-              <h3 className="font-pangram font-bold text-3xl md:text-5xl leading-[1.04] tracking-[-0.02em] text-[#800000] dark:text-[#Ebd4cb] mb-6">
+            <div className="flex flex-col">
+              <h3 className="font-pangram font-bold text-3xl md:text-5xl leading-[1.04] tracking-[-0.02em] text-[#800000] dark:text-[#Ebd4cb] mb-4 md:mb-6">
                 {data.missionVision.vision.title}
               </h3>
-              <p className="font-pangram font-light text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300">
+              <p className="font-pangram font-light text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 text-justify">
                 {data.missionVision.vision.description}
               </p>
             </div>
-          </motion.div> */}
+          </motion.div>
 
         </div>
       </div>
