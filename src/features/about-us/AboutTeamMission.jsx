@@ -38,23 +38,27 @@ export default function AboutTeamMission({ data }) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col justify-center space-y-12 lg:space-y-16 mt-8 lg:mt-0"
+            className="flex flex-col justify-center space-y-8 md:space-y-16 mt-12 md:mt-24"
           >
-            <div className="flex flex-col">
-              <h3 className="font-pangram font-bold text-3xl md:text-5xl leading-[1.04] tracking-[-0.02em] text-black dark:text-white mb-4 md:mb-6">
-                {data.missionVision.mission.title}
+            <div className="flex flex-col w-full max-w-[361px] mx-auto md:max-w-none md:mr-auto md:ml-0 text-left">
+              <h3 className="font-pangram font-normal text-[16px] leading-[16px] tracking-[-0.02em] text-black/70 dark:text-white/70 mb-4 md:mb-6">
+                <span className="md:hidden">Our Mission</span>
+                <span className="hidden md:inline">{data.missionVision.mission.title}</span>
               </h3>
-              <p className="font-pangram font-light text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 text-justify">
-                {data.missionVision.mission.description}
+              <p className="font-pangram font-[300] text-[16px] leading-[16px] tracking-[-0.02em] text-black/70 dark:text-white/70 text-left md:max-w-[361px]">
+                <span className="md:hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</span>
+                <span className="hidden md:inline">{data.missionVision.mission.description}</span>
               </p>
             </div>
 
-            <div className="flex flex-col">
-              <h3 className="font-pangram font-bold text-3xl md:text-5xl leading-[1.04] tracking-[-0.02em] text-[#800000] dark:text-[#Ebd4cb] mb-4 md:mb-6">
-                {data.missionVision.vision.title}
+            <div className="flex flex-col w-full max-w-[361px] mx-auto md:max-w-none md:mr-auto md:ml-0 text-left">
+              <h3 className="font-pangram font-normal text-[16px] leading-[16px] tracking-[-0.02em] text-black/70 dark:text-white/70 mb-4 md:mb-6">
+                <span className="md:hidden">Our Vision</span>
+                <span className="hidden md:inline">{data.missionVision.vision.title}</span>
               </h3>
-              <p className="font-pangram font-light text-lg md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 text-justify">
-                {data.missionVision.vision.description}
+              <p className="font-pangram font-[300] text-[16px] leading-[16px] tracking-[-0.02em] text-black/70 dark:text-white/70 text-left md:max-w-[361px]">
+                <span className="md:hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</span>
+                <span className="hidden md:inline">{data.missionVision.vision.description}</span>
               </p>
             </div>
           </motion.div>
