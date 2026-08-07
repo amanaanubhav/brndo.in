@@ -4,6 +4,7 @@ import AboutHero from '@/features/about-us/AboutHero';
 import AboutStats from '@/features/about-us/AboutStats';
 import AboutServices from '@/features/about-us/AboutServices';
 import AboutTeamMission from '@/features/about-us/AboutTeamMission';
+import Team from '@/features/team/Team';
 import FAQ from '@/features/faq/FAQ';
 import LogoScroll from '@/components/ui/LogoScroll';
 import Navbar from '@/components/layout/Navbar';
@@ -28,6 +29,8 @@ export default function AboutUsPage() {
       <AboutServices data={aboutUsData.services} />
       
       <AboutTeamMission data={aboutUsData} />
+      
+      <Team />
       
       <FAQ data={faqsData.aboutUs} showCta={false} />
 

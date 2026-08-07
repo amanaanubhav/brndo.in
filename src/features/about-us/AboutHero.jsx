@@ -44,8 +44,13 @@ export default function AboutHero({ data }) {
         <HeroHeading {...headingProps} className="text-[38px] min-[375px]:text-[44px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] !leading-[1.1] max-w-4xl mx-auto !mb-4 sm:!mb-6 md:!mb-8" />
 
         {/* Subtitles & Description */}
-        <HeroSubheading className="mb-8 md:mb-10 max-w-[330px] sm:max-w-3xl text-[14.5px] leading-[1.4] sm:text-base md:text-lg mx-auto">
-          {data.description}
+        <HeroSubheading className="mb-8 md:mb-10 w-full sm:max-w-3xl text-[13px] min-[375px]:text-[14px] leading-[1.5] sm:text-base md:text-lg mx-auto">
+          <span className="sm:hidden block px-2">
+            Lorem ipsum is a placeholder text commonly<br />used in graphic design and web development.
+          </span>
+          <span className="hidden sm:inline">
+            {data.description}
+          </span>
         </HeroSubheading>
 
         {/* Call To Action */}
