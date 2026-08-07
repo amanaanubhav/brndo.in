@@ -9,8 +9,8 @@ export default function AboutServices({ data }) {
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 w-full flex flex-col items-center">
         
         {/* Title */}
-        <div className="w-full flex justify-start mb-8 md:mb-16">
-          <h2 className="font-pangram font-normal text-[67px] leading-[70px] tracking-[-0.02em] text-black dark:text-white max-w-[473px]">
+        <div className="w-full flex justify-center md:justify-start mb-8 md:mb-16">
+          <h2 className="font-pangram font-normal text-[36px] sm:text-[42px] md:text-[67px] leading-[1.1] md:leading-[70px] tracking-[-0.02em] text-black dark:text-white max-w-[473px] text-center md:text-left">
             Everything Your<br />Brand Needs
           </h2>
         </div>
@@ -33,8 +33,8 @@ export default function AboutServices({ data }) {
                 </h3>
                 {/* Thick sleek arrow on the right - Only on Branding Design */}
                 {item.title === 'Branding Design' && (
-                  <div className="hidden sm:flex items-center justify-center text-white mr-4 md:mr-8 group-hover:translate-x-2 transition-transform duration-300">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 md:w-16 md:h-16">
+                  <div className="flex items-center justify-center text-white mr-0 sm:mr-4 md:mr-8 group-hover:translate-x-2 transition-transform duration-300">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16">
                       <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                   </div>

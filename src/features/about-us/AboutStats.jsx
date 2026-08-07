@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import SectionHeading from '@/components/ui/SectionHeading';
+import Button from '@/components/ui/Button';
 
 export default function AboutStats({ data }) {
   return (
@@ -19,7 +20,7 @@ export default function AboutStats({ data }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="w-full sm:w-[297px] h-[301px] bg-white/10 border-2 border-black dark:border-white shadow-[5px_5px_5px_0px_rgba(0,0,0,0.06)] dark:shadow-[5px_5px_5px_0px_rgba(255,255,255,0.03)] rounded-[20px] p-[32px] flex flex-col justify-between items-start text-left shrink-0"
+              className="w-full sm:w-[297px] h-[301px] bg-white/10 border border-gray-200 dark:border-gray-800 shadow-[5px_5px_5px_0px_rgba(0,0,0,0.06)] dark:shadow-[5px_5px_5px_0px_rgba(255,255,255,0.03)] rounded-[20px] p-[32px] flex flex-col justify-between items-start text-left shrink-0"
             >
               <h3 className="font-pangram font-bold text-[92px] leading-[100px] tracking-[-0.04em] text-[#800000] dark:text-[#Ebd4cb]">
                 {stat.number}
@@ -29,6 +30,10 @@ export default function AboutStats({ data }) {
               </p>
             </motion.div>
           ))}
+        </div>
+        
+        <div className="w-full mt-10 flex sm:hidden justify-center relative z-10">
+          <Button href="/contact" variant="primary">Book a free call</Button>
         </div>
       </div>
     </section>
