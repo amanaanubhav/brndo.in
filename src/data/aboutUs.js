@@ -1,6 +1,6 @@
 export const aboutUsData = {
   hero: {
-    title: "MEET BRNDO",
+    title: "Meet BRNDO",
     subtitle1: "Creative Design",
     subtitle2: "Studio Focused",
     description: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",

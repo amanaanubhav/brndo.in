@@ -25,26 +25,26 @@ export default function AboutHero({ data }) {
         ></div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 md:px-12 flex flex-col justify-evenly md:justify-start items-center text-center w-full min-h-[60vh] md:min-h-0 relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col justify-center items-center text-center w-full min-h-[65vh] md:min-h-0 relative z-10 py-12 md:py-0">
         
         {/* "Meet BRNDO" Badge */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex items-center justify-center border border-[#800000] rounded-[5px] mb-4 z-20"
+          className="flex items-center justify-center border border-[#800000] rounded-[5px] mb-6 md:mb-8 z-20"
           style={{ width: '151px', height: '38px', opacity: 1 }}
         >
-          <span className="font-pangram text-[15px] sm:text-base font-medium tracking-wide text-[#800000] uppercase">
+          <span className="font-pangram text-[15px] sm:text-base font-medium tracking-wide text-[#800000]">
             {data.title}
           </span>
         </motion.div>
         
         {/* Title */}
-        <HeroHeading {...headingProps} className="text-4xl md:text-6xl lg:text-7xl xl:text-[76px] !leading-[1.1] max-w-4xl mx-auto" />
+        <HeroHeading {...headingProps} className="text-[38px] min-[375px]:text-[44px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[76px] !leading-[1.1] max-w-4xl mx-auto !mb-4 sm:!mb-6 md:!mb-8" />
 
         {/* Subtitles & Description */}
-        <HeroSubheading className="mb-0 md:mb-10 sm:mb-12 mt-6 max-w-3xl text-base md:text-lg">
+        <HeroSubheading className="mb-8 md:mb-10 max-w-[330px] sm:max-w-3xl text-[14.5px] leading-[1.4] sm:text-base md:text-lg mx-auto">
           {data.description}
         </HeroSubheading>
 
