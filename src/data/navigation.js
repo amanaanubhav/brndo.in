@@ -12,6 +12,6 @@ export const navLinks = [
       { name: 'Retention Marketing', href: '#retention' },
     ],
   },
-  { name: 'About', href: '#about' },
+  { name: 'About', href: '/about-us' },
   { name: 'Studio', href: '#studio' },
 ];

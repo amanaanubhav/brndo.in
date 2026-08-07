@@ -34,7 +34,7 @@ export default function Footer() {
           <div className="lg:col-span-3 text-center lg:text-left">
             <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-gray-900 dark:text-white mb-4 lg:mb-8">Company</h4>
             <ul className="space-y-3 lg:space-y-5 text-gray-500 dark:text-gray-400 font-light text-base md:text-lg">
-              <li><a href="#about" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors inline-block relative group">About Us<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brndo-red transition-all duration-300 group-hover:w-full"></span></a></li>
+              <li><a href="/about-us" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors inline-block relative group">About Us<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brndo-red transition-all duration-300 group-hover:w-full"></span></a></li>
               <li><a href="#services" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors inline-block relative group">Services<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brndo-red transition-all duration-300 group-hover:w-full"></span></a></li>
               <li><a href="#pricing" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors inline-block relative group">Pricing<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brndo-red transition-all duration-300 group-hover:w-full"></span></a></li>
               <li><a href="#impact" className="hover:text-brndo-red dark:hover:text-brndo-red transition-colors inline-block relative group">Success Stories<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brndo-red transition-all duration-300 group-hover:w-full"></span></a></li>

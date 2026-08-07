@@ -93,7 +93,7 @@ export default function Footer2() {
                 <h3 className="font-normal text-[18px] md:text-[20px] text-black dark:text-gray-400 tracking-[-0.02em] transition-colors">Navigation</h3>
                 <ul className="flex flex-col gap-4 font-sans list-disc list-inside marker:text-black dark:marker:text-white">
                   <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Home</a></li>
-                  <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">About us</a></li>
+                  <li className="whitespace-nowrap"><a href="/about-us" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">About us</a></li>
                   <li className="whitespace-nowrap"><a href="#" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Pricing</a></li>
                   <li className="whitespace-nowrap"><Link href="/contact" className="font-medium text-[16px] md:text-[18px] text-black dark:text-white tracking-[-0.02em] hover:text-brndo-red transition-colors">Contact</Link></li>
                 </ul>
